@@ -1,0 +1,19 @@
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: currentColor;
+    font-size: 18px;
+    font-weight: 700;
+
+    &__link {
+        display: inline-block;
+        padding: 10px;
+        color: currentColor;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

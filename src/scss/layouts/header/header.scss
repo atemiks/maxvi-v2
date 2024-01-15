@@ -1,0 +1,35 @@
+@import 'header-nav';
+@import 'header-socials';
+
+.header {
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    background-color: rgba($c-dark, 0.7);
+    backdrop-filter: blur(10px);
+    color: $c-white;
+
+    &__layout {
+        display: grid;
+        grid-template-columns: 150px 1fr 120px max-content;
+        grid-template-areas: 'logo nav search socials';
+        column-gap: $column-gutter;
+        align-items: center;
+    }
+
+    &__logo {
+        grid-area: logo;
+    }
+
+    &__nav {
+        grid-area: nav;
+    }
+
+    &__search {
+        grid-area: search;
+    }
+
+    &__socials {
+        grid-area: socials;
+    }
+}

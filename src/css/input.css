@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+.swiper-pagination {
+  @apply static mt-2.5 leading-none;
+}
+
+.swiper-pagination-bullet {
+  @apply h-2 w-2 bg-border-700 lg:h-3 lg:w-3;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 100;
+    src:
+      local("Roboto"),
+      url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src:
+      local("Roboto"),
+      url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src:
+      local("Montserrat"),
+      url("../fonts/Montserrat/static/Montserrat-Regular.ttf")
+        format("truetype");
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src:
+      local("Montserrat"),
+      url("../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    src:
+      local("PT Sans"),
+      url("../fonts/PT-Sans/PTSans-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    src:
+      local("PT Sans Bold"),
+      url("../fonts/PT-Sans/PTSans-Bold.ttf") format("truetype");
+  }
+
+  body {
+    @apply font-body text-base leading-[1.3125rem];
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1440px];
+  }
+
+  .title-h1 {
+    @apply text-3xl font-bold lg:text-4xl xl:text-title-1;
+  }
+
+  .title-h2 {
+    @apply text-2xl font-bold lg:text-3xl xl:text-title-2;
+  }
+
+  .title-h3 {
+    @apply text-xl font-bold lg:text-2xl xl:text-title-3;
+  }
+
+  .title-h4 {
+    @apply text-lg lg:text-2xl xl:text-title-4;
+  }
+
+  .title-h5,
+  .title-h6 {
+    @apply text-lg lg:text-2xl xl:text-title-5;
+  }
+
+  .link {
+    @apply text-primary-500 underline hover:text-primary-500/75 hover:no-underline;
+  }
+
+  .link--dark {
+    @apply text-black hover:text-black/75;
+  }
+
+  .badge {
+    @apply rounded-3xl px-2 py-1 font-body text-[0.625rem] font-bold uppercase leading-none;
+  }
+
+  .badge--danger {
+    @apply bg-danger-500 text-white;
+  }
+
+  .form-control {
+    @apply h-[1.875rem] w-full rounded-md border border-border-500 px-2.5 text-base focus:border-primary-900 focus:outline-none;
+  }
+
+  .button {
+    @apply rounded-lg bg-primary-900 px-2 py-2 text-center text-white xl:text-xl;
+  }
+}
