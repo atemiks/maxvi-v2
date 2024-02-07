@@ -63,13 +63,17 @@
   }
 
   body {
-    @apply font-body text-base leading-[1.3125rem];
+    @apply font-body text-sm leading-[1.3125rem] lg:text-base;
   }
 }
 
 @layer components {
   .container {
-    @apply max-w-[1440px];
+    @apply mx-auto max-w-[1200px] px-[min(12.5vw,60px)] lg:px-3.5;
+  }
+
+  .container-lg {
+    @apply mx-auto max-w-[1440px] px-[min(12.5vw,60px)] lg:px-3.5;
   }
 
   .title-h1 {
@@ -114,6 +118,14 @@
   }
 
   .button {
-    @apply rounded-lg bg-primary-900 px-2 py-2 text-center text-white xl:text-xl;
+    @apply cursor-pointer rounded-lg bg-primary-900 px-2 py-2 text-center text-white xl:px-5 xl:text-xl;
+  }
+
+  .button--light {
+    @apply bg-white text-primary-500 transition-colors hover:bg-white/90;
+  }
+
+  .button--outline-dark {
+    @apply bg-transparent text-black outline outline-1 outline-black hover:bg-black hover:text-white;
   }
 }

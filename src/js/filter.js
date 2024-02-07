@@ -1,7 +1,7 @@
 const initFilter = () => {
-  const fitlerContainer = document.querySelector(".filter-wrapper");
-  const filterToggle = document.querySelector(".filter-toggle");
-  const filterClose = document.querySelector(".filter-close");
+  const fitlerContainer = document.querySelector("#filter-wrapper");
+  const filterToggle = document.querySelector("#filter-toggle");
+  const filterClose = document.querySelector("#filter-close");
   const filterCollapseToggle = document.querySelector(
     ".filter-collapse-toggle",
   );
@@ -39,9 +39,17 @@ const initFilter = () => {
     }
   };
 
-  filterToggle?.addEventListener("click", handleFilterOpen);
-  filterClose?.addEventListener("click", handleFilterClose);
-  filterCollapseToggle?.addEventListener("click", handleFilterToggleParams);
+  if (filterToggle) {
+    filterToggle.addEventListener("click", handleFilterOpen);
+  }
+
+  if (filterClose) {
+    filterClose.addEventListener("click", handleFilterClose);
+  }
+
+  if (filterCollapseToggle) {
+    filterCollapseToggle.addEventListener("click", handleFilterToggleParams);
+  }
 };
 
 export default initFilter;

@@ -80,7 +80,6 @@ module.exports = {
     },
     extend: {
       screens: {
-        sm: "576px",
         "3xl": "1920px",
       },
       // 40 32 30 28 22 20 18 16
@@ -127,10 +126,21 @@ module.exports = {
         secondary: {
           500: "#545766",
         },
+        tertiary: {
+          500: "#A1ACAF",
+        },
+        muted: {
+          100: "#F5F4F2",
+          300: "#CCCCCC",
+          500: "#848484",
+          700: "#575757",
+        },
         danger: {
           500: "#F95738",
         },
         border: {
+          100: "#F5F4F2",
+          300: "#CCCCCC",
           500: "#D9D9D9",
           700: "#848484",
         },

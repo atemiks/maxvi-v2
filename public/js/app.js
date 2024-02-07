@@ -9,15 +9,59 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
-/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
-/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/header-nav */ "./src/js/header-nav.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
+/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
+/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/card-product */ "./src/js/card-product.js");
 
 
 
-(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
+
+
+(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_src_js_search__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
+/***/ }),
+
+/***/ "./src/js/card-product.js":
+/*!********************************!*\
+  !*** ./src/js/card-product.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initCardProducts = function initCardProducts() {
+  var products = document.querySelectorAll(".card-product");
+  products.forEach(function (product) {
+    var productImage = product.querySelector(".card-product__media");
+    var productColors = product.querySelectorAll(".card-product__color");
+    productColors.forEach(function (productColor) {
+      productColor.addEventListener("click", function () {
+        // const {target} = event;
+        var productTargetImageUrl = productColor.getAttribute("data-product-image-url");
+        console.log("productImage", productImage);
+        if (productImage) {
+          productImage.setAttribute("src", productTargetImageUrl);
+        }
+        productColors.forEach(function (productColor) {
+          productColor.setAttribute("aria-selected", false);
+        });
+        productColor.setAttribute("aria-selected", true);
+      });
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initCardProducts);
 
 /***/ }),
 
@@ -32,9 +76,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var initFilter = function initFilter() {
-  var fitlerContainer = document.querySelector(".filter-wrapper");
-  var filterToggle = document.querySelector(".filter-toggle");
-  var filterClose = document.querySelector(".filter-close");
+  var fitlerContainer = document.querySelector("#filter-wrapper");
+  var filterToggle = document.querySelector("#filter-toggle");
+  var filterClose = document.querySelector("#filter-close");
   var filterCollapseToggle = document.querySelector(".filter-collapse-toggle");
   var filterSecondaryParams = fitlerContainer === null || fitlerContainer === void 0 ? void 0 : fitlerContainer.querySelectorAll('[aria-expanded="false"]');
   var handleFilterOpen = function handleFilterOpen() {
@@ -61,11 +105,63 @@ var initFilter = function initFilter() {
       isExpanded ? handleExpandParams() : handleCollapseParams();
     }
   };
-  filterToggle === null || filterToggle === void 0 || filterToggle.addEventListener("click", handleFilterOpen);
-  filterClose === null || filterClose === void 0 || filterClose.addEventListener("click", handleFilterClose);
-  filterCollapseToggle === null || filterCollapseToggle === void 0 || filterCollapseToggle.addEventListener("click", handleFilterToggleParams);
+  if (filterToggle) {
+    filterToggle.addEventListener("click", handleFilterOpen);
+  }
+  if (filterClose) {
+    filterClose.addEventListener("click", handleFilterClose);
+  }
+  if (filterCollapseToggle) {
+    filterCollapseToggle.addEventListener("click", handleFilterToggleParams);
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initFilter);
+
+/***/ }),
+
+/***/ "./src/js/header-nav.js":
+/*!******************************!*\
+  !*** ./src/js/header-nav.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initHeaderNav = function initHeaderNav() {
+  var headerNav = document.querySelector("#header-nav");
+  var headerNavItems = headerNav.querySelectorAll(".group\\/item");
+  var activeItemIndex = undefined;
+  var timeout = undefined;
+  headerNav.addEventListener("mouseleave", function (event) {
+    activeItemIndex = undefined;
+    timeout = undefined;
+    headerNavItems.forEach(function (item) {
+      item.classList.remove("hover");
+    });
+  });
+  headerNavItems.forEach(function (item, index) {
+    item.setAttribute("data-item-index", index);
+    item.addEventListener("mouseover", function (event) {
+      timeout = setTimeout(function () {
+        var targetItem = event.target.closest(".group\\/item");
+        var targetItemIndex = targetItem.getAttribute("data-item-index");
+        if (targetItemIndex !== activeItemIndex) {
+          activeItemIndex = targetItemIndex;
+          headerNavItems.forEach(function (item) {
+            item.classList.remove("hover");
+          });
+          item.classList.add("hover");
+        }
+      }, 100);
+    });
+    item.addEventListener("mouseleave", function (event) {
+      clearTimeout(timeout);
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initHeaderNav);
 
 /***/ }),
 
@@ -80,9 +176,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var initMegamenu = function initMegamenu() {
-  console.log("memgamenu init");
+  var megamenuContainer = document.querySelector("#megamenu");
+  if (megamenuContainer) {
+    var tabs = megamenuContainer.querySelectorAll('[role="tab"]');
+    var panels = megamenuContainer.querySelectorAll('[role="tabpanel"]');
+    var activeTab = megamenuContainer.querySelector('[role="tab"][aria-selected="true"]');
+    var timeout;
+    tabs.forEach(function (tab) {
+      tab.addEventListener("mouseover", function (event) {
+        timeout = setTimeout(function () {
+          var target = event.target.closest('[role="tab"]');
+          var targetPanelId = target.getAttribute("aria-controls");
+          if (target !== activeTab) {
+            activeTab = target;
+            tabs.forEach(function (tab) {
+              tab.setAttribute("aria-selected", false);
+            });
+            panels.forEach(function (panel) {
+              panel.setAttribute("aria-hidden", true);
+              if (panel.id === targetPanelId) {
+                panel.setAttribute("aria-hidden", false);
+              }
+            });
+            target.setAttribute("aria-selected", true);
+          }
+        }, 100);
+      });
+      tab.addEventListener("mouseleave", function (event) {
+        clearTimeout(timeout);
+      });
+    });
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMegamenu);
+
+/***/ }),
+
+/***/ "./src/js/search.js":
+/*!**************************!*\
+  !*** ./src/js/search.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initSearch = function initSearch() {
+  var searchToggle = document.querySelector(".search-toggle");
+  var popSearchContainer = document.querySelector("#pop-search");
+  var popSearchContainerBackdrop = document.querySelector("#pop-search-backdrop");
+  var popSearchInput = document.querySelector("#pop-search-input");
+  var popSearchSuggestionsContainer = document.querySelector("#pop-search-suggestions");
+  var openSearch = function openSearch() {
+    searchToggle.setAttribute("aria-selected", true);
+    popSearchContainer.setAttribute("aria-hidden", false);
+    popSearchInput.focus();
+  };
+  var closeSearch = function closeSearch() {
+    searchToggle.setAttribute("aria-selected", false);
+    popSearchContainer.setAttribute("aria-hidden", true);
+  };
+  var showSuggestions = function showSuggestions() {
+    popSearchContainer.classList.add("has-suggestions");
+    popSearchSuggestionsContainer.setAttribute("aria-hidden", false);
+  };
+  var hideSuggestions = function hideSuggestions() {
+    popSearchContainer.classList.remove("has-suggestions");
+    popSearchSuggestionsContainer.setAttribute("aria-hidden", true);
+  };
+  if (searchToggle) {
+    searchToggle.addEventListener("click", openSearch);
+  }
+  if (popSearchContainer) {
+    popSearchContainer.addEventListener("keydown", function (event) {
+      var key = event.key;
+      if (key === "Escape") {
+        closeSearch();
+      }
+    });
+  }
+  if (popSearchContainerBackdrop) {
+    popSearchContainerBackdrop.addEventListener("click", closeSearch);
+  }
+  if (popSearchInput) {
+    popSearchInput.addEventListener("input", function (event) {
+      var valueLength = event.target.value.length;
+      valueLength ? showSuggestions() : hideSuggestions();
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initSearch);
 
 /***/ }),
 

@@ -452,18 +452,87 @@
 
             <li>
               <a
+                href="categories.html"
+                class="flex gap-1 rounded-md bg-muted-100 px-2 py-0.5 after:text-muted-500 after:content-['>']"
+                >Мобильные телефоны</a
+              >
+            </li>
+
+            <li>
+              <a
                 class="flex gap-1 rounded-md bg-muted-100 px-2 py-0.5 after:text-muted-500 after:content-['>']"
                 aria-current="page"
-                >Мобильные телефоны</a
+                >P-серия</a
               >
             </li>
           </ol>
         </div>
       </nav>
 
+      <section class="my-5">
+        <div class="container-lg">
+          <div class="grid grid-cols-[max-content_1fr] items-center gap-x-7">
+            <p
+              class="font-bold uppercase leading-none text-primary-500 lg:text-5xl"
+            >
+              <span class="text-[4.375rem] lg:text-[7.1875rem]">P</span>
+              серия
+            </p>
+
+            <p>
+              Само названии серии P - это сокращение английского слова "Power",
+              что в переводе означает сила, энергия, мощь. В эту серию собраны
+              аппараты, имеющие достаточно внушительные показатели по ёмкости
+              аккумулятора и громкости динамика.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section class="my-5 lg:hidden">
         <div class="container-lg">
-          <div class="flex justify-end">
+          <div
+            class="grid grid-cols-[1fr_auto] items-center gap-3.5 lg:gap-x-7"
+          >
+            <fieldset form="form-filter">
+              <div class="flex flex-wrap items-center">
+                <legend class="text-muted-500">Сортировать:</legend>
+
+                <div class="flex flex-wrap">
+                  <label
+                    class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                  >
+                    <input
+                      type="radio"
+                      class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
+                      name="sorting"
+                      value="sort-by-name"
+                      checked
+                    />
+                    <span
+                      class="underline peer-checked:font-bold peer-checked:no-underline"
+                      >По названию</span
+                    >
+                  </label>
+
+                  <label
+                    class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                  >
+                    <input
+                      class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
+                      type="radio"
+                      name="sorting"
+                      value="sort-by-price"
+                    />
+                    <span
+                      class="underline peer-checked:font-bold peer-checked:no-underline"
+                      >По цене</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
             <button
               type="button"
               id="filter-toggle"
@@ -581,7 +650,7 @@
                   <button
                     type="button"
                     id="filter-close"
-                    class="flex min-h-10 min-w-10 items-center justify-center rounded-full bg-border-500"
+                    class="flex min-h-10 min-w-10 cursor-pointer items-center justify-center rounded-full bg-border-500"
                   >
                     <svg class="block size-6">
                       <use
@@ -778,7 +847,7 @@
 
                     <button
                       type="button"
-                      class="filter-collapse-toggle group relative flex w-full items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓']"
+                      class="filter-collapse-toggle group relative flex w-full cursor-pointer items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓']"
                     >
                       <span
                         class="underline underline-offset-2 group-hover/series:no-underline"
@@ -798,341 +867,537 @@
               </div>
             </aside>
 
-            <div
-              class="grid grid-cols-1 gap-x-3.5 gap-y-7 sm:grid-cols-3 xl:gap-12"
-            >
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-b.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="B серия"
-                    />
-                  </span>
+            <div class="flex flex-col gap-5">
+              <fieldset form="form-filter" class="hidden lg:block">
+                <div class="flex flex-wrap items-center">
+                  <legend class="text-muted-500">Сортировать:</legend>
 
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >B</span
+                  <div class="flex flex-wrap">
+                    <label
+                      class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <input
+                        type="radio"
+                        class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
+                        name="sorting"
+                        value="sort-by-name"
+                        checked
+                      />
+                      <span
+                        class="underline peer-checked:font-bold peer-checked:no-underline"
+                        >По названию</span
+                      >
+                    </label>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-c.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="C серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >C</span
+                    <label
+                      class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <input
+                        class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
+                        type="radio"
+                        name="sorting"
+                        value="sort-by-price"
+                      />
+                      <span
+                        class="underline peer-checked:font-bold peer-checked:no-underline"
+                        >По цене</span
+                      >
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
+              <div
+                class="grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-3 lg:gap-x-7"
               >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
                 >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-e.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="E серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >E</span
+                  <header>
+                    <h3
+                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <a href="product.html">MAXVI B100</a>
+                    </h3>
+                  </header>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-k.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="K серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >K</span
+                  <div class="relative px-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
 
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-p.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="P серия"
-                    />
-                  </span>
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
 
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >P</span
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <figure class="relative before:block before:pt-[100%]">
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-01.png"
+                          alt="MAXVI B100"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div class="flex flex-wrap justify-center gap-1">
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-r.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="R серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >R</span
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-rt.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="RT серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
-                  >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >RT</span
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
                     >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+                  </div>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-t.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="T серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
+                  <div
+                    class="mt-auto flex min-h-16 flex-col justify-end gap-2 text-center"
                   >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >T</span
-                    >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                    Цена:
+                    <span class="text-3xl font-bold">2790&nbsp;₽</span>
+                  </div>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
-                >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
-
-              <a
-                href="series-p.html"
-                class="group/series mx-auto block w-full max-w-96 text-secondary-500"
-              >
-                <span
-                  class="grid grid-cols-[3fr_1fr] items-center sm:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
-                >
-                  <span class="relative block pt-[100%]">
-                    <img
-                      loading="lazy"
-                      src="./images/sections/section-series/series-item-x.png"
-                      class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
-                      alt="X серия"
-                    />
-                  </span>
-
-                  <span
-                    class="text-4xl font-bold uppercase sm:text-base lg:text-5xl"
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark self-center"
+                    >Подробнее</a
                   >
-                    <span
-                      class="text-[9.875rem] leading-[0.5] sm:text-[5.625rem] lg:text-[9.375rem]"
-                      >X</span
-                    >
-                    <br />
-                    серия
-                  </span>
-                </span>
+                </article>
 
-                <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
                 >
-                  Простые в использовании телефоны, разработанные специально для
-                  пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
-                  помощи “SOS”.
-                </span>
-              </a>
+                  <header>
+                    <h3
+                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
+                    >
+                      <a href="product.html">MAXVI P235ds</a>
+                    </h3>
+                  </header>
+
+                  <div class="relative px-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
+                    >
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <figure class="relative before:block before:pt-[100%]">
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-02.png"
+                          alt="MAXVI P235ds"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div class="flex flex-wrap justify-center gap-1">
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="mt-auto flex min-h-16 flex-col justify-end gap-2 text-center"
+                  >
+                    Цена:
+                    <span class="text-3xl font-bold">2850&nbsp;₽</span>
+                  </div>
+
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark self-center"
+                    >Подробнее</a
+                  >
+                </article>
+
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
+                >
+                  <header>
+                    <h3
+                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
+                    >
+                      <a href="product.html">MAXVI P235ds UP</a>
+                    </h3>
+                  </header>
+
+                  <div class="relative px-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
+                    >
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-2 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white"
+                      >
+                        <span
+                          class="block size-10 bg-contain bg-center bg-no-repeat"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <figure class="relative before:block before:pt-[100%]">
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-02.png"
+                          alt="MAXVI P235ds UP"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div class="flex flex-wrap justify-center gap-1">
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="mx-auto mt-auto flex min-h-16 max-w-40 flex-col justify-end text-center font-bold uppercase text-primary-500"
+                  >
+                    Скоро <span class="text-sm">в&nbsp;продаже!</span>
+                  </div>
+
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark self-center"
+                    >Подробнее</a
+                  >
+                </article>
+              </div>
             </div>
           </div>
         </div>
