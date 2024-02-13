@@ -14,12 +14,21 @@
         <div class="flex items-center justify-between gap-7">
           <button
             type="button"
-            class="flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 p-1.5 lg:hidden"
-            title="Открыть мобильное меню"
+            aria-expanded="false"
+            aria-controls="offcanvas"
+            data-controls-focusabled="true"
+            class="offcanvas-toggle group/toggle flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 p-1.5 lg:hidden"
+            aria-label="Меню"
           >
-            <span class="block h-0.5 w-full bg-current"></span>
-            <span class="block h-0.5 w-full bg-current"></span>
-            <span class="block h-0.5 w-full bg-current"></span>
+            <span
+              class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(0.5rem)_rotate(45deg)]"
+            ></span>
+            <span
+              class="block h-0.5 w-full bg-current group-aria-expanded/toggle:invisible"
+            ></span>
+            <span
+              class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(-0.5rem)_rotate(-45deg)]"
+            ></span>
           </button>
 
           <a class="inline-block shrink-0" href="./index.html">
@@ -48,7 +57,7 @@
                     <ul class="bg-black/90 xl:text-lg" role="tablist">
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="true"
                           aria-controls="megamenu-tab-phone"
@@ -64,7 +73,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-tablet"
@@ -80,7 +89,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-accessories"
@@ -96,7 +105,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-household"
@@ -112,7 +121,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-computer-accessories"
@@ -128,7 +137,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-portable-electronics"
@@ -144,7 +153,7 @@
                       </li>
                       <li>
                         <a
-                          href="series.html"
+                          href="category.html"
                           role="tab"
                           aria-selected="false"
                           aria-controls="megamenu-tab-phones-for-office"
@@ -482,10 +491,10 @@
 
       <section class="my-10 md:my-14">
         <div class="container-lg">
-          <div class="grid grid-cols-2 gap-3.5 sm:grid-cols-4 xl:gap-7">
+          <div class="grid grid-cols-2 gap-3.5 md:grid-cols-4 xl:gap-7">
             <a
               href="/"
-              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md md:p-3.5 md:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
+              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md transition-all hover:scale-[1.01] hover:shadow-lg lg:p-3.5 lg:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
             >
               <span class="badge badge--danger absolute left-2.5 top-2.5 z-10">
                 Новинка
@@ -508,7 +517,7 @@
 
             <a
               href="/"
-              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md md:p-3.5 md:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
+              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md transition-all hover:scale-[1.01] hover:shadow-lg lg:p-3.5 lg:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
             >
               <span class="badge badge--danger absolute left-2.5 top-2.5 z-10">
                 Новинка
@@ -531,7 +540,7 @@
 
             <a
               href="/"
-              class="relative col-span-2 row-span-2 flex flex-col rounded-2xl bg-white p-5 font-display shadow-md xl:text-lg"
+              class="relative col-span-2 row-span-2 flex flex-col rounded-2xl bg-white p-5 font-display shadow-md transition-all hover:scale-[1.01] hover:shadow-lg md:p-3.5 lg:p-5 xl:text-lg"
             >
               <span class="title-h2 relative z-10 uppercase text-primary-500">
                 Скоро в продаже
@@ -562,7 +571,7 @@
 
             <a
               href="/"
-              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md md:p-3.5 md:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
+              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md transition-all hover:scale-[1.01] hover:shadow-lg lg:p-3.5 lg:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
             >
               <span class="badge badge--danger absolute left-2.5 top-2.5 z-10">
                 Новинка
@@ -585,7 +594,7 @@
 
             <a
               href="/"
-              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md md:p-3.5 md:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
+              class="relative flex flex-col rounded-xl bg-white p-2.5 font-display text-sm shadow-md transition-all hover:scale-[1.01] hover:shadow-lg lg:p-3.5 lg:text-base xl:rounded-2xl xl:p-5 xl:text-lg"
             >
               <span class="badge badge--danger absolute left-2.5 top-2.5 z-10">
                 Новинка
@@ -612,39 +621,12 @@
       <section class="my-10 md:my-16 lg:my-20 xl:my-[6.25rem]">
         <div class="container-lg">
           <div
-            class="grid grid-cols-1 gap-3.5 sm:grid-cols-2 md:grid-cols-[repeat(3,_1fr)_140px] xl:gap-7"
+            class="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-[repeat(3,_1fr)_140px] xl:gap-7"
           >
-            <a href="" class="relative overflow-hidden rounded-xl pt-[50%]">
-              <img
-                loading="lazy"
-                src="./images/sections/section-gallery/gallery-item-01.jpg"
-                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover object-center"
-                alt="Ручной блендр"
-              />
-
-              <svg
-                class="absolute bottom-0 left-0 right-0 top-0 m-auto size-16 text-primary-500 md:size-12 xl:size-20"
-              >
-                <use xlink:href="./images/icons/sprite.svg#icon-play"></use>
-              </svg>
-            </a>
-
-            <a href="" class="relative overflow-hidden rounded-xl pt-[50%]">
-              <img
-                loading="lazy"
-                src="./images/sections/section-gallery/gallery-item-02.jpg"
-                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover object-center"
-                alt="Радиоприемник PR-03"
-              />
-
-              <svg
-                class="absolute bottom-0 left-0 right-0 top-0 m-auto size-16 text-primary-500 md:size-12 xl:size-20"
-              >
-                <use xlink:href="./images/icons/sprite.svg#icon-play"></use>
-              </svg>
-            </a>
-
-            <a href="" class="relative overflow-hidden rounded-xl pt-[50%]">
+            <a
+              href=""
+              class="relative overflow-hidden rounded-xl pt-[50%] transition-all hover:scale-[1.01]"
+            >
               <img
                 loading="lazy"
                 src="./images/sections/section-gallery/gallery-item-01.jpg"
@@ -661,7 +643,43 @@
 
             <a
               href=""
-              class="flex flex-col items-center justify-center gap-1.5 rounded-xl bg-white p-3 text-center font-display shadow-md xl:text-lg"
+              class="relative overflow-hidden rounded-xl pt-[50%] transition-all hover:scale-[1.01]"
+            >
+              <img
+                loading="lazy"
+                src="./images/sections/section-gallery/gallery-item-02.jpg"
+                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover object-center"
+                alt="Радиоприемник PR-03"
+              />
+
+              <svg
+                class="absolute bottom-0 left-0 right-0 top-0 m-auto size-16 text-primary-500 md:size-12 xl:size-20"
+              >
+                <use xlink:href="./images/icons/sprite.svg#icon-play"></use>
+              </svg>
+            </a>
+
+            <a
+              href=""
+              class="relative overflow-hidden rounded-xl pt-[50%] transition-all hover:scale-[1.01]"
+            >
+              <img
+                loading="lazy"
+                src="./images/sections/section-gallery/gallery-item-01.jpg"
+                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full object-cover object-center"
+                alt="Ручной блендр"
+              />
+
+              <svg
+                class="absolute bottom-0 left-0 right-0 top-0 m-auto size-16 text-primary-500 md:size-12 xl:size-20"
+              >
+                <use xlink:href="./images/icons/sprite.svg#icon-play"></use>
+              </svg>
+            </a>
+
+            <a
+              href=""
+              class="flex flex-col items-center justify-center gap-1.5 rounded-xl bg-white p-3 text-center font-display shadow-md transition-all hover:scale-[1.01] hover:shadow-lg xl:text-lg"
             >
               <svg class="block size-16 text-primary-500 md:size-12 xl:size-20">
                 <use xlink:href="./images/icons/sprite.svg#icon-play"></use>
@@ -680,11 +698,11 @@
           </header>
 
           <div
-            class="mt-5 grid grid-cols-2 gap-3.5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:gap-7"
+            class="mt-5 grid grid-cols-2 gap-3.5 md:grid-cols-3 lg:grid-cols-4 lg:grid-cols-6 xl:gap-7"
           >
             <a
-              href="series.html"
-              class="relative col-span-2 row-span-2 rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-mobile.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative col-span-2 row-span-2 rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-mobile.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span class="title-h5 absolute left-2.5 top-2.5 font-normal">
                 Мобильные <br />
@@ -693,77 +711,77 @@
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-tablet.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-tablet.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Планшеты
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-accessories.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-accessories.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Аксессуары
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-household.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-household.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Бытовая техника
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-computer.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-computer.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Компьютерная периферия
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-electronics.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-electronics.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Портативная электроника
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-smartphone.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-smartphone.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Смартфоны
               </span>
             </a>
 
             <a
-              href="series.html"
-              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-phone.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display"
+              href="category.html"
+              class="relative rounded-xl bg-white bg-[url('../images/sections/section-products/product-item-phone.jpg')] bg-contain bg-center bg-no-repeat pt-[100%] font-display transition-all hover:scale-[1.01] hover:shadow-md"
             >
               <span
-                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal"
+                class="xl:title-h5 absolute left-2.5 right-2.5 top-2.5 font-normal md:text-base"
               >
                 Телефоны для дома и офиса
               </span>
@@ -1006,54 +1024,140 @@
       </section>
     </main>
 
-    <footer class="bg-[#535766] pb-5 pt-5 font-secondary text-white">
+    <footer
+      class="bg-secondary-500 pb-8 pt-14 font-secondary text-white md:pb-20 md:pt-20 lg:pb-5 lg:pt-16"
+    >
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-7">
-          <div class="flex flex-col gap-2 xl:gap-4">
-            <h3 class="title-h2 font-display">Продукция</h3>
+        <div
+          class="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3 lg:justify-items-start lg:gap-7"
+        >
+          <div class="hidden flex-col gap-2 lg:flex xl:gap-3">
+            <h3 class="title-h2 font-display uppercase">Продукция</h3>
 
             <ul class="xl:text-lg">
-              <li><a href="#">Мобильные телефоны</a></li>
-              <li><a href="#">Планшеты</a></li>
-              <li><a href="#">Аксессуары</a></li>
-              <li><a href="#">Бытовая техника</a></li>
-              <li><a href="#">Компьютерная периферия</a></li>
-              <li><a href="#">Портативная электроника</a></li>
-              <li><a href="#">Смартфоны</a></li>
-              <li><a href="#">Телефоны для дома и офиса</a></li>
-              <li><a href="#">Архив товаров</a></li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-2 xl:gap-4">
-            <h3 class="title-h2 font-display">Партнерам</h3>
-
-            <ul class="xl:text-lg">
-              <li><a href="#">Личный кабинет продавца</a></li>
-              <li><a href="#">Личный кабинет АСЦ</a></li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-2 xl:gap-4">
-            <ul class="flex flex-col gap-2 xl:gap-4 xl:text-lg">
               <li>
                 <a
                   href="#"
-                  class="grid grid-cols-[auto_1fr] items-center gap-2"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Мобильные телефоны
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Планшеты
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Аксессуары
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Бытовая техника
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Компьютерная периферия
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Портативная электроника
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Смартфоны
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Телефоны для дома и офиса
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Архив товаров
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hidden flex-col gap-2 lg:flex xl:gap-3">
+            <h3 class="title-h2 font-display uppercase">Партнерам</h3>
+
+            <ul class="xl:text-lg">
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Личный кабинет продавца
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="link link--current py-0.5 leading-none no-underline"
+                >
+                  Личный кабинет АСЦ
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-2 xl:gap-4">
+            <ul
+              class="flex flex-col gap-2 text-xs md:flex-row md:items-center md:gap-0 lg:flex-col lg:items-start lg:gap-4 xl:gap-8 xl:text-lg"
+            >
+              <li
+                class="md:odd:border-r md:odd:border-r-white/25 lg:border-none"
+              >
+                <a
+                  href="#"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
                   target="_blank"
                 >
-                  <svg class="block h-4 w-6 xl:h-6 xl:w-10">
+                  <svg class="block h-6 w-8 xl:h-6 xl:w-10">
                     <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
                   </svg>
                   Страница ВКонтакте
                 </a>
               </li>
+
               <li>
                 <a
                   href="mailto:info@maxvi.ru"
-                  class="grid grid-cols-[auto_1fr] items-center gap-2"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
                 >
-                  <svg class="block h-4 w-6 xl:h-6 xl:w-10">
+                  <svg class="block h-6 w-8 xl:h-7 xl:w-10">
                     <use
                       xlink:href="./images/icons/sprite.svg#icon-email"
                     ></use>
@@ -1065,11 +1169,355 @@
           </div>
         </div>
 
-        <p class="mt-5 text-center text-sm opacity-25 md:text-base xl:text-lg">
+        <p
+          class="mt-10 text-center text-xs opacity-25 md:mt-6 lg:mt-16 lg:text-base xl:text-lg"
+        >
           &copy;&nbsp;2013-2023 MAXVI. Все права защищены.
         </p>
       </div>
     </footer>
+
+    <!-- Offcanvas -->
+    <div
+      id="offcanvas"
+      aria-hidden="true"
+      tabindex="0"
+      class="fixed bottom-0 left-0 right-0 top-0 z-50 flex h-full translate-y-0 flex-col overflow-y-auto overscroll-contain scroll-smooth bg-black p-3.5 pt-14 text-white transition-all aria-hidden:invisible aria-hidden:-translate-y-full"
+    >
+      <div class="flex grow flex-col gap-2">
+        <nav class="flex grow flex-col justify-center text-base">
+          <ul class="flex flex-col">
+            <li
+              class="grid grid-cols-[1fr_auto] items-center gap-x-2 overflow-hidden"
+            >
+              <a
+                href="categories.html"
+                class="block py-3.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+              >
+                Каталог
+              </a>
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="offcanvas-directory-catalog"
+                class="peer/toggle flex size-10 items-center justify-center border-l border-l-white after:block after:size-3.5 after:bg-current after:[clip-path:polygon(0_45%,45%_45%,45%_0,55%_0,55%_45%,100%_45%,100%_55%,55%_55%,55%_100%,45%_100%,45%_55%,0_55%)] aria-expanded:after:[clip-path:polygon(0_45%,45%_45%,45%_45%,55%_45%,55%_45%,100%_45%,100%_55%,55%_55%,55%_55%,45%_55%,45%_55%,0_55%)]"
+              ></button>
+
+              <div
+                id="offcanvas-directory-catalog"
+                aria-hidden="true"
+                class="col-span-full grid grid-rows-[1fr] transition-all duration-200 aria-hidden:grid-rows-[0fr]"
+              >
+                <ul class="overflow-hidden">
+                  <li class="grid grid-cols-[auto_1fr] items-center gap-x-2">
+                    <a
+                      href="category.html"
+                      class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                    >
+                      Мобильные телефоны
+                    </a>
+                    <button
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="offcanvas-directory-catalog-phone"
+                      aria-label="Список мобильные телефоны"
+                      class="flex size-8 items-center justify-center after:block after:size-3.5 after:bg-current after:[clip-path:polygon(0_45%,45%_45%,45%_0,55%_0,55%_45%,100%_45%,100%_55%,55%_55%,55%_100%,45%_100%,45%_55%,0_55%)] aria-expanded:after:[clip-path:polygon(0_45%,45%_45%,45%_45%,55%_45%,55%_45%,100%_45%,100%_55%,55%_55%,55%_55%,45%_55%,45%_55%,0_55%)]"
+                    ></button>
+
+                    <div
+                      id="offcanvas-directory-catalog-phone"
+                      aria-hidden="true"
+                      class="col-span-full grid grid-rows-[1fr] transition-all duration-200 aria-hidden:grid-rows-[0fr]"
+                    >
+                      <ul class="overflow-hidden pl-5">
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            B серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            C серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            E серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            K серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            P серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            R серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            T серия
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            X серия
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="grid grid-cols-[auto_1fr] items-center gap-x-2">
+                    <a
+                      href="category.html"
+                      class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                    >
+                      Планшеты
+                    </a>
+                    <button
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="offcanvas-directory-catalog-tablet"
+                      aria-label="Список планшеты"
+                      class="flex size-8 items-center justify-center after:block after:size-3.5 after:bg-current after:[clip-path:polygon(0_45%,45%_45%,45%_0,55%_0,55%_45%,100%_45%,100%_55%,55%_55%,55%_100%,45%_100%,45%_55%,0_55%)] aria-expanded:after:[clip-path:polygon(0_45%,45%_45%,45%_45%,55%_45%,55%_45%,100%_45%,100%_55%,55%_55%,55%_55%,45%_55%,45%_55%,0_55%)]"
+                    ></button>
+
+                    <div
+                      id="offcanvas-directory-catalog-tablet"
+                      aria-hidden="true"
+                      class="col-span-full grid grid-rows-[1fr] transition-all duration-200 aria-hidden:grid-rows-[0fr]"
+                    >
+                      <ul class="overflow-hidden pl-5">
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Планшеты для рисования
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="grid grid-cols-[auto_1fr] items-center gap-x-2">
+                    <a
+                      href="category.html"
+                      class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                    >
+                      Аксессуары
+                    </a>
+                    <button
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="offcanvas-directory-catalog-accessories"
+                      aria-label="Список аксессуары"
+                      class="flex size-8 items-center justify-center after:block after:size-3.5 after:bg-current after:[clip-path:polygon(0_45%,45%_45%,45%_0,55%_0,55%_45%,100%_45%,100%_55%,55%_55%,55%_100%,45%_100%,45%_55%,0_55%)] aria-expanded:after:[clip-path:polygon(0_45%,45%_45%,45%_45%,55%_45%,55%_45%,100%_45%,100%_55%,55%_55%,55%_55%,45%_55%,45%_55%,0_55%)]"
+                    ></button>
+
+                    <div
+                      id="offcanvas-directory-catalog-accessories"
+                      aria-hidden="true"
+                      class="col-span-full grid grid-rows-[1fr] transition-all duration-200 aria-hidden:grid-rows-[0fr]"
+                    >
+                      <ul class="overflow-hidden pl-5">
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Автомобильные ЗУ
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Сетевые ЗУ
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Беспроводные ЗУ
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Автомобильные держатели
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Беспроводные наушники
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="series-p.html"
+                            class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                          >
+                            Наушники и гарнитуры
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block py-3.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+              >
+                Где купить
+              </a>
+            </li>
+
+            <li class="grid grid-cols-[1fr_auto] items-center gap-x-2">
+              <a
+                href=""
+                class="block py-3.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+              >
+                Сервис
+              </a>
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls="offcanvas-directory-service"
+                class="flex size-10 items-center justify-center border-l border-l-white after:block after:size-3.5 after:bg-current after:[clip-path:polygon(0_45%,45%_45%,45%_0,55%_0,55%_45%,100%_45%,100%_55%,55%_55%,55%_100%,45%_100%,45%_55%,0_55%)] aria-expanded:after:[clip-path:polygon(0_45%,45%_45%,45%_45%,55%_45%,55%_45%,100%_45%,100%_55%,55%_55%,55%_55%,45%_55%,45%_55%,0_55%)]"
+              ></button>
+
+              <div
+                id="offcanvas-directory-service"
+                aria-hidden="true"
+                class="col-span-full grid grid-rows-[1fr] transition-all duration-200 aria-hidden:grid-rows-[0fr]"
+              >
+                <ul class="overflow-hidden">
+                  <li>
+                    <a
+                      class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                    >
+                      Сервисные центры
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="block py-2.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+                    >
+                      Инструкции и ПО
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a
+                href=""
+                class="block py-3.5 uppercase opacity-80 hover:opacity-100 focus:opacity-100"
+              >
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div>
+          <h3 class="sr-only">Мы в социальных сетях</h3>
+          <ul class="flex flex-wrap items-center justify-center gap-1">
+            <li>
+              <a
+                href="https://vk.com/maxvi_ru"
+                aria-label="Группа ВКонтакте"
+                class="flex size-8 items-center justify-center hover:opacity-75 focus:opacity-75"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="block h-4 w-6">
+                  <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://vk.com/maxvi_ru"
+                aria-label="Группа ВКонтакте"
+                class="flex size-8 items-center justify-center hover:opacity-75 focus:opacity-75"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="block h-4 w-6">
+                  <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://vk.com/maxvi_ru"
+                aria-label="Группа ВКонтакте"
+                class="flex size-8 items-center justify-center hover:opacity-75 focus:opacity-75"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg class="block h-4 w-6">
+                  <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <!-- Search -->
     <div

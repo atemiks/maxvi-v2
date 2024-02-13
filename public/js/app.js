@@ -9,24 +9,73 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/header-nav */ "./src/js/header-nav.js");
-/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
-/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
-/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
-/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
-/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/card-product */ "./src/js/card-product.js");
+/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/aria */ "./src/js/aria.js");
+/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/header-nav */ "./src/js/header-nav.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../src/js/megamenu */ "./src/js/megamenu.js");
+/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../src/js/filter */ "./src/js/filter.js");
+/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../src/js/card-product */ "./src/js/card-product.js");
+/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../src/js/product/product.js */ "./src/js/product/product.js");
 
 
 
 
 
 
-(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_src_js_search__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
+
+(0,_src_js_aria__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_src_js_search__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
+
+/***/ }),
+
+/***/ "./src/js/aria.js":
+/*!************************!*\
+  !*** ./src/js/aria.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initAria = function initAria() {
+  var expanders = document.querySelectorAll("[aria-expanded]");
+  var expandItem = function expandItem(item) {
+    var target = item.getAttribute("aria-controls");
+    var targetContainer = document.getElementById(target);
+    var isFocusabled = item.getAttribute("data-controls-focusabled") === "true";
+    item.setAttribute("aria-expanded", true);
+    if (targetContainer) {
+      targetContainer.setAttribute("aria-hidden", false);
+      if (isFocusabled) {
+        targetContainer.focus();
+      }
+    }
+  };
+  var collapseItem = function collapseItem(item) {
+    var target = item.getAttribute("aria-controls");
+    var targetContainer = document.getElementById(target);
+    item.setAttribute("aria-expanded", false);
+    if (targetContainer) {
+      targetContainer.setAttribute("aria-hidden", true);
+    }
+  };
+  expanders.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var isExpanded = item.getAttribute("aria-expanded") === "true";
+      isExpanded ? collapseItem(item) : expandItem(item);
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initAria);
 
 /***/ }),
 
@@ -212,6 +261,55 @@ var initMegamenu = function initMegamenu() {
 
 /***/ }),
 
+/***/ "./src/js/product/product.js":
+/*!***********************************!*\
+  !*** ./src/js/product/product.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.mjs");
+/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+
+
+var initProduct = function initProduct() {
+  var productGalleryContainer = document.querySelector(".swiper-product-gallery");
+  var productThumbsContainer = document.querySelector(".swiper-product-thumbs");
+  if (productGalleryContainer && productThumbsContainer) {
+    var productThumbsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](productThumbsContainer, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
+      slidesPerView: 3,
+      rewind: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        640: {
+          direction: "vertical"
+        }
+      }
+    });
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](productGalleryContainer, {
+      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Thumbs],
+      slidesPerView: 1,
+      rewind: true,
+      thumbs: {
+        swiper: productThumbsSlider
+      },
+      pagination: {
+        el: ".swiper-pagination"
+      }
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initProduct);
+
+/***/ }),
+
 /***/ "./src/js/search.js":
 /*!**************************!*\
   !*** ./src/js/search.js ***!
@@ -284,14 +382,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 
 
-// import "swiper/css";
-// import "swiper/css/pagination";
-
 var initHeroSlider = function initHeroSlider() {
   var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-hero", {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
     pagination: {
-      el: ".swiper-pagination"
+      el: ".swiper-pagination",
+      clickable: true
     }
   });
 };
@@ -10670,7 +10766,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/public/js/app": 0,
-/******/ 			"public/css/output": 0
+/******/ 			"public/css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -10720,8 +10816,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/css/output"], () => (__webpack_require__("./src/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/output"], () => (__webpack_require__("./src/css/input.css")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/css/input.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
