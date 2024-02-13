@@ -480,36 +480,44 @@
 
       <section class="mt-5">
         <div class="container-lg">
-          <div class="grid grid-cols-[max-content_1fr] items-center gap-x-7">
+          <div class="grid grid-cols-[max-content_1fr] gap-x-3.5 lg:gap-x-7">
             <p
               class="font-bold uppercase leading-none text-primary-500 lg:text-5xl"
             >
-              <span class="text-[4.375rem] lg:text-[7.1875rem]">P</span>
+              <span class="text-[4.375rem] leading-[0.75] lg:text-[7.1875rem]"
+                >P</span
+              >
               серия
             </p>
 
-            <p>
-              Само названии серии P - это сокращение английского слова "Power",
-              что в переводе означает сила, энергия, мощь. В эту серию собраны
-              аппараты, имеющие достаточно внушительные показатели по ёмкости
-              аккумулятора и громкости динамика.
-            </p>
+            <div
+              class="self-center text-xs leading-none text-muted-500 lg:text-base lg:leading-[1.125]"
+            >
+              <p>
+                Само названии серии P - это сокращение английского слова
+                "Power", что в переводе означает сила, энергия, мощь. В эту
+                серию собраны аппараты, имеющие достаточно внушительные
+                показатели по ёмкости аккумулятора и громкости динамика.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="lg:hidden">
+      <section class="mt-5 lg:hidden">
         <div class="container-lg">
           <div
             class="grid grid-cols-[1fr_auto] items-center gap-3.5 lg:gap-x-7"
           >
             <fieldset form="form-filter">
               <div class="flex flex-wrap items-center">
-                <legend class="text-muted-500">Сортировать:</legend>
+                <legend class="text-xs text-muted-500 lg:text-sm">
+                  Сортировать:
+                </legend>
 
                 <div class="flex flex-wrap">
                   <label
-                    class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                    class="relative cursor-pointer border-r px-1 text-xs leading-none text-muted-500 last-of-type:border-none lg:text-sm"
                   >
                     <input
                       type="radio"
@@ -525,7 +533,7 @@
                   </label>
 
                   <label
-                    class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                    class="relative cursor-pointer border-r px-1 text-xs leading-none text-muted-500 last-of-type:border-none lg:text-sm"
                   >
                     <input
                       class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
@@ -556,7 +564,7 @@
         </div>
       </section>
 
-      <section class="mt-1.5 lg:mt-6 xl:mt-11">
+      <section class="mt-4 lg:mt-6 xl:mt-11">
         <div class="container-lg">
           <div
             class="no-scrollbar -mx-3.5 flex snap-x scroll-pl-3.5 gap-2 overflow-x-auto px-3.5 [--tw-gap-x:0.5rem] sm:-mx-20 sm:scroll-pl-16 sm:px-16 md:scroll-pl-20 md:px-20 lg:mx-0 lg:grid lg:snap-none lg:grid-cols-6 lg:gap-7 lg:overflow-visible lg:px-0"
@@ -642,10 +650,10 @@
         </div>
       </section>
 
-      <section class="mt-3.5 lg:mt-10 xl:mt-[5.625rem]">
+      <section class="mt-5 lg:mt-10">
         <div class="container-lg">
           <div
-            class="grid items-start gap-3.5 lg:grid-cols-[15rem_1fr] xl:gap-7"
+            class="grid items-start gap-x-3.5 lg:grid-cols-[15rem_1fr] lg:gap-x-7 xl:gap-x-24"
           >
             <aside class="flex flex-col gap-2.5">
               <div
@@ -877,14 +885,16 @@
               </div>
             </aside>
 
-            <div class="flex flex-col gap-5">
-              <fieldset form="form-filter" class="hidden lg:block">
+            <div class="flex flex-col gap-y-10">
+              <fieldset form="form-filter" class="mt-2 hidden lg:block">
                 <div class="flex flex-wrap items-center">
-                  <legend class="text-muted-500">Сортировать:</legend>
+                  <legend class="text-xs text-muted-500 lg:text-sm">
+                    Сортировать:
+                  </legend>
 
                   <div class="flex flex-wrap">
                     <label
-                      class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                      class="relative cursor-pointer border-r px-1 text-xs leading-none text-muted-500 last-of-type:border-none lg:text-sm"
                     >
                       <input
                         type="radio"
@@ -900,7 +910,7 @@
                     </label>
 
                     <label
-                      class="relative cursor-pointer border-r px-1 leading-none text-muted-500 last-of-type:border-none"
+                      class="relative cursor-pointer border-r px-1 text-xs leading-none text-muted-500 last-of-type:border-none lg:text-sm"
                     >
                       <input
                         class="peer absolute bottom-0 left-0 right-0 top-0 appearance-none"
@@ -918,105 +928,117 @@
               </fieldset>
 
               <div
-                class="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 lg:gap-x-7"
+                class="grid grid-cols-1 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-y-5 lg:gap-x-7 xl:gap-x-10 xl:gap-y-20"
               >
                 <article
-                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
                 >
                   <header>
                     <h3
-                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
                     >
                       <a href="product.html">MAXVI B100</a>
                     </h3>
                   </header>
 
-                  <div class="relative px-10">
+                  <div class="relative px-3.5 xl:mt-10">
                     <ul
-                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
                     >
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Экран 2.4''
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Батарея 1400&nbsp;mAh
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Powerbank
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Функция SOS
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Фонарик
                         </span>
                       </li>
                     </ul>
 
-                    <figure class="relative before:block before:pt-[100%]">
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
                       <a
                         href="product.html"
                         class="absolute bottom-0 left-0 right-0 top-0"
@@ -1031,11 +1053,13 @@
                     </figure>
                   </div>
 
-                  <div class="flex flex-wrap justify-center gap-1">
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
                     <button
                       type="button"
                       aria-selected="true"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-01.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
@@ -1047,7 +1071,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-02.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
@@ -1059,7 +1083,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-03.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
@@ -1070,116 +1094,131 @@
                   </div>
 
                   <div
-                    class="mt-auto flex min-h-16 flex-col justify-end gap-2 text-center"
+                    class="mt-5 flex flex-col justify-end gap-2 text-center md:mt-auto md:min-h-16 md:gap-0 lg:gap-2"
                   >
                     Цена:
-                    <span class="text-3xl font-bold">2790&nbsp;₽</span>
+                    <span class="text-xl font-bold lg:text-3xl">
+                      2790&nbsp;₽
+                    </span>
                   </div>
 
                   <a
                     href="product.html"
-                    class="button button--outline-dark self-center"
-                    >Подробнее</a
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
                   >
+                    Подробнее
+                  </a>
                 </article>
 
                 <article
-                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
                 >
                   <header>
                     <h3
-                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
                     >
                       <a href="product.html">MAXVI P235ds</a>
                     </h3>
                   </header>
 
-                  <div class="relative px-10">
+                  <div class="relative px-3.5 xl:mt-10">
                     <ul
-                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
                     >
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Экран 2.4''
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Батарея 1400&nbsp;mAh
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Powerbank
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Функция SOS
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Фонарик
                         </span>
                       </li>
                     </ul>
 
-                    <figure class="relative before:block before:pt-[100%]">
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
                       <a
                         href="product.html"
                         class="absolute bottom-0 left-0 right-0 top-0"
@@ -1194,11 +1233,13 @@
                     </figure>
                   </div>
 
-                  <div class="flex flex-wrap justify-center gap-1">
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
                     <button
                       type="button"
                       aria-selected="true"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-02.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
@@ -1210,7 +1251,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-03.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
@@ -1222,7 +1263,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-01.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
@@ -1233,116 +1274,488 @@
                   </div>
 
                   <div
-                    class="mt-auto flex min-h-16 flex-col justify-end gap-2 text-center"
+                    class="mt-5 flex flex-col justify-end gap-2 text-center md:mt-auto md:min-h-16 md:gap-0 lg:gap-2"
                   >
                     Цена:
-                    <span class="text-3xl font-bold">2850&nbsp;₽</span>
+                    <span class="text-xl font-bold lg:text-3xl">
+                      2850&nbsp;₽
+                    </span>
                   </div>
 
                   <a
                     href="product.html"
-                    class="button button--outline-dark self-center"
-                    >Подробнее</a
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
                   >
+                    Подробнее
+                  </a>
                 </article>
 
                 <article
-                  class="card-product mx-auto flex w-full max-w-80 flex-col gap-5 text-muted-700 sm:max-w-none"
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
                 >
                   <header>
                     <h3
-                      class="text-center text-xl font-bold text-muted-500 hover:text-muted-700"
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
                     >
                       <a href="product.html">MAXVI P235ds UP</a>
                     </h3>
                   </header>
 
-                  <div class="relative px-10">
+                  <div class="relative px-3.5 xl:mt-10">
                     <ul
-                      class="absolute left-0 top-0 z-10 flex flex-col items-start"
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
                     >
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Экран 2.4''
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Батарея 1400&nbsp;mAh
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Powerbank
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Функция SOS
                         </span>
                       </li>
 
                       <li
-                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center gap-2 overflow-hidden rounded-lg border border-transparent p-1 text-sm font-bold uppercase leading-none text-tertiary-500 hover:border-tertiary-500 hover:bg-white lg:p-2"
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
                       >
                         <span
-                          class="block size-9 bg-contain bg-center bg-no-repeat sm:size-6 lg:size-10"
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
                           style="
                             background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
                           "
                         ></span>
                         <span
-                          class="absolute -translate-x-1/3 opacity-0 transition-all group-hover/feature:static group-hover/feature:translate-x-0 group-hover/feature:opacity-100"
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
                         >
                           Фонарик
                         </span>
                       </li>
                     </ul>
 
-                    <figure class="relative before:block before:pt-[100%]">
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-03.png"
+                          alt="MAXVI P235ds UP"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="mx-auto mt-5 flex max-w-40 flex-col justify-end text-center text-sm font-bold uppercase leading-none text-primary-500 md:mt-auto md:min-h-16"
+                  >
+                    <span class="text-base">Скоро</span> в&nbsp;продаже!
+                  </div>
+
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
+                  >
+                    Подробнее
+                  </a>
+                </article>
+
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
+                >
+                  <header>
+                    <h3
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
+                    >
+                      <a href="product.html">MAXVI B100</a>
+                    </h3>
+                  </header>
+
+                  <div class="relative px-3.5 xl:mt-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
+                    >
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-01.png"
+                          alt="MAXVI B100"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="mt-5 flex flex-col justify-end gap-2 text-center md:mt-auto md:min-h-16 md:gap-0 lg:gap-2"
+                  >
+                    Цена:
+                    <span class="text-xl font-bold lg:text-3xl">
+                      2790&nbsp;₽
+                    </span>
+                  </div>
+
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
+                  >
+                    Подробнее
+                  </a>
+                </article>
+
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
+                >
+                  <header>
+                    <h3
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
+                    >
+                      <a href="product.html">MAXVI P235ds</a>
+                    </h3>
+                  </header>
+
+                  <div class="relative px-3.5 xl:mt-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
+                    >
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
                       <a
                         href="product.html"
                         class="absolute bottom-0 left-0 right-0 top-0"
@@ -1351,17 +1764,19 @@
                           loading="lazy"
                           class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
                           src="./uploads/products/product-item-02.png"
-                          alt="MAXVI P235ds UP"
+                          alt="MAXVI P235ds"
                         />
                       </a>
                     </figure>
                   </div>
 
-                  <div class="flex flex-wrap justify-center gap-1">
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
                     <button
                       type="button"
                       aria-selected="true"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-02.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
@@ -1373,7 +1788,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-03.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
@@ -1385,7 +1800,7 @@
                     <button
                       type="button"
                       aria-selected="false"
-                      class="card-product__color block size-6 cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
                       data-product-image-url="uploads/products/product-item-01.png"
                       style="
                         background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
@@ -1396,16 +1811,197 @@
                   </div>
 
                   <div
-                    class="mx-auto mt-auto flex min-h-16 max-w-40 flex-col justify-end text-center font-bold uppercase text-primary-500"
+                    class="mt-5 flex flex-col justify-end gap-2 text-center md:mt-auto md:min-h-16 md:gap-0 lg:gap-2"
                   >
-                    Скоро <span class="text-sm">в&nbsp;продаже!</span>
+                    Цена:
+                    <span class="text-xl font-bold lg:text-3xl">
+                      2850&nbsp;₽
+                    </span>
                   </div>
 
                   <a
                     href="product.html"
-                    class="button button--outline-dark self-center"
-                    >Подробнее</a
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
                   >
+                    Подробнее
+                  </a>
+                </article>
+
+                <article
+                  class="card-product mx-auto flex w-full max-w-80 flex-col text-muted-700 md:max-w-none"
+                >
+                  <header>
+                    <h3
+                      class="text-center text-base font-bold text-muted-500 hover:text-muted-700 lg:text-xl"
+                    >
+                      <a href="product.html">MAXVI P235ds UP</a>
+                    </h3>
+                  </header>
+
+                  <div class="relative px-3.5 xl:mt-10">
+                    <ul
+                      class="absolute left-0 top-0 z-10 flex flex-col items-start gap-1 xl:gap-1.5"
+                    >
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-2.4-inch-screen.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Экран 2.4''
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-battery.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Батарея 1400&nbsp;mAh
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-powerbank.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Powerbank
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-sos.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Функция SOS
+                        </span>
+                      </li>
+
+                      <li
+                        class="group/feature grid max-w-36 grid-cols-[auto_1fr] items-center overflow-hidden rounded-lg border border-transparent text-sm font-bold uppercase leading-none text-tertiary-500 lg:p-2 xl:gap-2 xl:p-1 xl:hover:border-tertiary-500 xl:hover:bg-white"
+                      >
+                        <span
+                          class="block size-9 bg-contain bg-center bg-no-repeat md:size-6 lg:size-10"
+                          style="
+                            background-image: url(&quot;./images/icons/features/icon-flashlight.svg&quot;);
+                          "
+                        ></span>
+                        <span
+                          class="absolute -translate-x-1/3 opacity-0 transition-all xl:group-hover/feature:static xl:group-hover/feature:translate-x-0 xl:group-hover/feature:opacity-100"
+                        >
+                          Фонарик
+                        </span>
+                      </li>
+                    </ul>
+
+                    <span class="absolute right-0 top-0 z-10">
+                      <svg
+                        class="block size-9 text-primary-500 md:size-5 lg:size-12"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </span>
+
+                    <figure
+                      class="relative mx-auto mt-5 max-w-44 before:block before:pt-[100%] md:mt-3.5 xl:max-w-64"
+                    >
+                      <a
+                        href="product.html"
+                        class="absolute bottom-0 left-0 right-0 top-0"
+                      >
+                        <img
+                          loading="lazy"
+                          class="card-product__media absolute bottom-0 left-0 right-0 top-0 m-auto h-full w-full object-contain object-center"
+                          src="./uploads/products/product-item-03.png"
+                          alt="MAXVI P235ds UP"
+                        />
+                      </a>
+                    </figure>
+                  </div>
+
+                  <div
+                    class="mt-9 flex flex-wrap justify-center gap-1 md:mt-6 xl:mb-8 xl:mt-10"
+                  >
+                    <button
+                      type="button"
+                      aria-selected="true"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-02.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-black.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Черный цвет</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-03.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-dark-blue.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Темно-синий</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-selected="false"
+                      class="card-product__color block size-[1.125rem] cursor-pointer rounded-full bg-cover bg-center bg-no-repeat aria-selected:outline aria-selected:outline-2 aria-selected:outline-border-700 md:size-3 lg:size-6"
+                      data-product-image-url="uploads/products/product-item-01.png"
+                      style="
+                        background-image: url(&quot;./uploads/colors/icon-color-green.svg&quot;);
+                      "
+                    >
+                      <span class="sr-only">Зеленый цвет</span>
+                    </button>
+                  </div>
+
+                  <div
+                    class="mx-auto mt-5 flex max-w-40 flex-col justify-end text-center text-sm font-bold uppercase leading-none text-primary-500 md:mt-auto md:min-h-16"
+                  >
+                    <span class="text-base">Скоро</span> в&nbsp;продаже!
+                  </div>
+
+                  <a
+                    href="product.html"
+                    class="button button--outline-dark button--sm mt-2 self-center xl:mt-7"
+                  >
+                    Подробнее
+                  </a>
                 </article>
               </div>
             </div>
