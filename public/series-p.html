@@ -64,7 +64,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Мобильные телефоны
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -80,7 +80,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Планшеты
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -96,7 +96,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Аксессуары
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -112,7 +112,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Бытовая техника
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -128,7 +128,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Компьютерная периферия
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -144,7 +144,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Портативная электроника
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -160,7 +160,7 @@
                           class="grid grid-cols-[1fr_auto] items-center gap-1.5 py-3.5 pl-6 pr-2.5 transition-colors hover:bg-black aria-selected:bg-black"
                         >
                           Телефоны для дома и офиса
-                          <svg class="block size-6">
+                          <svg class="block size-4">
                             <use
                               xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                             ></use>
@@ -373,13 +373,13 @@
                   class="absolute left-0 top-full hidden min-w-48 bg-black/80 group-[.hover]/item:block"
                 >
                   <li>
-                    <a class="block px-7 py-5 hover:bg-black">
+                    <a class="block px-7 py-5 transition-colors hover:bg-black">
                       Сервисные центры
                     </a>
                   </li>
 
                   <li>
-                    <a class="block px-7 py-5 hover:bg-black">
+                    <a class="block px-7 py-5 transition-colors hover:bg-black">
                       Инструкции и ПО
                     </a>
                   </li>
@@ -403,7 +403,7 @@
             aria-controls="pop-search"
             class="search-toggle flex size-11 items-center justify-center hover:opacity-75 lg:mr-auto"
           >
-            <svg class="block size-6">
+            <svg class="block size-4">
               <use xlink:href="./images/icons/sprite.svg#icon-search"></use>
             </svg>
             <span class="sr-only">Поиск</span>
@@ -478,17 +478,29 @@
         </div>
       </nav>
 
-      <section class="mt-5">
+      <section class="mt-5 lg:mt-7">
         <div class="container-lg">
-          <div class="grid grid-cols-[max-content_1fr] gap-x-3.5 lg:gap-x-7">
-            <p
-              class="font-bold uppercase leading-none text-primary-500 lg:text-5xl"
+          <div class="grid grid-cols-[auto_1fr] gap-x-3.5 lg:gap-x-7">
+            <div
+              class="grid grid-cols-[repeat(2,auto)] items-center gap-x-4 lg:gap-x-6"
             >
-              <span class="text-[4.375rem] leading-[0.75] lg:text-[7.1875rem]"
-                >P</span
+              <div
+                class="flex items-baseline gap-x-2.5 font-bold uppercase leading-none text-primary-500 lg:text-5xl"
               >
-              серия
-            </p>
+                <span
+                  class="text-[4.375rem] leading-[0.75] lg:text-[7.1875rem]"
+                >
+                  P
+                </span>
+                серия
+              </div>
+
+              <svg class="block size-16 opacity-10">
+                <use
+                  xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                ></use>
+              </svg>
+            </div>
 
             <div
               class="self-center text-xs leading-none text-muted-500 lg:text-base lg:leading-[1.125]"
@@ -564,17 +576,17 @@
         </div>
       </section>
 
-      <section class="mt-4 lg:mt-6 xl:mt-11">
+      <section class="mt-4 lg:mt-7">
         <div class="container-lg">
           <div
             class="no-scrollbar -mx-3.5 flex snap-x scroll-pl-3.5 gap-2 overflow-x-auto px-3.5 [--tw-gap-x:0.5rem] sm:-mx-20 sm:scroll-pl-16 sm:px-16 md:scroll-pl-20 md:px-20 lg:mx-0 lg:grid lg:snap-none lg:grid-cols-6 lg:gap-7 lg:overflow-visible lg:px-0"
           >
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-without-camera.svg&quot;);
                 "
@@ -584,10 +596,10 @@
 
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-3-sim.svg&quot;);
                 "
@@ -597,10 +609,10 @@
 
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-powerbank.svg&quot;);
                 "
@@ -610,10 +622,10 @@
 
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-type-c.svg&quot;);
                 "
@@ -623,10 +635,10 @@
 
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-military.svg&quot;);
                 "
@@ -636,10 +648,10 @@
 
             <a
               href=""
-              class="grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-all hover:scale-[1.01] hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
+              class="group grid w-[calc(33.3333%_-_var(--tw-gap-x))] shrink-0 snap-start grid-cols-[auto_1fr] items-center gap-2 rounded-xl border border-border-300 p-2 text-[0.625rem] font-bold leading-none transition-shadow hover:shadow md:w-[calc(25%_-_var(--tw-gap-x)/2)] lg:w-full lg:text-base xl:gap-5 xl:px-6 xl:py-2.5 xl:text-lg"
             >
               <span
-                class="block size-5 bg-contain bg-center bg-no-repeat lg:size-8"
+                class="block size-5 bg-contain bg-center bg-no-repeat transition-transform group-hover:scale-105 lg:size-8"
                 style="
                   background-image: url(&quot;./images/icons/categories/icon-loud-speaker.svg&quot;);
                 "
@@ -670,7 +682,7 @@
                     class="flex min-h-10 min-w-10 items-center justify-center rounded-full bg-border-500"
                     aria-label="Закрыть фильтр"
                   >
-                    <svg class="block size-6">
+                    <svg class="block size-4">
                       <use
                         xlink:href="./images/icons/sprite.svg#icon-close"
                       ></use>
@@ -2024,7 +2036,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Мобильные телефоны
                 </a>
@@ -2032,7 +2044,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Планшеты
                 </a>
@@ -2040,7 +2052,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Аксессуары
                 </a>
@@ -2048,7 +2060,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Бытовая техника
                 </a>
@@ -2056,7 +2068,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Компьютерная периферия
                 </a>
@@ -2064,7 +2076,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Портативная электроника
                 </a>
@@ -2072,7 +2084,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Смартфоны
                 </a>
@@ -2080,7 +2092,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Телефоны для дома и офиса
                 </a>
@@ -2088,7 +2100,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Архив товаров
                 </a>
@@ -2103,7 +2115,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Личный кабинет продавца
                 </a>
@@ -2111,7 +2123,7 @@
               <li>
                 <a
                   href="#"
-                  class="link link--current py-0.5 leading-none no-underline"
+                  class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Личный кабинет АСЦ
                 </a>

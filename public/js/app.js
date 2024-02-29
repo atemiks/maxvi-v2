@@ -9,14 +9,14 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/aria */ "./src/js/aria.js");
-/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/header-nav */ "./src/js/header-nav.js");
-/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../src/js/search */ "./src/js/search.js");
-/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../src/js/megamenu */ "./src/js/megamenu.js");
-/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../src/js/filter */ "./src/js/filter.js");
-/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
-/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../src/js/card-product */ "./src/js/card-product.js");
-/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../src/js/product/product.js */ "./src/js/product/product.js");
+/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/aria */ "./src/js/aria.js");
+/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/header-nav */ "./src/js/header-nav.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
+/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
+/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../src/js/card-product */ "./src/js/card-product.js");
+/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../src/js/product/product.js */ "./src/js/product/product.js");
 
 
 
@@ -183,9 +183,9 @@ var initHeaderNav = function initHeaderNav() {
   var headerNavItems = headerNav.querySelectorAll(".group\\/item");
   var activeItemIndex = undefined;
   var timeout = undefined;
-  headerNav.addEventListener("mouseleave", function (event) {
+  headerNav.addEventListener("mouseleave", function () {
+    clearTimeout(timeout);
     activeItemIndex = undefined;
-    timeout = undefined;
     headerNavItems.forEach(function (item) {
       item.classList.remove("hover");
     });
@@ -193,6 +193,7 @@ var initHeaderNav = function initHeaderNav() {
   headerNavItems.forEach(function (item, index) {
     item.setAttribute("data-item-index", index);
     item.addEventListener("mouseover", function (event) {
+      clearTimeout(timeout);
       timeout = setTimeout(function () {
         var targetItem = event.target.closest(".group\\/item");
         var targetItemIndex = targetItem.getAttribute("data-item-index");
@@ -203,9 +204,9 @@ var initHeaderNav = function initHeaderNav() {
           });
           item.classList.add("hover");
         }
-      }, 100);
+      }, 300);
     });
-    item.addEventListener("mouseleave", function (event) {
+    item.addEventListener("mouseleave", function () {
       clearTimeout(timeout);
     });
   });
@@ -249,9 +250,9 @@ var initMegamenu = function initMegamenu() {
             });
             target.setAttribute("aria-selected", true);
           }
-        }, 100);
+        }, 300);
       });
-      tab.addEventListener("mouseleave", function (event) {
+      tab.addEventListener("mouseleave", function () {
         clearTimeout(timeout);
       });
     });
@@ -282,6 +283,7 @@ var initProduct = function initProduct() {
     var productThumbsSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](productThumbsContainer, {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
       slidesPerView: 3,
+      spaceBetween: 16,
       rewind: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -289,6 +291,7 @@ var initProduct = function initProduct() {
       },
       breakpoints: {
         640: {
+          spaceBetween: 0,
           direction: "vertical"
         }
       }
@@ -383,8 +386,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var initHeroSlider = function initHeroSlider() {
-  var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-hero", {
-    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-hero", {
+    modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination],
+    rewind: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true
@@ -10766,7 +10774,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/public/js/app": 0,
-/******/ 			"public/css/app": 0
+/******/ 			"public/css/output": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -10816,8 +10824,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/css/input.css")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/output"], () => (__webpack_require__("./src/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/output"], () => (__webpack_require__("./src/css/input.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

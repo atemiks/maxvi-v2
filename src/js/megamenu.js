@@ -31,10 +31,10 @@ const initMegamenu = () => {
 
             target.setAttribute("aria-selected", true);
           }
-        }, 100);
+        }, 300);
       });
 
-      tab.addEventListener("mouseleave", (event) => {
+      tab.addEventListener("mouseleave", () => {
         clearTimeout(timeout);
       });
     });

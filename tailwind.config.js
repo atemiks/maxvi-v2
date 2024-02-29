@@ -80,6 +80,9 @@ module.exports = {
     },
     extend: {
       screens: {
+        sm: "480px",
+        md: "640px",
+        lg: "992px",
         "3xl": "1920px",
       },
       // 40 32 30 28 22 20 18 16
@@ -88,7 +91,7 @@ module.exports = {
           "2.5rem", // 40px
           {
             fontWeight: "700",
-            lineHeight: "normal",
+            lineHeight: 1.25,
           },
         ],
         "title-2": [
@@ -119,9 +122,13 @@ module.exports = {
         ],
       },
       colors: {
+        default: {
+          500: "#333333",
+        },
         primary: {
           500: "#0096D5",
-          900: "#1B83B8",
+          700: "#1B83B8",
+          900: "#045077",
         },
         secondary: {
           500: "#545766",
@@ -146,6 +153,7 @@ module.exports = {
         },
         placeholder: {
           500: "#F5F4F2",
+          700: "#D9D9D9",
         },
       },
     },

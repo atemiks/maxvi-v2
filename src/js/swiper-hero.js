@@ -1,9 +1,14 @@
 import Swiper from "swiper";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 const initHeroSlider = () => {
-  const swiperHero = new Swiper(".swiper-hero", {
-    modules: [Pagination],
+  new Swiper(".swiper-hero", {
+    modules: [Navigation, Pagination],
+    rewind: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

@@ -13,6 +13,7 @@ const initProduct = () => {
     const productThumbsSlider = new Swiper(productThumbsContainer, {
       modules: [Navigation],
       slidesPerView: 3,
+      spaceBetween: 16,
       rewind: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -20,6 +21,7 @@ const initProduct = () => {
       },
       breakpoints: {
         640: {
+          spaceBetween: 0,
           direction: "vertical",
         },
       },

@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <title>Maxvi</title>
+  </head>
+  <body class="bg-[#f2f2f2]">
+    <header
+      class="sticky top-0 z-[1000] bg-primary-500 py-2 font-secondary text-white"
+    >
+      <div class="container max-w-screen-3xl lg:px-10">
+        <div class="flex items-center gap-x-7">
+          <div
+            class="grid grid-cols-[repeat(2,auto)] items-center gap-x-7 justify-self-start text-[2.625rem] uppercase leading-none"
+          >
+            <a href="index.html" class="block">
+              <img
+                src="./images/logo-light.svg"
+                class="block h-8 w-44"
+                alt="Maxvi"
+              />
+            </a>
+            Bonus
+          </div>
+
+          <ul class="ml-auto flex gap-x-7">
+            <li>
+              <a
+                href=""
+                class="grid grid-cols-[repeat(3,auto)] items-center gap-x-3 text-5xl"
+              >
+                <span class="block size-10"></span>
+                Поддержка
+                <span
+                  class="rounded bg-primary-900 p-1 text-center font-medium text-white"
+                >
+                  12
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <figure
+            class="group relative grid grid-cols-[auto_auto] items-center gap-x-7"
+          >
+            <img
+              loading="lazy"
+              class="block size-[6.625rem] overflow-hidden rounded object-cover object-center"
+              src="./uploads/bonus/avatar.png"
+              alt="Roma Klimov"
+            />
+            <figcaption class="text-5xl font-bold">Roma Klimov</figcaption>
+
+            <ul
+              class="invisible absolute right-0 top-3/4 z-10 flex min-w-64 translate-y-1 flex-col rounded bg-[#3b3b3b] p-3 text-5xl leading-[normal] text-white shadow-[3px_8px_7px_rgba(0,0,0,0.6)] transition-all group-hover:visible group-hover:translate-y-0"
+            >
+              <li>
+                <a
+                  href=""
+                  class="grid grid-cols-[auto_1fr] gap-x-1 py-1 transition-opacity hover:opacity-85"
+                >
+                  <span></span>
+                  Профиль
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href=""
+                  class="grid grid-cols-[auto_1fr] gap-x-1 py-1 transition-opacity hover:opacity-85"
+                >
+                  <span></span>
+                  Выход
+                </a>
+              </li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow pb-12 pt-8 xl:pb-48 xl:pt-10">
+      <section>
+        <div class="container max-w-screen-3xl lg:px-10">
+          <div class="swiper swiper-promo">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="grid grid-cols-3 gap-x-14">
+                  <a
+                    href=""
+                    class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
+                  >
+                    <img
+                      loading="lazy"
+                      class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                      src="./uploads/bonus/promo/promo-media-01.png"
+                      alt="Беспроводная колонка PS-04"
+                    />
+                    <span class="sr-only">Беспроводная колонка PS-04</span>
+                  </a>
+
+                  <a
+                    href=""
+                    class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
+                  >
+                    <img
+                      loading="lazy"
+                      class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                      src="./uploads/bonus/promo/promo-media-02.png"
+                      alt="Беспроводная колонка PS-04"
+                    />
+                    <span class="sr-only">Беспроводная колонка PS-04</span>
+                  </a>
+
+                  <div class="grid grid-cols-2 gap-x-10">
+                    <a
+                      href=""
+                      class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
+                    >
+                      <img
+                        loading="lazy"
+                        class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                        src="./uploads/bonus/promo/promo-media-03.png"
+                        alt="Беспроводная колонка PS-04"
+                      />
+                      <span class="sr-only">Беспроводная колонка PS-04</span>
+                    </a>
+
+                    <a
+                      href=""
+                      class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
+                    >
+                      <img
+                        loading="lazy"
+                        class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                        src="./uploads/bonus/promo/promo-media-03.png"
+                        alt="Беспроводная колонка PS-04"
+                      />
+                      <span class="sr-only">Беспроводная колонка PS-04</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-[auto_1fr_auto] gap-x-7">
+              <button
+                type="button"
+                class="flex w-12 items-center justify-center opacity-30 transition-opacity hover:opacity-100"
+                aria-label="Предыдущий слайд"
+              >
+                <svg class="block size-12">
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-chevron-left"
+                  ></use>
+                </svg>
+              </button>
+
+              <div class="swiper-pagination"></div>
+
+              <button
+                type="button"
+                class="flex w-12 items-center justify-center opacity-30 transition-opacity hover:opacity-100"
+                aria-label="Следующий слайд"
+              >
+                <svg class="block size-12">
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10 font-secondary text-[2.25rem] leading-[normal]">
+        <div class="container max-w-screen-3xl lg:px-10">
+          <div class="grid grid-cols-12 gap-x-7">
+            <div class="col-span-8">
+              <section>
+                <header>
+                  <h1 class="text-[4.5rem] font-medium">Привет Roma!</h1>
+                </header>
+
+                <p class="text-6xl">
+                  <a href="" class="link link--dark">
+                    Ты участвуешь в акции <b>МОБИС ВОЛГОГРАД= ДЕКАБРЬ</b> 2023
+                    до 31.12.2023
+                  </a>
+                </p>
+
+                <p>
+                  Не забудь прочитать
+                  <a href="" class="link">руководство пользователя</a>
+                </p>
+
+                <div class="grid grid-cols-2 gap-x-7">
+                  <div
+                    class="flex flex-col gap-y-3.5 rounded-2xl bg-primary-500 p-3 text-center text-[3rem] leading-[normal] text-white"
+                  >
+                    По окончании акции, Тебе будет выплачено
+                    <span class="text-[9.625rem] font-bold leading-[0.85]">
+                      5 600
+                    </span>
+                    <span class="opacity-70">бонусов</span>
+                  </div>
+
+                  <div
+                    class="flex flex-col gap-y-3.5 rounded-2xl border-[10px] border-black/10 bg-white p-3 text-center text-[2.25rem] leading-[normal] text-primary-500"
+                  >
+                    За время участия в бонусной программе, Тебе выплачено
+                    <span class="text-[9.625rem] font-bold leading-[0.85]">
+                      13 200
+                    </span>
+                    <span class="opacity-70">бонусов</span>
+                  </div>
+                </div>
+              </section>
+
+              <section class="mt-10 font-secondary text-6xl leading-[normal]">
+                <header class="text-center">
+                  <h2 class="text-[3.75rem]">Вперед за бонусами! :)</h2>
+                </header>
+
+                <form action="" class="relative">
+                  <input
+                    type="text"
+                    class="h-44 w-full rounded-[1.875rem] border-[10px] border-primary-500 bg-white pl-12 pr-56 font-secondary text-[2.75rem]"
+                    placeholder="Укажите IMEI 1 или серийный номер товара"
+                  />
+                  <button
+                    type="submit"
+                    class="absolute bottom-6 right-6 top-6 flex w-48 items-center justify-center rounded-3xl bg-primary-500 text-white hover:bg-primary-900 focus:bg-primary-900"
+                    aria-label="Отправить IMEI"
+                  >
+                    <svg class="block size-16">
+                      <use
+                        xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                      ></use>
+                    </svg>
+                  </button>
+                </form>
+
+                <p class="font-light opacity-80">
+                  Во избежании конфликтных ситуаций
+                  <b class="font-medium">сохрани копию чека!</b>
+                </p>
+
+                <a
+                  href=""
+                  class="inline-grid grid-cols-[auto_1fr] gap-x-7 text-[#b0b0b0] underline underline-offset-2 hover:text-primary-500 hover:no-underline"
+                >
+                  <span
+                    class="block size-20 bg-contain bg-center bg-no-repeat"
+                    style="background-image: url(&quot;&quot;)"
+                  ></span>
+
+                  <span class="self-center">
+                    Акт о результатах участия в бонусной программе
+                  </span>
+                </a>
+              </section>
+
+              <section class="text-6xl leading-[normal]">
+                <header>
+                  <h2>Начисленные бонусы по текущей акции</h2>
+                </header>
+
+                <div class="overflow-x-auto">
+                  <table class="w-full align-middle">
+                    <tr class="border-b border-t border-primary-500">
+                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
+                      <td class="p-5 font-bold">
+                        MAXVI B6DS <br />
+                        MAXVI P3 <br />
+                        MAXVI B6DS <br />
+                        MAXVI P3
+                      </td>
+                      <td>
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222 <br />
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222
+                      </td>
+                      <td class="p-5 font-bold">
+                        50 <br />
+                        40 <br />
+                        50 <br />
+                        40
+                      </td>
+                    </tr>
+
+                    <tr class="border-b border-t border-primary-500">
+                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
+                      <td class="p-5 font-bold">
+                        MAXVI B6DS <br />
+                        MAXVI P3 <br />
+                        MAXVI B6DS <br />
+                        MAXVI P3
+                      </td>
+                      <td>
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222 <br />
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222
+                      </td>
+                      <td class="p-5 font-bold">
+                        50 <br />
+                        40 <br />
+                        50 <br />
+                        40
+                      </td>
+                    </tr>
+
+                    <tr class="border-b border-t border-primary-500">
+                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
+                      <td class="p-5 font-bold">
+                        MAXVI B6DS <br />
+                        MAXVI P3 <br />
+                        MAXVI B6DS <br />
+                        MAXVI P3
+                      </td>
+                      <td>
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222 <br />
+                        IMEI: 359884960362618 <br />
+                        IMEI: 359702102447222
+                      </td>
+                      <td class="p-5 font-bold">
+                        50 <br />
+                        40 <br />
+                        50 <br />
+                        40
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="mt-5 text-right">
+                  Подитог: <b class="text-primary-500">5600 бонусов</b>
+                </div>
+              </section>
+            </div>
+
+            <aside class="col-span-4 self-start">
+              <div
+                class="relative rounded-t-2xl bg-white p-3 shadow-[1px_3px_16px_rgba(0,0,0,0.35)]"
+              >
+                <figure
+                  class="absolute right-0 top-0 size-40 -translate-y-1/2 bg-contain bg-no-repeat"
+                  style="
+                    background-image: url(&quot;./images/icons/icon-gift.png&quot;);
+                  "
+                ></figure>
+
+                <h2 class="title-h1">Бонусы за продажи</h2>
+
+                <ul class="text-[1.875rem]">
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B5DS
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B6DS
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B9
+                    </a>
+                    <span class="font-bold text-primary-500">40</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B21DS
+                    </a>
+                    <span class="font-bold text-primary-500">40</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B32
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B35
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B100
+                    </a>
+                    <span class="font-bold text-primary-500">30</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B100DS
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">40</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B110
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">30</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B200
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">40</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI B231
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E5
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E6
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E7
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E8
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E9
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+
+                  <li
+                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                  >
+                    <a
+                      href="product.html"
+                      class="inline-flex items-center gap-x-3.5 text-[#7e7e7e] transition-colors hover:text-primary-500 hover:underline"
+                    >
+                      MAXVI E10
+
+                      <svg class="size-9 text-primary-500">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-play"
+                        ></use>
+                      </svg>
+                    </a>
+                    <span class="font-bold text-primary-500">50</span>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10 font-secondary text-[2.25rem] leading-[normal]">
+        <div class="container max-w-screen-3xl lg:px-10">
+          <header class="flex items-center gap-x-48">
+            <h2 class="text-[4.125rem]">Прошедшие акции</h2>
+
+            <div class="inline-grid grid-cols-[repeat(3,auto)]">
+              <button
+                type="button"
+                class="flex w-12 items-center justify-center rounded-l-lg bg-[#d0d0d0] text-white"
+                aria-label="Предыдущий слайд"
+              >
+                <svg class="block size-12">
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-chevron-left"
+                  ></use>
+                </svg>
+              </button>
+
+              <select
+                name=""
+                id=""
+                class="min-w-44 appearance-none bg-[#aeaeae] px-2.5 py-2.5 text-center text-[2.875rem] font-bold text-white"
+              >
+                <option value="2023" selected>2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+              </select>
+
+              <button
+                type="button"
+                class="flex w-12 items-center justify-center rounded-r-lg bg-[#d0d0d0] text-white"
+                aria-label="Следующий слайд"
+              >
+                <svg class="block size-12">
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <button type="button">Декабрь</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <button type="button">Ноябрь</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <button type="button">Октябрь</button>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <button type="button">Сентябрь</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide bg-white p-10">
+                <h3>МОБИС ВОЛГОГРАД</h3>
+
+                <div class="grid grid-cols-12 gap-x-7">
+                  <ul class="col-span-10">
+                    <li class="grid grid-cols-12 gap-x-7">
+                      <div class="col-span-4">27.11.2023</div>
+                      <div class="col-span-8">
+                        <p>Модель MAXVI P21 IMEI: 356415300378403 40 бонусов</p>
+                        <p>
+                          Модель MAXVI B5DS IMEI: 351618251571448 50 бонусов
+                        </p>
+                      </div>
+                    </li>
+
+                    <li class="grid grid-cols-12 gap-x-7">
+                      <div class="col-span-4">27.11.2023</div>
+                      <div class="col-span-8">
+                        <p>Модель MAXVI P21 IMEI: 356415300378403 40 бонусов</p>
+                        <p>
+                          Модель MAXVI B5DS IMEI: 351618251571448 50 бонусов
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="col-span-2 text-[3.375rem] text-primary-500">
+                    <b class="text-[8.125rem] leading-[0.5]">260</b> бонусов
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-[#3b3b3b] py-10 text-[2.25rem] leading-[normal] text-white"
+    >
+      <div class="container max-w-screen-3xl lg:px-10">
+        <div class="flex justify-between gap-x-7">
+          <p class="max-w-[45rem] opacity-50">
+            &copy;&nbsp;2013—2023 г. MAXVI. Все права защищены. <br />
+            Сайт использует cookies.
+          </p>
+
+          <div
+            class="grid grid-cols-[repeat(2,auto)] items-center gap-x-7 justify-self-start text-[2.625rem] uppercase leading-none"
+          >
+            <a href="index.html" class="block">
+              <img
+                src="./images/logo-light.svg"
+                class="block h-8 w-44"
+                alt="Maxvi"
+              />
+            </a>
+            Bonus
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

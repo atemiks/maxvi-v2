@@ -4,9 +4,9 @@ const initHeaderNav = () => {
   let activeItemIndex = undefined;
   let timeout = undefined;
 
-  headerNav.addEventListener("mouseleave", (event) => {
+  headerNav.addEventListener("mouseleave", () => {
+    clearTimeout(timeout);
     activeItemIndex = undefined;
-    timeout = undefined;
 
     headerNavItems.forEach((item) => {
       item.classList.remove("hover");
@@ -17,6 +17,8 @@ const initHeaderNav = () => {
     item.setAttribute("data-item-index", index);
 
     item.addEventListener("mouseover", (event) => {
+      clearTimeout(timeout);
+
       timeout = setTimeout(() => {
         const targetItem = event.target.closest(".group\\/item");
         const targetItemIndex = targetItem.getAttribute("data-item-index");
@@ -30,10 +32,10 @@ const initHeaderNav = () => {
 
           item.classList.add("hover");
         }
-      }, 100);
+      }, 300);
     });
 
-    item.addEventListener("mouseleave", (event) => {
+    item.addEventListener("mouseleave", () => {
       clearTimeout(timeout);
     });
   });
