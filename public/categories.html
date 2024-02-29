@@ -8,7 +8,7 @@
   </head>
   <body>
     <header
-      class="sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
+      class="header-box sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
     >
       <div class="container">
         <div class="flex items-center justify-between gap-7">
@@ -42,16 +42,34 @@
           <nav id="header-nav" class="ml-auto hidden lg:block">
             <ul class="flex flex-wrap justify-center">
               <li class="group/item">
-                <a
-                  class="transition-color block px-7 py-5 uppercase group-[.hover]/item:bg-black"
-                  href="./categories.html"
-                >
-                  Каталог
-                </a>
+                <div class="relative flex">
+                  <a
+                    class="transition-color block px-7 py-5 uppercase group-[.hover]/item:bg-black"
+                    href="./categories.html"
+                  >
+                    Каталог
+                  </a>
+
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="megamenu"
+                    aria-label="Меню каталог"
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      class="block size-2.5 transition-transform group-[.hover]/item:rotate-180"
+                    >
+                      <use
+                        xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
 
                 <div
                   id="megamenu"
-                  class="container absolute left-0 right-0 top-full mx-auto hidden px-3.5 font-secondary group-[.hover]/item:block"
+                  class="container invisible absolute left-0 right-0 top-full mx-auto px-3.5 font-secondary group-[.hover]/item:visible"
                 >
                   <div class="grid grid-cols-[4fr_8fr] text-white">
                     <ul class="bg-black/90 xl:text-lg" role="tablist">
@@ -350,6 +368,7 @@
 
               <li class="group/item">
                 <a
+                  href=""
                   class="block px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
                 >
                   Где купить
@@ -357,29 +376,48 @@
               </li>
 
               <li class="group/item relative">
-                <a
-                  class="flex items-center gap-1 px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
-                >
-                  Сервис
+                <div class="relative flex">
+                  <a
+                    href=""
+                    class="flex items-center gap-1 px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
+                  >
+                    Сервис
+                  </a>
 
-                  <svg class="block size-4 group-[.hover]/item:rotate-180">
-                    <use
-                      xlink:href="./images/icons/sprite.svg#icon-chevron-down"
-                    ></use>
-                  </svg>
-                </a>
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="megamenu"
+                    aria-label="Меню каталог"
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      class="block size-2.5 transition-transform group-[.hover]/item:rotate-180"
+                    >
+                      <use
+                        xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
 
                 <ul
                   class="absolute left-0 top-full hidden min-w-48 bg-black/80 group-[.hover]/item:block"
                 >
                   <li>
-                    <a class="block px-7 py-5 transition-colors hover:bg-black">
+                    <a
+                      href=""
+                      class="block px-7 py-5 transition-colors hover:bg-black"
+                    >
                       Сервисные центры
                     </a>
                   </li>
 
                   <li>
-                    <a class="block px-7 py-5 transition-colors hover:bg-black">
+                    <a
+                      href=""
+                      class="block px-7 py-5 transition-colors hover:bg-black"
+                    >
                       Инструкции и ПО
                     </a>
                   </li>
@@ -388,6 +426,7 @@
 
               <li class="group/item">
                 <a
+                  href=""
                   class="block px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
                 >
                   Контакты
@@ -412,35 +451,38 @@
           <div class="hidden gap-x-2 lg:flex">
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
 
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
 
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
           </div>
         </div>
@@ -760,7 +802,7 @@
               >
                 <a
                   href="#"
-                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline opacity-85 hover:opacity-100 md:px-12 md:py-3 lg:p-0"
                   target="_blank"
                 >
                   <svg class="block h-6 w-8 xl:h-6 xl:w-10">
@@ -773,7 +815,7 @@
               <li>
                 <a
                   href="mailto:info@maxvi.ru"
-                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline opacity-85 hover:opacity-100 md:px-12 md:py-3 lg:p-0"
                 >
                   <svg class="block h-6 w-8 xl:h-7 xl:w-10">
                     <use

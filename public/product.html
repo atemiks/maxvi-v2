@@ -8,7 +8,7 @@
   </head>
   <body>
     <header
-      class="sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
+      class="header-box sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
     >
       <div class="container">
         <div class="flex items-center justify-between gap-7">
@@ -42,16 +42,34 @@
           <nav id="header-nav" class="ml-auto hidden lg:block">
             <ul class="flex flex-wrap justify-center">
               <li class="group/item">
-                <a
-                  class="transition-color block px-7 py-5 uppercase group-[.hover]/item:bg-black"
-                  href="./categories.html"
-                >
-                  Каталог
-                </a>
+                <div class="relative flex">
+                  <a
+                    class="transition-color block px-7 py-5 uppercase group-[.hover]/item:bg-black"
+                    href="./categories.html"
+                  >
+                    Каталог
+                  </a>
+
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="megamenu"
+                    aria-label="Меню каталог"
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      class="block size-2.5 transition-transform group-[.hover]/item:rotate-180"
+                    >
+                      <use
+                        xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
 
                 <div
                   id="megamenu"
-                  class="container absolute left-0 right-0 top-full mx-auto hidden px-3.5 font-secondary group-[.hover]/item:block"
+                  class="container invisible absolute left-0 right-0 top-full mx-auto px-3.5 font-secondary group-[.hover]/item:visible"
                 >
                   <div class="grid grid-cols-[4fr_8fr] text-white">
                     <ul class="bg-black/90 xl:text-lg" role="tablist">
@@ -350,6 +368,7 @@
 
               <li class="group/item">
                 <a
+                  href=""
                   class="block px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
                 >
                   Где купить
@@ -357,29 +376,48 @@
               </li>
 
               <li class="group/item relative">
-                <a
-                  class="flex items-center gap-1 px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
-                >
-                  Сервис
+                <div class="relative flex">
+                  <a
+                    href=""
+                    class="flex items-center gap-1 px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
+                  >
+                    Сервис
+                  </a>
 
-                  <svg class="block size-4 group-[.hover]/item:rotate-180">
-                    <use
-                      xlink:href="./images/icons/sprite.svg#icon-chevron-down"
-                    ></use>
-                  </svg>
-                </a>
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="megamenu"
+                    aria-label="Меню каталог"
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2"
+                  >
+                    <svg
+                      class="block size-2.5 transition-transform group-[.hover]/item:rotate-180"
+                    >
+                      <use
+                        xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
 
                 <ul
                   class="absolute left-0 top-full hidden min-w-48 bg-black/80 group-[.hover]/item:block"
                 >
                   <li>
-                    <a class="block px-7 py-5 transition-colors hover:bg-black">
+                    <a
+                      href=""
+                      class="block px-7 py-5 transition-colors hover:bg-black"
+                    >
                       Сервисные центры
                     </a>
                   </li>
 
                   <li>
-                    <a class="block px-7 py-5 transition-colors hover:bg-black">
+                    <a
+                      href=""
+                      class="block px-7 py-5 transition-colors hover:bg-black"
+                    >
                       Инструкции и ПО
                     </a>
                   </li>
@@ -388,6 +426,7 @@
 
               <li class="group/item">
                 <a
+                  href=""
                   class="block px-7 py-5 uppercase transition-colors group-[.hover]/item:bg-black"
                 >
                   Контакты
@@ -412,35 +451,38 @@
           <div class="hidden gap-x-2 lg:flex">
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
 
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
 
             <a
               href="https://vk.com/maxvi_ru"
+              aria-label="Группа ВКонтакте"
               class="flex size-11 items-center justify-center hover:opacity-75"
               target="_blank"
+              rel="noopener"
             >
               <svg class="block h-6 w-10">
                 <use xlink:href="./images/icons/sprite.svg#icon-vk"></use>
               </svg>
-              <span class="sr-only">Группа ВКонтакте</span>
             </a>
           </div>
         </div>
@@ -487,20 +529,74 @@
             class="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-[repeat(4,auto)] lg:gap-x-7"
           >
             <header
-              class="grid grid-cols-1 gap-x-3.5 gap-y-2 md:grid-cols-[1fr_max-content] md:items-end lg:col-span-2 lg:col-start-3 lg:row-start-1 lg:grid-cols-2 lg:gap-x-7"
+              class="grid grid-cols-1 gap-x-3.5 gap-y-2 md:grid-cols-[1fr_max-content] lg:col-span-2 lg:col-start-3 lg:row-start-1 lg:grid-cols-2 lg:gap-x-7"
             >
               <h1 class="title-h1 flex flex-col">
                 <small class="text-2xl font-normal lg:text-4xl">
                   Беспроводная колонка
                 </small>
-                <b class="">MAXVI PS-04</b>
+                <b>MAXVI PS-04</b>
               </h1>
 
-              <span
-                class="text-3xl leading-none text-primary-500 xl:text-[4.6875rem]"
-              >
-                <b>31&nbsp;750</b>&nbsp;₽
-              </span>
+              <div class="space-y-2.5 self-end md:space-y-1 lg:space-y-0">
+                <div
+                  class="text-3xl leading-none text-primary-500 lg:text-7xl xl:text-[4.6875rem]"
+                >
+                  <b>31&nbsp;750</b>&nbsp;₽
+                </div>
+
+                <div class="relative">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="available-partners"
+                    class="button w-full rounded-none uppercase"
+                  >
+                    Купить
+                  </button>
+
+                  <ul
+                    id="available-partners"
+                    aria-hidden="true"
+                    class="absolute left-1/2 top-full z-10 grid w-full min-w-48 -translate-x-1/2 translate-y-0 grid-cols-2 gap-3.5 bg-[#F6F6F9] px-3.5 py-5 shadow-md transition-transform aria-hidden:invisible aria-hidden:translate-y-1"
+                  >
+                    <li class="flex flex-col">
+                      <a
+                        href="https://www.wildberries.ru/"
+                        aria-label="Купить на Wildberries"
+                        class="flex grow flex-col justify-center"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          loading="lazy"
+                          aria-hidden="true"
+                          src="./images/partners/wildberries.png"
+                          class="mx-auto max-h-8 w-auto"
+                          alt="Wildberries"
+                        />
+                      </a>
+                    </li>
+                    <li class="flex flex-col">
+                      <a
+                        href="https://www.ozon.ru"
+                        aria-label="Купить на Ozon"
+                        class="flex grow flex-col justify-center"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <img
+                          loading="lazy"
+                          aria-hidden="true"
+                          src="./images/partners/ozon.png"
+                          class="mx-auto max-h-8 w-auto"
+                          alt="Ozon"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </header>
 
             <div
@@ -682,7 +778,7 @@
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
-                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat group-aria-selected/color:shadow-lg xl:size-20"
+                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat transition-shadow group-hover/color:shadow-lg group-aria-selected/color:shadow-lg xl:size-20"
                     style="
                       background-image: url(&quot;./uploads/product/thumbs/product-thumb-01.png&quot;);
                     "
@@ -698,7 +794,7 @@
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
-                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat group-aria-selected/color:shadow-lg xl:size-20"
+                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat transition-shadow group-hover/color:shadow-lg group-aria-selected/color:shadow-lg xl:size-20"
                     style="
                       background-image: url(&quot;./uploads/product/thumbs/product-thumb-01.png&quot;);
                     "
@@ -714,7 +810,7 @@
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
-                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat group-aria-selected/color:shadow-lg xl:size-20"
+                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat transition-shadow group-hover/color:shadow-lg group-aria-selected/color:shadow-lg xl:size-20"
                     style="
                       background-image: url(&quot;./uploads/product/thumbs/product-thumb-01.png&quot;);
                     "
@@ -730,7 +826,7 @@
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
-                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat group-aria-selected/color:shadow-lg xl:size-20"
+                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat transition-shadow group-hover/color:shadow-lg group-aria-selected/color:shadow-lg xl:size-20"
                     style="
                       background-image: url(&quot;./uploads/product/thumbs/product-thumb-01.png&quot;);
                     "
@@ -746,7 +842,7 @@
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
-                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat group-aria-selected/color:shadow-lg xl:size-20"
+                    class="block size-12 rounded border border-border-100/80 bg-white bg-contain bg-center bg-no-repeat transition-shadow group-hover/color:shadow-lg group-aria-selected/color:shadow-lg xl:size-20"
                     style="
                       background-image: url(&quot;./uploads/product/thumbs/product-thumb-01.png&quot;);
                     "
@@ -836,7 +932,11 @@
                 </div>
               </dl>
 
-              <button type="button" class="link link--dark self-start">
+              <button
+                type="button"
+                data-anchor="#product-specifications"
+                class="link link--dark self-start"
+              >
                 Все характеристики
               </button>
             </div>
@@ -879,6 +979,324 @@
 
                 <span class="py-1">Комплектация</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="product-specifications" class="mt-5">
+        <div class="container-lg">
+          <header
+            class="bg-muted-700 px-3.5 py-0.5 text-center text-white md:py-1.5 lg:py-1"
+          >
+            <h2 class="font-bold lg:text-2xl">Технические характеристики</h2>
+          </header>
+
+          <div class="mt-2.5 grid grid-cols-1 gap-x-7 lg:grid-cols-2">
+            <div class="flex flex-col gap-y-5">
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  ОСНОВНЫЕ ХАРАКТЕРИСТИКИ
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Звуковая мощность</dt>
+                    <dd class="text-right font-bold">20 Вт</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Интерфейс подключения</dt>
+                    <dd class="text-right font-bold">Bluetooth</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  ЭЛЕКТРОПИТАНИЕ
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Звуковая мощность</dt>
+                    <dd class="text-right font-bold">20 Вт</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Интерфейс подключения</dt>
+                    <dd class="text-right font-bold">Bluetooth</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  ИНТЕРФЕЙС И РАЗЪЕМЫ
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Звуковая мощность</dt>
+                    <dd class="text-right font-bold">20 Вт</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Интерфейс подключения</dt>
+                    <dd class="text-right font-bold">Bluetooth</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-y-5">
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  КОМПЛЕКТАЦИЯ
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  ДРУГОЕ
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Звуковая мощность</dt>
+                    <dd class="text-right font-bold">20 Вт</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Интерфейс подключения</dt>
+                    <dd class="text-right font-bold">Bluetooth</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div>
+                <h3
+                  class="bg-muted-100 px-3.5 py-2 text-xs font-bold uppercase text-muted-700 lg:text-base"
+                >
+                  ГАБАРИТЫ И ВЕС
+                </h3>
+
+                <dl
+                  class="divide-y divide-muted-300 text-xs leading-tight lg:text-base"
+                >
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Версия Bluetooth</dt>
+                    <dd class="text-right font-bold">V5.3</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Встроенный микрофон</dt>
+                    <dd class="text-right font-bold">да</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Динамик</dt>
+                    <dd class="text-right font-bold">100 мм., 2 шт.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Звуковая мощность</dt>
+                    <dd class="text-right font-bold">20 Вт</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Интерфейс подключения</dt>
+                    <dd class="text-right font-bold">Bluetooth</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Отношение сигнал/шум</dt>
+                    <dd class="text-right font-bold">80 дБ</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Радиус действия Bluetooth</dt>
+                    <dd class="text-right font-bold">до 10 м.</dd>
+                  </div>
+
+                  <div class="flex justify-between gap-x-3.5 pb-1 pt-3.5">
+                    <dt>Частотный диапазон</dt>
+                    <dd class="text-right font-bold">50 Гц - 18кГц</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>
@@ -1003,7 +1421,7 @@
               >
                 <a
                   href="#"
-                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline opacity-85 hover:opacity-100 md:px-12 md:py-3 lg:p-0"
                   target="_blank"
                 >
                   <svg class="block h-6 w-8 xl:h-6 xl:w-10">
@@ -1016,7 +1434,7 @@
               <li>
                 <a
                   href="mailto:info@maxvi.ru"
-                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline md:px-12 md:py-3 lg:p-0"
+                  class="link link--current grid grid-cols-[auto_1fr] items-center gap-x-4 no-underline opacity-85 hover:opacity-100 md:px-12 md:py-3 lg:p-0"
                 >
                   <svg class="block h-6 w-8 xl:h-7 xl:w-10">
                     <use

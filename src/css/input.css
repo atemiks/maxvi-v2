@@ -117,7 +117,7 @@
   }
 
   body {
-    @apply min-w-80 font-body text-sm leading-[1.3125rem] text-default-500 lg:text-base;
+    @apply min-w-80 grow font-body text-sm leading-[1.3125rem] text-default-500 lg:text-base;
   }
 }
 

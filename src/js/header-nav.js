@@ -2,24 +2,31 @@ const initHeaderNav = () => {
   const headerNav = document.querySelector("#header-nav");
   const headerNavItems = headerNav.querySelectorAll(".group\\/item");
   let activeItemIndex = undefined;
-  let timeout = undefined;
+  let timeoutNav = undefined;
+  let timeoutSubnav = undefined;
+
+  headerNav.addEventListener("mouseover", () => {
+    clearTimeout(timeoutNav);
+  });
 
   headerNav.addEventListener("mouseleave", () => {
-    clearTimeout(timeout);
-    activeItemIndex = undefined;
+    timeoutNav = setTimeout(() => {
+      clearTimeout(timeoutSubnav);
+      activeItemIndex = undefined;
 
-    headerNavItems.forEach((item) => {
-      item.classList.remove("hover");
-    });
+      headerNavItems.forEach((item) => {
+        item.classList.remove("hover");
+      });
+    }, 300);
   });
 
   headerNavItems.forEach((item, index) => {
     item.setAttribute("data-item-index", index);
 
     item.addEventListener("mouseover", (event) => {
-      clearTimeout(timeout);
+      clearTimeout(timeoutSubnav);
 
-      timeout = setTimeout(() => {
+      timeoutSubnav = setTimeout(() => {
         const targetItem = event.target.closest(".group\\/item");
         const targetItemIndex = targetItem.getAttribute("data-item-index");
 
@@ -36,7 +43,7 @@ const initHeaderNav = () => {
     });
 
     item.addEventListener("mouseleave", () => {
-      clearTimeout(timeout);
+      clearTimeout(timeoutSubnav);
     });
   });
 };

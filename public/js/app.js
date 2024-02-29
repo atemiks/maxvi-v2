@@ -2,6 +2,39 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/anchor.js":
+/*!**************************!*\
+  !*** ./src/js/anchor.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initAnchor = function initAnchor() {
+  var anchors = document.querySelectorAll("[data-anchor]");
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener("click", function (event) {
+      var target = event.target;
+      var targetName = target.getAttribute("data-anchor");
+      var targetContainer = document.querySelector(targetName);
+      if (targetContainer) {
+        var header = document.querySelector(".header-box");
+        var headerHeight = header.offsetHeight;
+        var targetContainerOffset = targetContainer.offsetTop;
+        window.scrollTo({
+          top: targetContainerOffset - headerHeight,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initAnchor);
+
+/***/ }),
+
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
@@ -10,13 +43,15 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/js/aria */ "./src/js/aria.js");
-/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/header-nav */ "./src/js/header-nav.js");
-/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
-/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
-/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
-/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
-/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../src/js/card-product */ "./src/js/card-product.js");
-/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../src/js/product/product.js */ "./src/js/product/product.js");
+/* harmony import */ var _src_js_anchor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/js/anchor */ "./src/js/anchor.js");
+/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../src/js/header-nav */ "./src/js/header-nav.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../src/js/megamenu */ "./src/js/megamenu.js");
+/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../src/js/filter */ "./src/js/filter.js");
+/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../src/js/card-product */ "./src/js/card-product.js");
+/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../src/js/product/product.js */ "./src/js/product/product.js");
+
 
 
 
@@ -26,13 +61,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_src_js_aria__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_src_js_search__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_5__["default"])();
-(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_6__["default"])();
-(0,_src_js_product_product_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_src_js_anchor__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_src_js_search__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_src_js_product_product_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
 
 /***/ }),
 
@@ -182,19 +218,25 @@ var initHeaderNav = function initHeaderNav() {
   var headerNav = document.querySelector("#header-nav");
   var headerNavItems = headerNav.querySelectorAll(".group\\/item");
   var activeItemIndex = undefined;
-  var timeout = undefined;
+  var timeoutNav = undefined;
+  var timeoutSubnav = undefined;
+  headerNav.addEventListener("mouseover", function () {
+    clearTimeout(timeoutNav);
+  });
   headerNav.addEventListener("mouseleave", function () {
-    clearTimeout(timeout);
-    activeItemIndex = undefined;
-    headerNavItems.forEach(function (item) {
-      item.classList.remove("hover");
-    });
+    timeoutNav = setTimeout(function () {
+      clearTimeout(timeoutSubnav);
+      activeItemIndex = undefined;
+      headerNavItems.forEach(function (item) {
+        item.classList.remove("hover");
+      });
+    }, 300);
   });
   headerNavItems.forEach(function (item, index) {
     item.setAttribute("data-item-index", index);
     item.addEventListener("mouseover", function (event) {
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
+      clearTimeout(timeoutSubnav);
+      timeoutSubnav = setTimeout(function () {
         var targetItem = event.target.closest(".group\\/item");
         var targetItemIndex = targetItem.getAttribute("data-item-index");
         if (targetItemIndex !== activeItemIndex) {
@@ -207,7 +249,7 @@ var initHeaderNav = function initHeaderNav() {
       }, 300);
     });
     item.addEventListener("mouseleave", function () {
-      clearTimeout(timeout);
+      clearTimeout(timeoutSubnav);
     });
   });
 };
