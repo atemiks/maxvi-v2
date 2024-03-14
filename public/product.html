@@ -10,7 +10,7 @@
     <header
       class="header-box sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
     >
-      <div class="container">
+      <div class="container-lg">
         <div class="flex items-center justify-between gap-7">
           <button
             type="button"
@@ -545,20 +545,20 @@
                   <b>31&nbsp;750</b>&nbsp;₽
                 </div>
 
-                <div class="relative">
+                <div class="product-buy relative">
                   <button
                     type="button"
                     aria-expanded="false"
-                    aria-controls="available-partners"
-                    class="button w-full rounded-none uppercase"
+                    aria-controls="product-partners"
+                    class="product-buy__toggle button w-full rounded-none uppercase"
                   >
                     Купить
                   </button>
 
                   <ul
-                    id="available-partners"
+                    id="product-partners"
                     aria-hidden="true"
-                    class="absolute left-1/2 top-full z-10 grid w-full min-w-48 -translate-x-1/2 translate-y-0 grid-cols-2 gap-3.5 bg-[#F6F6F9] px-3.5 py-5 shadow-md transition-transform aria-hidden:invisible aria-hidden:translate-y-1"
+                    class="absolute left-1/2 top-full z-10 grid w-full min-w-48 -translate-x-1/2 translate-y-0 grid-cols-2 gap-3.5 bg-[#F6F6F9] px-3.5 py-5 shadow-md transition-all aria-hidden:invisible aria-hidden:translate-y-1"
                   >
                     <li class="flex flex-col">
                       <a
@@ -605,6 +605,8 @@
               <button
                 type="button"
                 class="col-start-1 row-start-1 mx-auto self-start"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
                 aria-label="Просмотреть видео"
               >
                 <svg
@@ -651,7 +653,7 @@
                     >
                       <img
                         loading="lazy"
-                        src="./uploads/product/gallery/product-image-01.png"
+                        src="./uploads/product/gallery/product-image-02.jpeg"
                         class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
                         alt="Беспроводная колонка MAXVI PS-04"
                       />
@@ -662,7 +664,7 @@
                     >
                       <img
                         loading="lazy"
-                        src="./uploads/product/gallery/product-image-01.png"
+                        src="./uploads/product/gallery/product-image-03.jpeg"
                         class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
                         alt="Беспроводная колонка MAXVI PS-04"
                       />
@@ -673,7 +675,7 @@
                     >
                       <img
                         loading="lazy"
-                        src="./uploads/product/gallery/product-image-01.png"
+                        src="./uploads/product/gallery/product-image-04.jpeg"
                         class="absolute bottom-0 left-0 right-0 top-0 m-auto max-h-full max-w-full object-contain object-center"
                         alt="Беспроводная колонка MAXVI PS-04"
                       />
@@ -775,6 +777,7 @@
                   role="tab"
                   aria-selected="false"
                   aria-label="Цвет Black"
+                  data-color="black"
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
@@ -791,6 +794,7 @@
                   type="button"
                   aria-selected="true"
                   aria-label="Цвет Marengo"
+                  data-color="marengo"
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
@@ -807,6 +811,7 @@
                   type="button"
                   aria-selected="false"
                   aria-label="Цвет Marengo Silver"
+                  data-color="marengo-silver"
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
@@ -823,6 +828,7 @@
                   type="button"
                   aria-selected="false"
                   aria-label="Цвет Black"
+                  data-color="black"
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
@@ -839,6 +845,7 @@
                   type="button"
                   aria-selected="false"
                   aria-label="Цвет Black"
+                  data-color="black"
                   class="group/color flex flex-col items-center gap-y-1 text-center text-[0.625rem] leading-tight aria-selected:font-bold md:gap-y-2 lg:text-base lg:leading-none"
                 >
                   <span
@@ -1306,7 +1313,7 @@
     <footer
       class="bg-secondary-500 pb-8 pt-14 font-secondary text-white md:pb-20 md:pt-20 lg:pb-5 lg:pt-16"
     >
-      <div class="container mx-auto px-4">
+      <div class="container-lg mx-auto px-4">
         <div
           class="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3 lg:justify-items-start lg:gap-7"
         >
@@ -1395,7 +1402,7 @@
             <ul class="xl:text-lg">
               <li>
                 <a
-                  href="#"
+                  href="bonus.html"
                   class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Личный кабинет продавца
@@ -1403,7 +1410,7 @@
               </li>
               <li>
                 <a
-                  href="#"
+                  href="bonus.html"
                   class="link link--current py-0.5 leading-none no-underline opacity-85 hover:opacity-100"
                 >
                   Личный кабинет АСЦ
@@ -1911,6 +1918,40 @@
         </ul>
       </div>
     </div>
+
+    <!-- Modal -->
+    <!-- <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
 
     <script src="./js/app.js"></script>
   </body>

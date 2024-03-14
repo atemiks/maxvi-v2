@@ -8,17 +8,21 @@
   </head>
   <body class="bg-[#f2f2f2]">
     <header
-      class="sticky top-0 z-[1000] bg-primary-500 py-2 font-secondary text-white"
+      class="sticky top-0 z-[1000] bg-primary-500 py-2.5 font-secondary text-sm/[normal] text-white lg:text-base/[normal] xl:text-xl/none 2xl:text-[1.875rem]"
     >
-      <div class="container max-w-screen-3xl lg:px-10">
-        <div class="flex items-center gap-x-7">
+      <div
+        class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
+      >
+        <div
+          class="flex items-center gap-x-3.5 md:gap-x-5 lg:gap-x-7 2xl:gap-x-14"
+        >
           <div
-            class="grid grid-cols-[repeat(2,auto)] items-center gap-x-7 justify-self-start text-[2.625rem] uppercase leading-none"
+            class="grid grid-cols-1 items-center gap-1 justify-self-start text-sm uppercase leading-none lg:grid-cols-[repeat(2,auto)] lg:gap-x-2.5 lg:text-xl/none 2xl:gap-x-7 2xl:text-[2.625rem]"
           >
             <a href="index.html" class="block">
               <img
                 src="./images/logo-light.svg"
-                class="block h-8 w-44"
+                class="block w-24 2xl:h-8 2xl:w-44"
                 alt="Maxvi"
               />
             </a>
@@ -29,10 +33,16 @@
             <li>
               <a
                 href=""
-                class="grid grid-cols-[repeat(3,auto)] items-center gap-x-3 text-5xl"
+                class="grid grid-cols-[repeat(3,auto)] items-center gap-x-1 md:gap-x-2 xl:gap-x-3"
               >
-                <span class="block size-10"></span>
+                <svg class="hidden size-6 md:block xl:size-8 2xl:size-10">
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-support"
+                  ></use>
+                </svg>
+
                 Поддержка
+
                 <span
                   class="rounded bg-primary-900 p-1 text-center font-medium text-white"
                 >
@@ -42,26 +52,58 @@
             </li>
           </ul>
 
-          <figure
-            class="group relative grid grid-cols-[auto_auto] items-center gap-x-7"
-          >
-            <img
-              loading="lazy"
-              class="block size-[6.625rem] overflow-hidden rounded object-cover object-center"
-              src="./uploads/bonus/avatar.png"
-              alt="Roma Klimov"
-            />
-            <figcaption class="text-5xl font-bold">Roma Klimov</figcaption>
+          <div class="my-2.5 w-px self-stretch bg-black opacity-15"></div>
+
+          <div class="group relative">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="account-nav"
+              aria-label="Аккаунт Roma Klimov"
+              class="group grid grid-cols-[auto_1fr] items-center gap-x-1 font-bold md:gap-x-2.5 xl:gap-x-3 2xl:gap-x-7"
+            >
+              <img
+                loading="lazy"
+                class="block size-10 overflow-hidden rounded-full object-cover object-center lg:size-14 2xl:size-[6.625rem]"
+                src="./uploads/bonus/avatar.png"
+                alt="Roma Klimov"
+              />
+
+              <span
+                class="grid grid-cols-[1fr_auto] items-center gap-x-1 xl:gap-x-3.5"
+              >
+                <span
+                  class="hidden max-w-60 overflow-hidden text-ellipsis text-nowrap md:block"
+                >
+                  Roma Klimov
+                </span>
+
+                <svg
+                  class="block size-3 transition-transform group-aria-expanded:rotate-180 xl:size-4 2xl:size-7"
+                >
+                  <use
+                    xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                  ></use>
+                </svg>
+              </span>
+            </button>
 
             <ul
-              class="invisible absolute right-0 top-3/4 z-10 flex min-w-64 translate-y-1 flex-col rounded bg-[#3b3b3b] p-3 text-5xl leading-[normal] text-white shadow-[3px_8px_7px_rgba(0,0,0,0.6)] transition-all group-hover:visible group-hover:translate-y-0"
+              id="account-nav"
+              aria-hidden="true"
+              class="visible absolute right-0 top-3/4 z-10 flex translate-y-0 flex-col space-y-2 rounded-xl bg-[#3b3b3b] px-3.5 py-2.5 text-white opacity-100 shadow-[3px_8px_7px_rgba(0,0,0,0.6)] transition-all aria-hidden:invisible aria-hidden:translate-y-1 aria-hidden:opacity-0 lg:px-5 lg:py-3.5 2xl:min-w-64 2xl:px-8 2xl:py-5"
             >
               <li>
                 <a
                   href=""
-                  class="grid grid-cols-[auto_1fr] gap-x-1 py-1 transition-opacity hover:opacity-85"
+                  class="grid grid-cols-[auto_1fr] gap-x-2 py-1.5 transition-opacity hover:opacity-85 lg:gap-x-2.5 xl:gap-x-3.5 xl:py-3"
                 >
-                  <span></span>
+                  <svg class="block size-5 lg:size-6 2xl:size-9">
+                    <use
+                      xlink:href="./images/icons/sprite.svg#icon-profile"
+                    ></use>
+                  </svg>
+
                   Профиль
                 </a>
               </li>
@@ -69,103 +111,178 @@
               <li>
                 <a
                   href=""
-                  class="grid grid-cols-[auto_1fr] gap-x-1 py-1 transition-opacity hover:opacity-85"
+                  class="grid grid-cols-[auto_1fr] gap-x-2 py-1.5 transition-opacity hover:opacity-85 lg:gap-x-2.5 xl:gap-x-3.5 xl:py-3"
                 >
-                  <span></span>
+                  <svg class="block size-5 lg:size-6 2xl:size-9">
+                    <use
+                      xlink:href="./images/icons/sprite.svg#icon-logout"
+                    ></use>
+                  </svg>
+
                   Выход
                 </a>
               </li>
             </ul>
-          </figure>
+          </div>
         </div>
       </div>
     </header>
 
-    <main class="flex-grow pb-12 pt-8 xl:pb-48 xl:pt-10">
+    <main class="flex-grow pb-12 pt-8 font-secondary xl:pb-32 xl:pt-12">
       <section>
-        <div class="container max-w-screen-3xl lg:px-10">
-          <div class="swiper swiper-promo">
+        <div
+          class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
+        >
+          <div
+            class="swiper swiper-promo -mx-[var(--tw-container-padding-x)] px-[var(--tw-container-padding-x)]"
+          >
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="grid grid-cols-3 gap-x-14">
-                  <a
-                    href=""
-                    class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
-                  >
-                    <img
-                      loading="lazy"
-                      class="absolute left-0 top-0 h-full w-full object-cover object-center"
-                      src="./uploads/bonus/promo/promo-media-01.png"
-                      alt="Беспроводная колонка PS-04"
-                    />
-                    <span class="sr-only">Беспроводная колонка PS-04</span>
-                  </a>
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[275px] rounded border-4 border-black/5 before:block before:pt-[60%] md:w-[320px] lg:w-[380px] xl:w-[445px] xl:border-8 2xl:w-[525px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-01.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
 
-                  <a
-                    href=""
-                    class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
-                  >
-                    <img
-                      loading="lazy"
-                      class="absolute left-0 top-0 h-full w-full object-cover object-center"
-                      src="./uploads/bonus/promo/promo-media-02.png"
-                      alt="Беспроводная колонка PS-04"
-                    />
-                    <span class="sr-only">Беспроводная колонка PS-04</span>
-                  </a>
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[275px] rounded border-4 border-black/5 before:block before:pt-[60%] md:w-[320px] lg:w-[380px] xl:w-[445px] xl:border-8 2xl:w-[525px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-02.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
 
-                  <div class="grid grid-cols-2 gap-x-10">
-                    <a
-                      href=""
-                      class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
-                    >
-                      <img
-                        loading="lazy"
-                        class="absolute left-0 top-0 h-full w-full object-cover object-center"
-                        src="./uploads/bonus/promo/promo-media-03.png"
-                        alt="Беспроводная колонка PS-04"
-                      />
-                      <span class="sr-only">Беспроводная колонка PS-04</span>
-                    </a>
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[168px] rounded border-4 border-black/5 before:block before:pt-[100%] md:w-[195px] lg:w-[230px] xl:w-[272px] xl:border-8 2xl:w-[320px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-03.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
 
-                    <a
-                      href=""
-                      class="relative rounded border-[10px] border-black/5 before:block before:pt-[45%]"
-                    >
-                      <img
-                        loading="lazy"
-                        class="absolute left-0 top-0 h-full w-full object-cover object-center"
-                        src="./uploads/bonus/promo/promo-media-03.png"
-                        alt="Беспроводная колонка PS-04"
-                      />
-                      <span class="sr-only">Беспроводная колонка PS-04</span>
-                    </a>
-                  </div>
-                </div>
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[168px] rounded border-4 border-black/5 before:block before:pt-[100%] md:w-[195px] lg:w-[230px] xl:w-[272px] xl:border-8 2xl:w-[320px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-03.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[275px] rounded border-4 border-black/5 before:block before:pt-[60%] md:w-[320px] lg:w-[380px] xl:w-[445px] xl:border-8 2xl:w-[525px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-01.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[275px] rounded border-4 border-black/5 before:block before:pt-[60%] md:w-[320px] lg:w-[380px] xl:w-[445px] xl:border-8 2xl:w-[525px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-02.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[168px] rounded border-4 border-black/5 before:block before:pt-[100%] md:w-[195px] lg:w-[230px] xl:w-[272px] xl:border-8 2xl:w-[320px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-03.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
+              </div>
+
+              <div class="swiper-slide w-[auto]">
+                <a
+                  href=""
+                  class="relative block w-[168px] rounded border-4 border-black/5 before:block before:pt-[100%] md:w-[195px] lg:w-[230px] xl:w-[272px] xl:border-8 2xl:w-[320px] 2xl:border-[10px]"
+                >
+                  <img
+                    loading="lazy"
+                    class="absolute left-0 top-0 h-full w-full object-cover object-center"
+                    src="./uploads/bonus/promo/promo-media-03.png"
+                    alt="Беспроводная колонка PS-04"
+                  />
+                  <span class="sr-only">Беспроводная колонка PS-04</span>
+                </a>
               </div>
             </div>
 
-            <div class="grid grid-cols-[auto_1fr_auto] gap-x-7">
+            <div
+              class="mt-5 grid grid-cols-[auto_1fr_auto] items-center gap-x-7 lg:mt-8 xl:mt-14 2xl:mt-20"
+            >
               <button
                 type="button"
-                class="flex w-12 items-center justify-center opacity-30 transition-opacity hover:opacity-100"
+                class="swiper-button swiper-button-prev relative top-0 translate-y-0 !text-black/30 hover:!text-black"
                 aria-label="Предыдущий слайд"
               >
-                <svg class="block size-12">
+                <svg class="block !size-8 xl:!size-12">
                   <use
                     xlink:href="./images/icons/sprite.svg#icon-chevron-left"
                   ></use>
                 </svg>
               </button>
 
-              <div class="swiper-pagination"></div>
+              <div
+                class="swiper-pagination swiper-pagination-lg swiper-pagination-square static"
+              ></div>
 
               <button
                 type="button"
-                class="flex w-12 items-center justify-center opacity-30 transition-opacity hover:opacity-100"
+                class="swiper-button swiper-button-next relative top-0 translate-y-0 !text-black/30 hover:!text-black"
                 aria-label="Следующий слайд"
               >
-                <svg class="block size-12">
+                <svg class="block !size-8 xl:!size-12">
                   <use
                     xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                   ></use>
@@ -176,67 +293,98 @@
         </div>
       </section>
 
-      <section class="mt-10 font-secondary text-[2.25rem] leading-[normal]">
-        <div class="container max-w-screen-3xl lg:px-10">
-          <div class="grid grid-cols-12 gap-x-7">
-            <div class="col-span-8">
-              <section>
+      <section class="mt-8 lg:mt-10 xl:mt-14 2xl:mt-28">
+        <div
+          class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
+        >
+          <div
+            class="grid grid-cols-1 gap-y-8 lg:grid-cols-[1fr_21.75rem] lg:gap-x-12 xl:grid-cols-[1fr_25.625rem] 2xl:grid-cols-[1fr_30.25rem]"
+          >
+            <div>
+              <section
+                class="font-secondary text-sm/[normal] lg:text-base/[normal] xl:text-xl/[normal] 2xl:text-[2.25rem]"
+              >
                 <header>
-                  <h1 class="text-[4.5rem] font-medium">Привет Roma!</h1>
+                  <h1
+                    class="text-[1.375rem] font-medium leading-none lg:text-[3.25rem] xl:text-[3.875rem] 2xl:text-[4.5rem]"
+                  >
+                    Привет Roma!
+                  </h1>
                 </header>
 
-                <p class="text-6xl">
-                  <a href="" class="link link--dark">
-                    Ты участвуешь в акции <b>МОБИС ВОЛГОГРАД= ДЕКАБРЬ</b> 2023
-                    до 31.12.2023
-                  </a>
-                </p>
+                <div class="mt-2.5 space-y-2.5 md:mt-3.5 xl:mt-6 xl:space-y-5">
+                  <p class="2xl:text-[2rem]">
+                    <a href="" class="link link--dark">
+                      Ты участвуешь в акции <b>МОБИС ВОЛГОГРАД= ДЕКАБРЬ</b> 2023
+                      до 31.12.2023
+                    </a>
+                  </p>
 
-                <p>
-                  Не забудь прочитать
-                  <a href="" class="link">руководство пользователя</a>
-                </p>
+                  <p>
+                    Не забудь прочитать
+                    <a href="" class="link">руководство пользователя</a>
+                  </p>
+                </div>
 
-                <div class="grid grid-cols-2 gap-x-7">
+                <div
+                  class="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 md:gap-3.5 lg:gap-5 2xl:mt-20 2xl:gap-10"
+                >
                   <div
-                    class="flex flex-col gap-y-3.5 rounded-2xl bg-primary-500 p-3 text-center text-[3rem] leading-[normal] text-white"
+                    class="flex flex-col gap-y-1.5 rounded-2xl border-4 border-primary-500 bg-primary-500 p-3.5 text-center text-white xl:border-8 2xl:gap-y-7 2xl:border-[10px] 2xl:px-8 2xl:pb-10 2xl:pt-5"
                   >
-                    По окончании акции, Тебе будет выплачено
-                    <span class="text-[9.625rem] font-bold leading-[0.85]">
-                      5 600
+                    По окончании акции, <br />
+                    Тебе будет выплачено
+
+                    <span class="flex flex-col">
+                      <span
+                        class="text-[2rem] font-bold leading-none 2xl:text-[9.625rem]"
+                      >
+                        5 600
+                      </span>
+                      <span class="opacity-70">бонусов</span>
                     </span>
-                    <span class="opacity-70">бонусов</span>
                   </div>
 
                   <div
-                    class="flex flex-col gap-y-3.5 rounded-2xl border-[10px] border-black/10 bg-white p-3 text-center text-[2.25rem] leading-[normal] text-primary-500"
+                    class="flex flex-col gap-y-1.5 rounded-2xl border-4 border-black/10 bg-white p-3.5 text-center text-primary-500 xl:border-8 2xl:gap-y-7 2xl:border-[10px] 2xl:px-8 2xl:pb-10 2xl:pt-5"
                   >
                     За время участия в бонусной программе, Тебе выплачено
-                    <span class="text-[9.625rem] font-bold leading-[0.85]">
-                      13 200
+
+                    <span class="flex flex-col">
+                      <span
+                        class="text-[2rem] font-bold leading-none 2xl:text-[9.625rem]"
+                      >
+                        13 200
+                      </span>
+                      <span class="opacity-70">бонусов</span>
                     </span>
-                    <span class="opacity-70">бонусов</span>
                   </div>
                 </div>
               </section>
 
-              <section class="mt-10 font-secondary text-6xl leading-[normal]">
+              <section
+                class="mt-8 font-secondary text-sm/[normal] lg:mt-10 lg:text-base/[normal] xl:mt-14 xl:text-xl/[normal] 2xl:mt-24 2xl:text-[2.25rem]"
+              >
                 <header class="text-center">
-                  <h2 class="text-[3.75rem]">Вперед за бонусами! :)</h2>
+                  <h2
+                    class="text-[1.375rem] leading-none lg:text-[2.625rem] xl:text-[3.125rem] 2xl:text-[3.75rem]"
+                  >
+                    Вперед за бонусами! :)
+                  </h2>
                 </header>
 
-                <form action="" class="relative">
+                <form action="" class="relative mt-5">
                   <input
                     type="text"
-                    class="h-44 w-full rounded-[1.875rem] border-[10px] border-primary-500 bg-white pl-12 pr-56 font-secondary text-[2.75rem]"
+                    class="h-12 w-full rounded-xl border-4 border-primary-500 bg-white pl-3.5 pr-14 font-secondary xl:border-8 2xl:h-44 2xl:rounded-[2.5rem] 2xl:border-[10px] 2xl:pl-12 2xl:pr-56 2xl:text-[2.75rem]"
                     placeholder="Укажите IMEI 1 или серийный номер товара"
                   />
                   <button
                     type="submit"
-                    class="absolute bottom-6 right-6 top-6 flex w-48 items-center justify-center rounded-3xl bg-primary-500 text-white hover:bg-primary-900 focus:bg-primary-900"
+                    class="absolute bottom-2 right-2 top-2 flex w-10 items-center justify-center rounded-lg bg-primary-500 text-white hover:bg-primary-900 focus:bg-primary-900 2xl:bottom-6 2xl:right-6 2xl:top-6 2xl:w-48 2xl:rounded-3xl"
                     aria-label="Отправить IMEI"
                   >
-                    <svg class="block size-16">
+                    <svg class="block size-4 2xl:size-16">
                       <use
                         xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                       ></use>
@@ -244,17 +392,17 @@
                   </button>
                 </form>
 
-                <p class="font-light opacity-80">
+                <p class="mt-1.5 font-light opacity-80 md:mt-3.5">
                   Во избежании конфликтных ситуаций
                   <b class="font-medium">сохрани копию чека!</b>
                 </p>
 
                 <a
                   href=""
-                  class="inline-grid grid-cols-[auto_1fr] gap-x-7 text-[#b0b0b0] underline underline-offset-2 hover:text-primary-500 hover:no-underline"
+                  class="mt-2.5 inline-grid grid-cols-[auto_1fr] gap-x-10 text-[#b0b0b0] underline underline-offset-2 hover:text-primary-500 hover:no-underline md:mt-3.5 xl:mt-6 2xl:mt-10 2xl:text-[2.75rem]"
                 >
                   <span
-                    class="block size-20 bg-contain bg-center bg-no-repeat"
+                    class="block w-5 bg-contain bg-center bg-no-repeat before:block before:pt-[100%] 2xl:w-20"
                     style="background-image: url(&quot;&quot;)"
                   ></span>
 
@@ -264,16 +412,24 @@
                 </a>
               </section>
 
-              <section class="text-6xl leading-[normal]">
+              <section
+                class="mt-8 font-secondary text-sm/[normal] lg:mt-10 lg:text-base/[normal] xl:mt-14 xl:text-xl/[normal] 2xl:text-[2.25rem]"
+              >
                 <header>
-                  <h2>Начисленные бонусы по текущей акции</h2>
+                  <h2
+                    class="text-[1.375rem] leading-none lg:text-[3rem] xl:text-[3.5rem] 2xl:text-[4.125rem]"
+                  >
+                    Начисленные бонусы по текущей акции
+                  </h2>
                 </header>
 
-                <div class="overflow-x-auto">
-                  <table class="w-full align-middle">
+                <div class="mt-3.5 overflow-x-auto 2xl:mt-12">
+                  <table class="w-full align-middle leading-[1.35]">
                     <tr class="border-b border-t border-primary-500">
-                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold text-primary-500">
+                        05.12.2023
+                      </td>
+                      <td class="px-5 py-10 font-bold">
                         MAXVI B6DS <br />
                         MAXVI P3 <br />
                         MAXVI B6DS <br />
@@ -285,7 +441,7 @@
                         IMEI: 359884960362618 <br />
                         IMEI: 359702102447222
                       </td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold">
                         50 <br />
                         40 <br />
                         50 <br />
@@ -294,8 +450,10 @@
                     </tr>
 
                     <tr class="border-b border-t border-primary-500">
-                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold text-primary-500">
+                        05.12.2023
+                      </td>
+                      <td class="px-5 py-10 font-bold">
                         MAXVI B6DS <br />
                         MAXVI P3 <br />
                         MAXVI B6DS <br />
@@ -307,7 +465,7 @@
                         IMEI: 359884960362618 <br />
                         IMEI: 359702102447222
                       </td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold">
                         50 <br />
                         40 <br />
                         50 <br />
@@ -316,8 +474,10 @@
                     </tr>
 
                     <tr class="border-b border-t border-primary-500">
-                      <td class="p-5 font-bold text-primary-500">05.12.2023</td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold text-primary-500">
+                        05.12.2023
+                      </td>
+                      <td class="px-5 py-10 font-bold">
                         MAXVI B6DS <br />
                         MAXVI P3 <br />
                         MAXVI B6DS <br />
@@ -329,7 +489,7 @@
                         IMEI: 359884960362618 <br />
                         IMEI: 359702102447222
                       </td>
-                      <td class="p-5 font-bold">
+                      <td class="px-5 py-10 font-bold">
                         50 <br />
                         40 <br />
                         50 <br />
@@ -339,28 +499,36 @@
                   </table>
                 </div>
 
-                <div class="mt-5 text-right">
+                <div class="mt-3.5 text-right font-bold 2xl:mt-10">
                   Подитог: <b class="text-primary-500">5600 бонусов</b>
                 </div>
               </section>
             </div>
 
-            <aside class="col-span-4 self-start">
+            <aside class="self-start">
               <div
-                class="relative rounded-t-2xl bg-white p-3 shadow-[1px_3px_16px_rgba(0,0,0,0.35)]"
+                class="relative rounded-t-2xl bg-white px-3.5 py-4 shadow-[1px_3px_16px_rgba(0,0,0,0.35)] lg:px-7 xl:px-8 2xl:px-10 2xl:pb-4 2xl:pt-12"
               >
                 <figure
-                  class="absolute right-0 top-0 size-40 -translate-y-1/2 bg-contain bg-no-repeat"
+                  class="absolute right-0 top-0 size-14 -translate-y-1/3 bg-contain bg-no-repeat lg:size-24 xl:size-32 2xl:size-40"
                   style="
                     background-image: url(&quot;./images/icons/icon-gift.png&quot;);
                   "
                 ></figure>
 
-                <h2 class="title-h1">Бонусы за продажи</h2>
+                <h2
+                  class="text-[1.375rem] font-bold uppercase leading-none lg:text-[2.625rem] xl:text-[3.125rem] 2xl:text-[3.625rem]"
+                >
+                  Бонусы за&nbsp;продажи
+                </h2>
 
-                <ul class="text-[1.875rem]">
+                <ul
+                  id="list-of-bonuses"
+                  aria-hidden="true"
+                  class="relative mt-1.5 grid-rows-[1fr] divide-y divide-[#b0b0b0] aria-hidden:max-h-[31.25rem] aria-hidden:overflow-hidden aria-hidden:after:absolute aria-hidden:after:bottom-0 aria-hidden:after:left-0 aria-hidden:after:block aria-hidden:after:h-5 aria-hidden:after:w-full aria-hidden:after:bg-gradient-to-b aria-hidden:after:from-transparent aria-hidden:after:to-white 2xl:mt-6 2xl:divide-y-2 2xl:text-[1.875rem]"
+                >
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -368,7 +536,7 @@
                     >
                       MAXVI B5DS
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -378,7 +546,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -390,7 +558,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -402,7 +570,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -414,7 +582,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -422,7 +590,7 @@
                     >
                       MAXVI B32
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -432,7 +600,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -440,7 +608,7 @@
                     >
                       MAXVI B35
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -450,7 +618,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -462,7 +630,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -470,7 +638,7 @@
                     >
                       MAXVI B100DS
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -480,7 +648,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -488,7 +656,7 @@
                     >
                       MAXVI B110
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -498,7 +666,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -506,7 +674,7 @@
                     >
                       MAXVI B200
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -516,7 +684,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -524,7 +692,7 @@
                     >
                       MAXVI B231
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -534,7 +702,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -542,7 +710,7 @@
                     >
                       MAXVI E5
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -552,7 +720,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -560,7 +728,7 @@
                     >
                       MAXVI E6
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -570,7 +738,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -578,7 +746,7 @@
                     >
                       MAXVI E7
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -588,7 +756,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -596,7 +764,7 @@
                     >
                       MAXVI E8
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -606,7 +774,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -614,7 +782,7 @@
                     >
                       MAXVI E9
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -624,7 +792,7 @@
                   </li>
 
                   <li
-                    class="flex items-center justify-between gap-x-7 border-b-2 border-b-[#b0b0b0] py-1.5 last-of-type:border-none"
+                    class="flex items-center justify-between gap-x-3.5 py-1.5 2xl:gap-x-7 2xl:py-2.5"
                   >
                     <a
                       href="product.html"
@@ -632,7 +800,7 @@
                     >
                       MAXVI E10
 
-                      <svg class="size-9 text-primary-500">
+                      <svg class="size-6 text-primary-500 2xl:size-9">
                         <use
                           xlink:href="./images/icons/sprite.svg#icon-play"
                         ></use>
@@ -641,24 +809,54 @@
                     <span class="font-bold text-primary-500">50</span>
                   </li>
                 </ul>
+
+                <button
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="list-of-bonuses"
+                  aria-label="Бонусы за продажи"
+                  class="group mt-3.5 flex w-full justify-center opacity-30 transition-opacity hover:opacity-50 lg:mt-5 xl:mt-10"
+                >
+                  <svg
+                    class="block size-8 transition-transform group-aria-expanded:rotate-180 xl:size-10"
+                  >
+                    <use
+                      xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                    ></use>
+                  </svg>
+                </button>
               </div>
+
+              <p
+                class="mt-3.5 text-primary-500 lg:mt-5 xl:mt-8 2xl:text-[1.875rem]"
+              >
+                1 бонус = 1 рубль
+              </p>
             </aside>
           </div>
         </div>
       </section>
 
-      <section class="mt-10 font-secondary text-[2.25rem] leading-[normal]">
-        <div class="container max-w-screen-3xl lg:px-10">
-          <header class="flex items-center gap-x-48">
-            <h2 class="text-[4.125rem]">Прошедшие акции</h2>
+      <section
+        class="section-loyalty mt-8 font-secondary text-sm/[normal] lg:mt-10 lg:text-base/[normal] xl:mt-14 xl:text-xl/[normal] 2xl:mt-16 2xl:text-[2.25rem]"
+      >
+        <div
+          class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
+        >
+          <header class="flex items-center gap-x-3.5 sm:gap-x-7 2xl:gap-x-48">
+            <h2
+              class="text-[1.375rem] leading-none lg:text-[3rem] xl:text-[3.5rem] 2xl:text-[4.125rem]"
+            >
+              Прошедшие акции
+            </h2>
 
             <div class="inline-grid grid-cols-[repeat(3,auto)]">
               <button
                 type="button"
-                class="flex w-12 items-center justify-center rounded-l-lg bg-[#d0d0d0] text-white"
+                class="swiper-loyalty-button-prev flex w-10 items-center justify-center rounded-l-lg bg-[#d0d0d0] text-white lg:w-12"
                 aria-label="Предыдущий слайд"
               >
-                <svg class="block size-12">
+                <svg class="block size-4 lg:size-6 2xl:size-8">
                   <use
                     xlink:href="./images/icons/sprite.svg#icon-chevron-left"
                   ></use>
@@ -666,22 +864,20 @@
               </button>
 
               <select
-                name=""
-                id=""
-                class="min-w-44 appearance-none bg-[#aeaeae] px-2.5 py-2.5 text-center text-[2.875rem] font-bold text-white"
+                id="loyalty-date-select"
+                name="loyalty-date"
+                class="min-w-14 appearance-none bg-[#aeaeae] px-1 py-3.5 text-center font-bold text-white lg:px-2.5 2xl:min-w-44 2xl:text-[2.875rem]"
               >
-                <option value="2023" selected>2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
+                <option value="0" selected>2023</option>
+                <option value="1">2022</option>
               </select>
 
               <button
                 type="button"
-                class="flex w-12 items-center justify-center rounded-r-lg bg-[#d0d0d0] text-white"
+                class="swiper-loyalty-button-next flex w-10 items-center justify-center rounded-r-lg bg-[#d0d0d0] text-white lg:w-12"
                 aria-label="Следующий слайд"
               >
-                <svg class="block size-12">
+                <svg class="block size-4 lg:size-6 2xl:size-8">
                   <use
                     xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                   ></use>
@@ -690,62 +886,2076 @@
             </div>
           </header>
 
-          <div class="swiper">
+          <div class="swiper swiper-loyalty mt-3.5 lg:mt-5 xl:mt-14 2xl:mt-20">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="swiper">
+                <div class="relative">
+                  <div
+                    class="swiper swiper-loyalty-months static mx-10 lg:mx-14"
+                  >
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Декабрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Ноябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Октябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Сентябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Август</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Июль</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Июнь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Май</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Апрель</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Март</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Февраль</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Январь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="swiper-loyalty-months-button-prev swiper-button swiper-button-prev !text-black/30 hover:!text-black"
+                      aria-label="Предыдущий слайд"
+                    >
+                      <svg class="block !size-8 xl:!size-12">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-left"
+                        ></use>
+                      </svg>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="swiper-loyalty-months-button-next swiper-button swiper-button-next !text-black/30 hover:!text-black"
+                      aria-label="Следующий слайд"
+                    >
+                      <svg class="block !size-8 xl:!size-12">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="swiper swiper-loyalty-panels mt-3.5 lg:mt-5 xl:mt-14 2xl:mt-20"
+                >
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <button type="button">Декабрь</button>
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="swiper-slide">
-                      <button type="button">Ноябрь</button>
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="swiper-slide">
-                      <button type="button">Октябрь</button>
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="swiper-slide">
-                      <button type="button">Сентябрь</button>
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide bg-white p-10">
-                <h3>МОБИС ВОЛГОГРАД</h3>
+              <div class="swiper-slide">
+                <div class="relative">
+                  <div
+                    class="swiper swiper-loyalty-months static mx-10 lg:mx-14"
+                  >
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Декабрь</span>
 
-                <div class="grid grid-cols-12 gap-x-7">
-                  <ul class="col-span-10">
-                    <li class="grid grid-cols-12 gap-x-7">
-                      <div class="col-span-4">27.11.2023</div>
-                      <div class="col-span-8">
-                        <p>Модель MAXVI P21 IMEI: 356415300378403 40 бонусов</p>
-                        <p>
-                          Модель MAXVI B5DS IMEI: 351618251571448 50 бонусов
-                        </p>
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                    </li>
 
-                    <li class="grid grid-cols-12 gap-x-7">
-                      <div class="col-span-4">27.11.2023</div>
-                      <div class="col-span-8">
-                        <p>Модель MAXVI P21 IMEI: 356415300378403 40 бонусов</p>
-                        <p>
-                          Модель MAXVI B5DS IMEI: 351618251571448 50 бонусов
-                        </p>
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Ноябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                    </li>
-                  </ul>
 
-                  <div class="col-span-2 text-[3.375rem] text-primary-500">
-                    <b class="text-[8.125rem] leading-[0.5]">260</b> бонусов
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Октябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Сентябрь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Август</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Июль</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Июнь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Май</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Апрель</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Март</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Февраль</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="swiper-slide group"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="lg:group-[.swiper-slide-thumb-active]:border-l-6 lg:group-[.swiper-slide-thumb-active]:border-r-6 lg:group-[.swiper-slide-thumb-active]:border-t-6 mx-auto flex min-h-20 max-w-72 flex-col justify-center rounded-xl border-2 border-primary-500 bg-white text-center font-bold text-primary-500 group-[.swiper-slide-thumb-active]:border-l-4 group-[.swiper-slide-thumb-active]:border-r-4 group-[.swiper-slide-thumb-active]:border-t-4 lg:min-h-24 xl:min-h-32 xl:group-[.swiper-slide-thumb-active]:border-l-8 xl:group-[.swiper-slide-thumb-active]:border-r-8 xl:group-[.swiper-slide-thumb-active]:border-t-8 2xl:text-[1.875rem]"
+                        >
+                          <span class="my-auto">Январь</span>
+
+                          <div
+                            class="rounded-b bg-primary-500 p-1.5 text-white"
+                          >
+                            <svg
+                              class="mx-auto block size-4 transition-transform group-[.swiper-slide-thumb-active]:rotate-180 lg:size-6 xl:size-8"
+                            >
+                              <use
+                                xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                              ></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="swiper-loyalty-months-button-prev swiper-button swiper-button-prev !text-black/30 hover:!text-black"
+                      aria-label="Предыдущий слайд"
+                    >
+                      <svg class="block !size-8 xl:!size-12">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-left"
+                        ></use>
+                      </svg>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="swiper-loyalty-months-button-next swiper-button swiper-button-next !text-black/30 hover:!text-black"
+                      aria-label="Следующий слайд"
+                    >
+                      <svg class="block !size-8 xl:!size-12">
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-right"
+                        ></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="swiper swiper-loyalty-panels mt-3.5 lg:mt-5 xl:mt-14 2xl:mt-20"
+                >
+                  <div class="swiper-wrapper">
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-slide bg-white px-3.5 py-4 sm:px-4 sm:py-5 md:px-5 md:py-6 lg:p-8 xl:p-10 2xl:px-16 2xl:py-12"
+                    >
+                      <h3
+                        class="text-[1.375rem] font-bold lg:text-[1.75rem] 2xl:text-[2.25rem]"
+                      >
+                        МОБИС ВОЛГОГРАД
+                      </h3>
+
+                      <div
+                        class="mt-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-[9fr_3fr] lg:mt-5 lg:gap-7"
+                      >
+                        <ul class="space-y-3.5">
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li
+                            class="grid grid-cols-1 gap-x-3.5 gap-y-1.5 sm:grid-cols-[3fr_9fr] lg:gap-x-7"
+                          >
+                            <time datetime="2023-11-27"> 27.11.2023 </time>
+
+                            <ul class="space-y-1.5 lg:space-y-3.5">
+                              <li>
+                                Модель MAXVI P21 IMEI: 356415300378403 40
+                                бонусов
+                              </li>
+                              <li>
+                                Модель MAXVI B5DS IMEI: 351618251571448 50
+                                бонусов
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+
+                        <div
+                          class="text-[1.375rem] leading-loose text-primary-500 md:flex md:flex-col md:items-center lg:text-[1.75rem] 2xl:text-[3.375rem]"
+                        >
+                          <b class="text-[150%] leading-[0.75] 2xl:text-[240%]"
+                            >260</b
+                          >
+                          бонусов
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -756,9 +2966,11 @@
     </main>
 
     <footer
-      class="bg-[#3b3b3b] py-10 text-[2.25rem] leading-[normal] text-white"
+      class="bg-[#3b3b3b] py-5 text-sm/[normal] text-white lg:py-8 lg:text-base/[normal] xl:text-xl/[normal] 2xl:py-10 2xl:text-[2.25rem]"
     >
-      <div class="container max-w-screen-3xl lg:px-10">
+      <div
+        class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
+      >
         <div class="flex justify-between gap-x-7">
           <p class="max-w-[45rem] opacity-50">
             &copy;&nbsp;2013—2023 г. MAXVI. Все права защищены. <br />
@@ -766,12 +2978,12 @@
           </p>
 
           <div
-            class="grid grid-cols-[repeat(2,auto)] items-center gap-x-7 justify-self-start text-[2.625rem] uppercase leading-none"
+            class="grid grid-cols-1 items-center gap-1 justify-self-start text-sm/none uppercase lg:grid-cols-[repeat(2,auto)] lg:gap-x-2.5 lg:text-xl/none 2xl:gap-x-7 2xl:text-[2.625rem]"
           >
             <a href="index.html" class="block">
               <img
                 src="./images/logo-light.svg"
-                class="block h-8 w-44"
+                class="block w-24 2xl:h-8 2xl:w-44"
                 alt="Maxvi"
               />
             </a>

@@ -1,0 +1,52 @@
+{
+  "product": {
+    "black": {
+      "gallery": {
+        "main": [
+          {
+            "src": "/uploads/product/gallery/product-image-01.png",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          },
+          {
+            "src": "/uploads/product/gallery/product-image-02.jpeg",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          }
+        ]
+      }
+    },
+    "marengo": {
+      "gallery": {
+        "main": [
+          {
+            "src": "/uploads/product/gallery/product-image-01.png",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          },
+          {
+            "src": "/uploads/product/gallery/product-image-02.jpeg",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          }
+        ]
+      }
+    },
+    "marengo-silver": {
+      "gallery": {
+        "main": [
+          {
+            "src": "/uploads/product/gallery/product-image-01.png",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          },
+          {
+            "src": "/uploads/product/gallery/product-image-02.jpeg",
+            "alt": "Беспроводная колонка MAXVI PS-04",
+            "title": "Беспроводная колонка MAXVI PS-04"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import "swiper/css";
+@import "swiper/css/effect-fade";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
 
 .swiper-button {
-  @apply z-10 m-0 flex size-7 items-center justify-center text-primary-500 after:hidden hover:text-primary-700 lg:size-14;
+  @apply z-10 m-0 flex size-7 items-center justify-center text-primary-500 transition-colors after:hidden hover:text-primary-700 lg:size-14;
 }
 
-.swiper-button svg {
+/* .swiper-button svg {
   @apply block size-10;
-}
+} */
 
 .swiper-button--lg {
   @apply size-20;
@@ -21,8 +22,20 @@
   @apply text-white hover:text-white;
 }
 
+.swiper-button-lock {
+  @apply invisible opacity-0;
+}
+
 .swiper-horizontal .swiper-button {
   @apply top-1/2 -translate-y-1/2;
+}
+
+.swiper-horizontal .swiper-button-prev {
+  @apply left-0;
+}
+
+.swiper-horizontal .swiper-button-next {
+  @apply right-0;
 }
 
 /* .swiper-vertical .swiper-button-prev {
@@ -34,16 +47,51 @@
 } */
 
 .swiper-pagination {
-  @apply static mt-2.5 leading-none;
+  @apply static leading-none;
 }
 
 .swiper-pagination-bullet {
-  @apply h-2 w-2 bg-border-700 lg:h-3 lg:w-3;
+  @apply size-2 rounded-full bg-border-700 lg:size-3;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-500;
+}
+
+.swiper-pagination-lg .swiper-pagination-bullet {
+  @apply size-2 lg:size-3 xl:size-6;
+}
+
+.swiper-pagination-square .swiper-pagination-bullet {
+  @apply rounded-sm;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply mx-1;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-lg
+  .swiper-pagination-bullet {
+  @apply mx-1 xl:mx-3;
 }
 
 @layer base {
   :root {
     --header-height: 3.75rem;
+    --tw-container-padding-x: 0.875rem;
+  }
+
+  @media screen(sm) {
+    :root {
+      --tw-container-padding-x: 5rem;
+    }
+  }
+
+  @media screen(lg) {
+    :root {
+      --tw-container-padding-x: 0.875rem;
+    }
   }
 
   @font-face {
@@ -123,11 +171,11 @@
 
 @layer components {
   .container {
-    @apply mx-auto max-w-[1200px] px-3.5 sm:px-20 lg:px-3.5;
+    @apply mx-auto max-w-[1200px] px-[var(--tw-container-padding-x)];
   }
 
   .container-lg {
-    @apply mx-auto max-w-[1440px] px-3.5 sm:px-20 lg:px-3.5;
+    @apply mx-auto max-w-[1440px] px-[var(--tw-container-padding-x)];
   }
 
   .title-h1 {
