@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx mix",
-    "watch": "npx mix watch",
-    "tailwind": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch",
-    "server": "npx json-server --port 1000 db.json"
+    "build": "npx mix --production",
+    "watch": "npx mix watch"
   },
   "author": "",
   "license": "ISC",

@@ -606,7 +606,10 @@
                 type="button"
                 class="col-start-1 row-start-1 mx-auto self-start"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#modal-video"
+                data-video-url="/uploads/video/maxvi-PS-04.mp4"
+                data-video-poster="/uploads/video/maxvi-PS-04-poster.jpeg"
+                data-video-download-url="/uploads/video/maxvi-PS-04.mp4"
                 aria-label="Просмотреть видео"
               >
                 <svg
@@ -1920,38 +1923,34 @@
     </div>
 
     <!-- Modal -->
-    <!-- <div
+    <div
       class="modal fade"
-      id="exampleModal"
+      id="modal-video"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="modal-video-label"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content relative rounded-none border-none">
+          <div class="modal-header border-none p-0">
             <button
               type="button"
-              class="btn-close"
+              class="absolute right-0 top-0 -translate-y-full translate-x-full text-white/80 hover:text-white"
               data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
+              aria-label="Закрыть окно просмотра"
             >
-              Close
+              <svg class="block size-8">
+                <use xlink:href="./images/icons/sprite.svg#icon-close"></use>
+              </svg>
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+
+          <div class="modal-body p-0">
+            <div class="player"></div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script src="./js/app.js"></script>
   </body>

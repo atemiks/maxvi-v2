@@ -1,3 +1,4 @@
+import initDevice from "/src/js/device";
 import initAria from "/src/js/aria";
 import initAnchor from "/src/js/anchor";
 import initModals from "/src/js/modals.js";
@@ -11,6 +12,7 @@ import initLoyaltySlider from "/src/js/swiper-loyalty";
 import initCardProducts from "/src/js/card-product";
 import initProduct from "/src/js/product/product.js";
 
+initDevice();
 initAria();
 initAnchor();
 initModals();

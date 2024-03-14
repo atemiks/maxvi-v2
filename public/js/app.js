@@ -3010,18 +3010,19 @@ var initAnchor = function initAnchor() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/aria */ "./src/js/aria.js");
-/* harmony import */ var _src_js_anchor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/anchor */ "./src/js/anchor.js");
-/* harmony import */ var _src_js_modals_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../src/js/modals.js */ "./src/js/modals.js");
-/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../src/js/header-nav */ "./src/js/header-nav.js");
-/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../src/js/search */ "./src/js/search.js");
-/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../src/js/megamenu */ "./src/js/megamenu.js");
-/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../src/js/filter */ "./src/js/filter.js");
-/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
-/* harmony import */ var _src_js_swiper_promo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../../src/js/swiper-promo */ "./src/js/swiper-promo.js");
-/* harmony import */ var _src_js_swiper_loyalty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../../src/js/swiper-loyalty */ "./src/js/swiper-loyalty.js");
-/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../../src/js/card-product */ "./src/js/card-product.js");
-/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../../src/js/product/product.js */ "./src/js/product/product.js");
+/* harmony import */ var _src_js_device__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../../src/js/device */ "./src/js/device.js");
+/* harmony import */ var _src_js_aria__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/aria */ "./src/js/aria.js");
+/* harmony import */ var _src_js_anchor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../src/js/anchor */ "./src/js/anchor.js");
+/* harmony import */ var _src_js_modals_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../src/js/modals.js */ "./src/js/modals.js");
+/* harmony import */ var _src_js_header_nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../src/js/header-nav */ "./src/js/header-nav.js");
+/* harmony import */ var _src_js_search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../../../src/js/search */ "./src/js/search.js");
+/* harmony import */ var _src_js_megamenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../../../src/js/megamenu */ "./src/js/megamenu.js");
+/* harmony import */ var _src_js_filter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../../../src/js/filter */ "./src/js/filter.js");
+/* harmony import */ var _src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../../../src/js/swiper-hero */ "./src/js/swiper-hero.js");
+/* harmony import */ var _src_js_swiper_promo__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../../../../src/js/swiper-promo */ "./src/js/swiper-promo.js");
+/* harmony import */ var _src_js_swiper_loyalty__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../../../src/js/swiper-loyalty */ "./src/js/swiper-loyalty.js");
+/* harmony import */ var _src_js_card_product__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../../../../src/js/card-product */ "./src/js/card-product.js");
+/* harmony import */ var _src_js_product_product_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../../../../src/js/product/product.js */ "./src/js/product/product.js");
 
 
 
@@ -3034,18 +3035,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_src_js_aria__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_src_js_anchor__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_src_js_modals_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_src_js_search__WEBPACK_IMPORTED_MODULE_4__["default"])();
-(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_5__["default"])();
-(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_6__["default"])();
-(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_7__["default"])();
-(0,_src_js_swiper_promo__WEBPACK_IMPORTED_MODULE_8__["default"])();
-(0,_src_js_swiper_loyalty__WEBPACK_IMPORTED_MODULE_9__["default"])();
-(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_10__["default"])();
-(0,_src_js_product_product_js__WEBPACK_IMPORTED_MODULE_11__["default"])();
+
+(0,_src_js_device__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_src_js_aria__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_src_js_anchor__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_src_js_modals_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_src_js_header_nav__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_src_js_search__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_src_js_megamenu__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_src_js_filter__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_src_js_swiper_hero__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_src_js_swiper_promo__WEBPACK_IMPORTED_MODULE_9__["default"])();
+(0,_src_js_swiper_loyalty__WEBPACK_IMPORTED_MODULE_10__["default"])();
+(0,_src_js_card_product__WEBPACK_IMPORTED_MODULE_11__["default"])();
+(0,_src_js_product_product_js__WEBPACK_IMPORTED_MODULE_12__["default"])();
 
 /***/ }),
 
@@ -3124,6 +3127,52 @@ var initCardProducts = function initCardProducts() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initCardProducts);
+
+/***/ }),
+
+/***/ "./src/js/device.js":
+/*!**************************!*\
+  !*** ./src/js/device.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var initDevice = function initDevice() {
+  var phoneQuery = "(max-width: 479px)";
+  var phabletQuery = "(min-width: 480px) and (max-width: 639px)";
+  var tabletQuery = "(min-width: 640px) and (max-width: 991px)";
+  var laptopQuery = "(min-width: 992px) and (max-width: 1199px)";
+  var desktopQuery = "(min-width: 1200px)";
+  var phoneMatchMedia = window.matchMedia(phoneQuery);
+  var phabletMatchMedia = window.matchMedia(phabletQuery);
+  var tabletMatchMedia = window.matchMedia(tabletQuery);
+  var laptopMatchMedia = window.matchMedia(laptopQuery);
+  var desktopMatchMedia = window.matchMedia(desktopQuery);
+  phoneMatchMedia.addEventListener("change", function (event) {
+    window.isPhone = event.matches;
+  });
+  phabletMatchMedia.addEventListener("change", function (event) {
+    window.isPhablet = event.matches;
+  });
+  tabletMatchMedia.addEventListener("change", function (event) {
+    window.isTablet = event.matches;
+  });
+  laptopMatchMedia.addEventListener("change", function (event) {
+    window.isLaptop = event.matches;
+  });
+  desktopMatchMedia.addEventListener("change", function (event) {
+    window.isDesktop = event.matches;
+  });
+  window.isPhone = phoneMatchMedia.matches;
+  window.isPhablet = phabletMatchMedia.matches;
+  window.isTablet = tabletMatchMedia.matches;
+  window.isLaptop = laptopMatchMedia.matches;
+  window.isDesktop = desktopMatchMedia.matches;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initDevice);
 
 /***/ }),
 
@@ -3294,9 +3343,432 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var _src_js_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../../src/js/player */ "./src/js/player.js");
 
-var initModals = function initModals() {};
+
+var initModals = function initModals() {
+  console.log("init modals");
+  var initVideoModal = function initVideoModal() {
+    var modalNode = document.querySelector("#modal-video");
+    if (modalNode) {
+      var modalInstance = new bootstrap__WEBPACK_IMPORTED_MODULE_0__.Modal(modalNode);
+      var playerNode = modalNode.querySelector(".player");
+      var initPlayer = function initPlayer(_ref) {
+        var playerNode = _ref.playerNode,
+          videoUrl = _ref.videoUrl,
+          videoPoster = _ref.videoPoster,
+          videoDownloadUrl = _ref.videoDownloadUrl;
+        var video = document.createElement("video");
+        var source = document.createElement("source");
+        source.setAttribute("src", videoUrl);
+        source.setAttribute("type", "video/mp4");
+        video.setAttribute("poster", videoPoster);
+        video.setAttribute("playsinline", "");
+        video.appendChild(source);
+        playerNode.appendChild(video);
+        var playerInstance = new _src_js_player__WEBPACK_IMPORTED_MODULE_1__["default"](playerNode, {
+          autoPlay: true,
+          downloadUrl: videoDownloadUrl
+        });
+        if (window.isPhone || window.isPhablet) {
+          playerInstance.openFullscreen();
+          playerNode.addEventListener("exitFullscreen", function () {
+            modalInstance.hide();
+          });
+        }
+      };
+      var destroyPlayer = function destroyPlayer(_ref2) {
+        var playerNode = _ref2.playerNode;
+        playerNode.innerHTML = "";
+      };
+      modalNode.addEventListener("show.bs.modal", function (event) {
+        var toggle = event.relatedTarget;
+        var videoUrl = toggle.getAttribute("data-video-url");
+        var videoPoster = toggle.getAttribute("data-video-poster");
+        var videoDownloadUrl = toggle.getAttribute("data-video-download-url");
+        initPlayer({
+          playerNode: playerNode,
+          videoUrl: videoUrl,
+          videoPoster: videoPoster,
+          videoDownloadUrl: videoDownloadUrl
+        });
+      });
+      modalNode.addEventListener("hidden.bs.modal", function () {
+        destroyPlayer({
+          playerNode: playerNode
+        });
+      });
+    }
+  };
+  initVideoModal();
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initModals);
+
+/***/ }),
+
+/***/ "./src/js/player.js":
+/*!**************************!*\
+  !*** ./src/js/player.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var Player = /*#__PURE__*/function () {
+  function Player(playerElement) {
+    var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+      _ref$autoPlay = _ref.autoPlay,
+      autoPlay = _ref$autoPlay === void 0 ? false : _ref$autoPlay,
+      downloadUrl = _ref.downloadUrl;
+    _classCallCheck(this, Player);
+    _defineProperty(this, "iconPlay", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"160\" width=\"160\" viewBox=\"0 -960 960 960\"  fill=\"currentColor\">\n        <path d=\"M320-200v-560l440 280-440 280Z\"/>\n      </svg>");
+    _defineProperty(this, "iconPause", "<svg width=\"90\" height=\"90\" viewBox=\"-1 0 8 8\" xmlns=\"http://www.w3.org/2000/svg\"  fill=\"currentColor\">\n            <g transform=\"translate(-67.000000, -3765.000000)\"><g transform=\"translate(56.000000, 160.000000)\">\n                <path d=\"M11,3613 L13,3613 L13,3605 L11,3605 L11,3613 Z M15,3613 L17,3613 L17,3605 L15,3605 L15,3613 Z\" />\n            </g></g>\n        </svg>");
+    _defineProperty(this, "iconFullscreen", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\">\n        <path d=\"M200-200v-200h80v120h120v80H200Zm0-360v-200h200v80H280v120h-80Zm360 360v-80h120v-120h80v200H560Zm120-360v-120H560v-80h200v200h-80Z\"/>\n      </svg>");
+    _defineProperty(this, "iconNoSound", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\" >\n        <path d=\"m616-320-56-56 104-104-104-104 56-56 104 104 104-104 56 56-104 104 104 104-56 56-104-104-104 104Zm-496-40v-240h160l200-200v640L280-360H120Z\"/>\n      </svg>");
+    _defineProperty(this, "iconVolumeUp", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\" >\n        <path d=\"M560-131v-82q90-26 145-100t55-168q0-94-55-168T560-749v-82q124 28 202 125.5T840-481q0 127-78 224.5T560-131ZM120-360v-240h160l200-200v640L280-360H120Zm440 40v-322q47 22 73.5 66t26.5 96q0 51-26.5 94.5T560-320Z\"/>\n      </svg>");
+    _defineProperty(this, "iconDownload", "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" viewBox=\"0 -960 960 960\" width=\"24\" fill=\"currentColor\" >\n            <path d=\"M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z\"/>\n        </svg>");
+    _defineProperty(this, "playerTemplate", "\n        <button type=\"button\" class=\"player__handle\">\n          ".concat(this.iconPlay, "\n        </button>\n    \n        <div class=\"player__island\" >\n          <div class=\"player__time\" >\n            <span class=\"player__currentTime\" >0:00</span>\n            /\n            <span class=\"player__duration\" >0:00</span>\n          </div>\n    \n          <div class=\"player__seekbar\" >\n            <input type=\"range\" class=\"player__progressbar player__range\" min=\"0\" value=\"0\" step=\"0.01\" max=\"100\" >\n          </div>\n    \n          <div class=\"player__volume\" >\n            <button type=\"button\" class=\"player__volume-toggle player__control\" >").concat(this.iconVolumeUp, "</button>\n            \n            <div class=\"player__volume-bar player__seekbar\" >\n              <input type=\"range\" class=\"player__volume-range player__range\" min=\"0\" max=\"1\" value=\"1\" step=\"0.01\" >\n            </div>\n          </div>\n    \n          <div class=\"player__controls\" >\n            <a class=\"player__control player__download\" style=\"display: none;\" download>").concat(this.iconDownload, "</a>\n            <button type=\"button\" class=\"player__control player__fullscreen\" >").concat(this.iconFullscreen, "</button>\n          </div>\n        </div>\n      "));
+    this.playerElement = playerElement;
+    this.autoPlay = autoPlay;
+    this.downloadUrl = downloadUrl;
+    this.playerVideo = undefined;
+    this.playerHandle = undefined;
+    this.playerIsland = undefined;
+    this.playerCurrentTime = undefined;
+    this.playerTotalTime = undefined;
+    this.playerSeekbar = undefined;
+    this.playerProgressbar = undefined;
+    this.playerVolumeToggle = undefined;
+    this.playerVolumeBar = undefined;
+    this.playerVolumeRange = undefined;
+    this.playerDownload = undefined;
+    this.playerFullscreen = undefined;
+    this.playerHideControlsTimeoutId = undefined;
+    this.initialize();
+  }
+  _createClass(Player, [{
+    key: "initialize",
+    value: function initialize() {
+      var playerElement = this.playerElement;
+      this.playerElement.classList.add("initialized");
+      this.playerElement.innerHTML += this.playerTemplate;
+      this.playerVideo = playerElement.querySelector("video");
+      this.playerVideo.classList.add("player__video");
+      this.playerHandle = playerElement.querySelector(".player__handle");
+      this.playerIsland = playerElement.querySelector(".player__island");
+      this.playerCurrentTime = playerElement.querySelector(".player__currentTime");
+      this.playerTotalTime = playerElement.querySelector(".player__duration");
+      this.playerSeekbar = playerElement.querySelector(".player__seekbar");
+      this.playerProgressbar = playerElement.querySelector(".player__progressbar");
+      this.playerVolumeToggle = playerElement.querySelector(".player__volume-toggle");
+      this.playerVolumeBar = playerElement.querySelector(".player__volume-bar");
+      this.playerVolumeRange = playerElement.querySelector(".player__volume-range");
+      this.playerDownload = playerElement.querySelector(".player__download");
+      this.playerFullscreen = playerElement.querySelector(".player__fullscreen");
+      this.updateTimeInformation(this.playerVideo.currentTime, this.playerVideo.duration);
+      this.initializeVideo();
+      this.initializeProgressbar();
+      this.initializeVolume();
+      this.initializeAutoplay();
+      this.initializeFullscreen();
+    }
+  }, {
+    key: "initializeVideo",
+    value: function initializeVideo() {
+      var _this = this;
+      this.playerElement.addEventListener("mousemove", function () {
+        if (!_this.playerVideo.paused) {
+          _this.showControls();
+          _this.hideControlsWithDelay();
+        }
+      });
+      this.playerElement.addEventListener("touchmove", function () {
+        if (!_this.playerVideo.paused) {
+          _this.showControls();
+          _this.hideControlsWithDelay();
+        }
+      });
+      this.playerElement.addEventListener("mouseenter", function () {
+        if (!_this.playerVideo.paused) {
+          _this.showControls();
+        }
+      });
+      this.playerElement.addEventListener("mouseleave", function () {
+        if (!_this.playerVideo.paused) {
+          _this.hideControls();
+        }
+      });
+      this.playerVideo.addEventListener("loadedmetadata", function () {
+        _this.initializeDownload();
+      });
+      this.playerVideo.addEventListener("play", function () {
+        _this.playerHandle.innerHTML = _this.iconPause;
+        _this.hideControlsWithDelay();
+      });
+      this.playerVideo.addEventListener("pause", function () {
+        _this.playerHandle.innerHTML = _this.iconPlay;
+        _this.showControls();
+      });
+      this.playerVideo.addEventListener("durationchange", function (_ref2) {
+        var target = _ref2.target;
+        var currentTime = target.currentTime,
+          duration = target.duration;
+        _this.updateTimeInformation(currentTime, duration);
+      });
+      this.playerVideo.addEventListener("timeupdate", function (_ref3) {
+        var target = _ref3.target;
+        var currentTime = target.currentTime,
+          duration = target.duration;
+        _this.updateTimeInformation(currentTime, duration);
+      });
+      this.playerVideo.addEventListener("ended", function () {
+        _this.pauseVideo();
+        _this.closeFullscreen();
+      });
+      this.playerVideo.addEventListener("volumechange", function () {
+        _this.updateVolumeInformation();
+      });
+      this.playerVideo.addEventListener("fullscreenchange", function (event) {
+        if (!document.fullscreenElement) {
+          _this.closeFullscreen();
+        }
+      });
+
+      // Video controls appear after exiting full screen mode on iOS
+      this.playerVideo.addEventListener("webkitendfullscreen", function () {
+        _this.closeFullscreen();
+        _this.pauseVideo();
+      });
+      this.playerVideo.addEventListener("click", function () {
+        if (_this.playerVideo.paused) {
+          _this.unMuteVolume();
+          _this.playVideo();
+          return;
+        }
+        _this.pauseVideo();
+      });
+    }
+  }, {
+    key: "initializeProgressbar",
+    value: function initializeProgressbar() {
+      var _this2 = this;
+      this.playerProgressbar.addEventListener("mousedown", function () {
+        _this2.pauseVideo();
+        console.log("mousedown");
+      });
+      this.playerProgressbar.addEventListener("mouseup", function () {
+        _this2.playVideo();
+      });
+      this.playerProgressbar.addEventListener("touchstart", function () {
+        _this2.pauseVideo();
+      });
+      this.playerProgressbar.addEventListener("touchend", function () {
+        _this2.playVideo();
+      });
+      this.playerProgressbar.addEventListener("input", function () {
+        var _this2$playerProgress = _this2.playerProgressbar,
+          value = _this2$playerProgress.value,
+          max = _this2$playerProgress.max;
+        _this2.playerVideo.currentTime = value;
+        _this2.updateProgressbarProgress(_this2.playerSeekbar, value, max);
+      });
+    }
+  }, {
+    key: "initializeVolume",
+    value: function initializeVolume() {
+      var _this3 = this;
+      if (this.isIOS()) {
+        this.playerVolumeBar.style.display = "none ";
+      }
+      this.playerVolumeToggle.addEventListener("click", function () {
+        if (_this3.playerVideo.muted) {
+          _this3.unMuteVolume();
+          return;
+        }
+        _this3.muteVolume();
+      });
+      this.playerVolumeRange.addEventListener("input", function (_ref4) {
+        var target = _ref4.target;
+        var value = target.value;
+        _this3.playerVideo.muted = false;
+        _this3.playerVideo.volume = Number(value);
+      });
+    }
+  }, {
+    key: "initializeAutoplay",
+    value: function initializeAutoplay() {
+      var _this4 = this;
+      if (this.autoPlay) {
+        var presentationObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              _this4.autoPlayVideo();
+              return;
+            }
+            _this4.pauseVideo();
+          });
+        }, {
+          rootMargin: "-25% 0px -25% 0px"
+        });
+        presentationObserver.observe(this.playerElement);
+      }
+    }
+  }, {
+    key: "initializeDownload",
+    value: function initializeDownload() {
+      this.playerDownload.style.display = "block";
+      this.playerDownload.href = this.downloadUrl || this.playerVideo.currentSrc;
+    }
+  }, {
+    key: "initializeFullscreen",
+    value: function initializeFullscreen() {
+      var _this5 = this;
+      this.playerFullscreen.addEventListener("click", function () {
+        _this5.openFullscreen();
+      });
+    }
+  }, {
+    key: "secondsToMinutesAndSeconds",
+    value: function secondsToMinutesAndSeconds(totalSeconds) {
+      if (isNaN(totalSeconds)) {
+        totalSeconds = 0;
+      }
+      var minutes = Math.floor(Number(totalSeconds) / 60);
+      var seconds = Math.round(Number(totalSeconds) % 60);
+      var formattedSeconds = String(seconds).padStart(2, "0");
+      return "".concat(minutes, ":").concat(formattedSeconds);
+    }
+  }, {
+    key: "updateProgressbarProgress",
+    value: function updateProgressbarProgress(target, currentValue, maxValue) {
+      var progress = currentValue / maxValue * 100;
+      target.style.setProperty("--player-progressbar-complete", "".concat(progress, "%"));
+    }
+  }, {
+    key: "updateTimeInformation",
+    value: function updateTimeInformation(currentTime, duration) {
+      this.playerCurrentTime.textContent = this.secondsToMinutesAndSeconds(currentTime);
+      this.playerTotalTime.textContent = this.secondsToMinutesAndSeconds(duration);
+      this.playerProgressbar.value = currentTime;
+      this.playerProgressbar.max = duration;
+      this.updateProgressbarProgress(this.playerSeekbar, currentTime, duration);
+    }
+  }, {
+    key: "updateVolumeInformation",
+    value: function updateVolumeInformation(currentVolume) {
+      var maxVolume = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+      console.log([currentVolume, maxVolume]);
+      var progress = this.playerVideo.muted ? 0 : this.playerVideo.volume;
+      this.playerVolumeToggle.innerHTML = this.playerVideo.muted ? this.iconNoSound : this.iconVolumeUp;
+      this.playerVolumeRange.value = this.playerVideo.muted ? 0 : this.playerVideo.volume;
+      this.updateProgressbarProgress(this.playerVolumeBar, progress, maxVolume);
+    }
+  }, {
+    key: "playVideo",
+    value: function playVideo() {
+      this.playerVideo.play();
+    }
+  }, {
+    key: "pauseVideo",
+    value: function pauseVideo() {
+      this.playerVideo.pause();
+      console.log("pause");
+    }
+  }, {
+    key: "autoPlayVideo",
+    value: function autoPlayVideo() {
+      this.muteVolume();
+      this.playVideo();
+    }
+  }, {
+    key: "muteVolume",
+    value: function muteVolume() {
+      this.playerVideo.muted = true;
+      this.updateVolumeInformation();
+    }
+  }, {
+    key: "unMuteVolume",
+    value: function unMuteVolume() {
+      this.playerVideo.muted = false;
+      this.updateVolumeInformation();
+    }
+  }, {
+    key: "showControls",
+    value: function showControls() {
+      this.playerHandle.style.opacity = 1;
+      this.playerHandle.style.visibility = "visible";
+      this.playerIsland.style.opacity = 1;
+      this.playerIsland.style.visibility = "visible";
+      this.playerIsland.style.transform = "translateY(0)";
+    }
+  }, {
+    key: "hideControls",
+    value: function hideControls() {
+      this.playerHandle.style.opacity = 0;
+      this.playerHandle.style.visibility = "hidden";
+      this.playerIsland.style.opacity = 0;
+      this.playerIsland.style.visibility = "hidden";
+      this.playerIsland.style.transform = "translateY(10px)";
+    }
+  }, {
+    key: "hideControlsWithDelay",
+    value: function hideControlsWithDelay() {
+      var _this6 = this;
+      clearTimeout(this.playerHideControlsTimeoutId);
+      this.playerHideControlsTimeoutId = setTimeout(function () {
+        if (!_this6.playerVideo.paused) {
+          _this6.hideControls();
+        }
+      }, 1500);
+    }
+  }, {
+    key: "openFullscreen",
+    value: function openFullscreen() {
+      if (this.playerVideo.requestFullscreen) {
+        this.playerVideo.requestFullscreen();
+        this.playerVideo.muted = false;
+        this.playVideo();
+      } else if (this.playerVideo.webkitEnterFullscreen) {
+        this.playerVideo.webkitEnterFullscreen();
+        this.playerVideo.muted = false;
+        this.playVideo();
+      } else if (this.playerVideo.webkitRequestFullscreen) {
+        this.playerVideo.webkitRequestFullscreen();
+        this.playerVideo.muted = false;
+        this.playVideo();
+      }
+    }
+  }, {
+    key: "closeFullscreen",
+    value: function closeFullscreen() {
+      if (this.playerVideo.exitFullscreen) {
+        this.playerVideo.exitFullscreen();
+      } else if (this.playerVideo.webkitExitFullscreen) {
+        this.playerVideo.webkitExitFullscreen();
+      }
+      var exitFullscreenEvent = new Event("exitFullscreen");
+      this.playerElement.dispatchEvent(exitFullscreenEvent);
+    }
+  }, {
+    key: "isIOS",
+    value: function isIOS() {
+      return ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      navigator.userAgent.includes("Mac") && "ontouchend" in document;
+    }
+  }]);
+  return Player;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Player);
 
 /***/ }),
 
@@ -8104,22 +8576,10 @@ defineJQueryPlugin(Toast);
 
 /***/ }),
 
-/***/ "./src/scss/bootstrap.scss":
-/*!*********************************!*\
-  !*** ./src/scss/bootstrap.scss ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/css/tailwind.css":
-/*!******************************!*\
-  !*** ./src/css/tailwind.css ***!
-  \******************************/
+/***/ "./src/scss/app.scss":
+/*!***************************!*\
+  !*** ./src/scss/app.scss ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -18487,8 +18947,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/public/js/app": 0,
-/******/ 			"public/css/tailwind": 0,
-/******/ 			"public/css/bootstrap": 0
+/******/ 			"public/css/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -18538,9 +18997,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["public/css/tailwind","public/css/bootstrap"], () => (__webpack_require__("./src/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["public/css/tailwind","public/css/bootstrap"], () => (__webpack_require__("./src/scss/bootstrap.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/tailwind","public/css/bootstrap"], () => (__webpack_require__("./src/css/tailwind.css")))
+/******/ 	__webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["public/css/app"], () => (__webpack_require__("./src/scss/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

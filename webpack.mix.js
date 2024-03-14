@@ -11,13 +11,10 @@ mix.alias({
 
 mix.js("src/js/app.js", "public/js");
 
-mix.postCss("src/css/tailwind.css", "public/css/tailwind.css", [
-  require("tailwindcss"),
-]);
-
-mix.sass("src/scss/bootstrap.scss", "public/css/");
-
-mix.combine("public/css/**/*.css", "public/css/app.css");
+mix.sass("src/scss/app.scss", "public/css/").options({
+  processCssUrls: false,
+  postCss: [require("tailwindcss")],
+});
 
 mix.copyDirectory("./public/css/", "../www/f/dist/css/");
 mix.copyDirectory("./public/fonts/", "../www/f/dist/fonts/");
