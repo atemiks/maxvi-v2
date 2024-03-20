@@ -928,13 +928,22 @@
                       aria-controls="filter-secondary-params"
                       data-expanded-text="Еще фильтры"
                       data-collapsed-text="Свернуть"
-                      class="relative flex w-full items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓'] before:aria-expanded:rotate-180 after:aria-expanded:rotate-180"
+                      class="group relative flex w-full items-center justify-center gap-1 p-2"
                     >
                       <span
                         data-target-inject
                         class="underline underline-offset-2 group-hover:no-underline"
-                        >Еще фильтры</span
                       >
+                        Еще фильтры
+                      </span>
+
+                      <svg
+                        class="block size-2.5 transition-transform group-aria-expanded:rotate-180"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                        ></use>
+                      </svg>
                     </button>
                   </div>
 

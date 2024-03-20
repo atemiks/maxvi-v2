@@ -3565,10 +3565,6 @@ body {
   --tw-content: 'от';
   content: var(--tw-content);
 }
-.before\:content-\[\'\2193\'\]::before {
-  --tw-content: '↓';
-  content: var(--tw-content);
-}
 .before\:backdrop\:blur::backdrop::before {
   content: var(--tw-content);
   --tw-blur: blur(8px);
@@ -3603,10 +3599,6 @@ body {
 }
 .after\:content-\[\'\>\>\'\]::after {
   --tw-content: '>>';
-  content: var(--tw-content);
-}
-.after\:content-\[\'\2193\'\]::after {
-  --tw-content: '↓';
   content: var(--tw-content);
 }
 .after\:\[clip-path\:polygon\(0_45\%\2c 45\%_45\%\2c 45\%_0\2c 55\%_0\2c 55\%_45\%\2c 100\%_45\%\2c 100\%_55\%\2c 55\%_55\%\2c 55\%_100\%\2c 45\%_100\%\2c 45\%_55\%\2c 0_55\%\)\]::after {
@@ -3769,16 +3761,6 @@ body {
 }
 .peer:checked ~ .peer-checked\:no-underline {
   text-decoration-line: none;
-}
-.before\:aria-expanded\:rotate-180[aria-expanded="true"]::before {
-  content: var(--tw-content);
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.after\:aria-expanded\:rotate-180[aria-expanded="true"]::after {
-  content: var(--tw-content);
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .aria-expanded\:after\:\[clip-path\:polygon\(0_45\%\2c 45\%_45\%\2c 45\%_45\%\2c 55\%_45\%\2c 55\%_45\%\2c 100\%_45\%\2c 100\%_55\%\2c 55\%_55\%\2c 55\%_55\%\2c 45\%_55\%\2c 45\%_55\%\2c 0_55\%\)\][aria-expanded="true"]::after {
   content: var(--tw-content);
