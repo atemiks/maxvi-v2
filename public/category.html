@@ -839,13 +839,22 @@
                       aria-controls="filter-secondary-params"
                       data-expanded-text="Еще фильтры"
                       data-collapsed-text="Свернуть"
-                      class="relative flex w-full items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓'] before:aria-expanded:rotate-180 after:aria-expanded:rotate-180"
+                      class="group relative flex w-full items-center justify-center gap-1 p-2"
                     >
                       <span
                         data-target-inject
                         class="underline underline-offset-2 group-hover:no-underline"
-                        >Еще фильтры</span
                       >
+                        Еще фильтры
+                      </span>
+
+                      <svg
+                        class="block size-2.5 transition-transform group-aria-expanded:rotate-180"
+                      >
+                        <use
+                          xlink:href="./images/icons/sprite.svg#icon-chevron-down"
+                        ></use>
+                      </svg>
                     </button>
                   </div>
 
@@ -860,14 +869,14 @@
             </aside>
 
             <div
-              class="grid grid-cols-1 gap-x-3.5 md:grid-cols-3 md:gap-y-10 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-12 xl:gap-y-20"
+              class="grid grid-cols-1 gap-x-3.5 md:grid-cols-3 md:gap-y-10 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-12 xl:gap-y-9"
             >
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
-                  class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
+                  class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform"
                 >
                   <span class="relative block pt-[100%]">
                     <img
@@ -891,7 +900,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -901,7 +910,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -928,7 +937,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -938,7 +947,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -965,7 +974,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -975,7 +984,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1002,7 +1011,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -1012,7 +1021,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1039,7 +1048,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -1049,7 +1058,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1076,7 +1085,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -1086,7 +1095,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1113,7 +1122,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -1123,7 +1132,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1150,7 +1159,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова
@@ -1160,7 +1169,7 @@
 
               <a
                 href="series-p.html"
-                class="group/series mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 md:min-h-0"
+                class="group mx-auto flex min-h-56 w-full max-w-80 flex-col items-center justify-center text-secondary-500 transition-transform md:min-h-0 md:items-start md:justify-start xl:hover:-translate-y-8"
               >
                 <span
                   class="grid grid-cols-[3fr_1fr] items-center md:grid-cols-[6.25rem_1fr] lg:grid-cols-[11.875rem_auto] xl:transition-transform xl:group-hover/series:-translate-y-8"
@@ -1187,7 +1196,7 @@
                 </span>
 
                 <span
-                  class="hidden xl:-mb-8 xl:block xl:opacity-0 xl:transition-all xl:group-hover/series:-translate-y-8 xl:group-hover/series:opacity-100"
+                  class="hidden xl:mt-3 xl:block xl:-translate-y-12 xl:opacity-0 xl:transition-transform xl:group-hover:-translate-y-0 xl:group-hover:opacity-100"
                 >
                   Простые в использовании телефоны, разработанные специально для
                   пожилых людей. Ряд моделей этой серии оснащен кнопкой вызова

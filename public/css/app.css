@@ -1919,6 +1919,9 @@ body {
   white-space: nowrap;
   border-width: 0;
 }
+.pointer-events-none {
+  pointer-events: none;
+}
 .visible {
   visibility: visible;
 }
@@ -2297,14 +2300,14 @@ body {
 .min-w-14 {
   min-width: 3.5rem;
 }
+.min-w-36 {
+  min-width: 9rem;
+}
 .min-w-48 {
   min-width: 12rem;
 }
 .min-w-full {
   min-width: 100%;
-}
-.max-w-36 {
-  max-width: 9rem;
 }
 .max-w-40 {
   max-width: 10rem;
@@ -2355,8 +2358,8 @@ body {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.-translate-x-1\/3 {
-  --tw-translate-x: -33.333333%;
+.-translate-x-3 {
+  --tw-translate-x: -0.75rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .-translate-y-1\/2 {
@@ -2979,6 +2982,9 @@ body {
 .pb-8 {
   padding-bottom: 2rem;
 }
+.pl-12 {
+  padding-left: 3rem;
+}
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -3002,6 +3008,9 @@ body {
 }
 .pr-2\.5 {
   padding-right: 0.625rem;
+}
+.pr-3 {
+  padding-right: 0.75rem;
 }
 .pt-14 {
   padding-top: 3.5rem;
@@ -4113,8 +4122,16 @@ body {
     flex-direction: column;
   }
 
+  .md\:items-start {
+    align-items: flex-start;
+  }
+
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:gap-0 {
@@ -4859,10 +4876,6 @@ body {
     margin-bottom: 6.5rem;
   }
 
-  .xl\:-mb-8 {
-    margin-bottom: -2rem;
-  }
-
   .xl\:mb-8 {
     margin-bottom: 2rem;
   }
@@ -5008,6 +5021,11 @@ body {
     max-width: 16rem;
   }
 
+  .xl\:-translate-y-12 {
+    --tw-translate-y: -3rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -5026,10 +5044,6 @@ body {
 
   .xl\:gap-1\.5 {
     gap: 0.375rem;
-  }
-
-  .xl\:gap-2 {
-    gap: 0.5rem;
   }
 
   .xl\:gap-3 {
@@ -5083,6 +5097,10 @@ body {
 
   .xl\:gap-y-20 {
     row-gap: 5rem;
+  }
+
+  .xl\:gap-y-9 {
+    row-gap: 2.25rem;
   }
 
   .xl\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -5156,10 +5174,6 @@ body {
 
   .xl\:pb-48 {
     padding-bottom: 12rem;
-  }
-
-  .xl\:pr-2 {
-    padding-right: 0.5rem;
   }
 
   .xl\:pr-24 {
@@ -5247,30 +5261,19 @@ body {
     opacity: 0;
   }
 
-  .xl\:transition-all {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-
   .xl\:transition-transform {
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
   }
 
-  .xl\:hover\:border-tertiary-500:hover {
-    --tw-border-opacity: 1;
-    border-color: rgb(161 172 175 / var(--tw-border-opacity));
+  .xl\:hover\:-translate-y-8:hover {
+    --tw-translate-y: -2rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .xl\:hover\:bg-white:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
-  .group\/feature:hover .xl\:group-hover\/feature\:static {
-    position: static;
+  .group\/feature:hover .xl\:group-hover\/feature\:pointer-events-auto {
+    pointer-events: auto;
   }
 
   .group\/feature:hover .xl\:group-hover\/feature\:translate-x-0 {
@@ -5283,11 +5286,26 @@ body {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .group:hover .xl\:group-hover\:-translate-y-0 {
+    --tw-translate-y: -0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group\/feature:hover .xl\:group-hover\/feature\:border-tertiary-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(161 172 175 / var(--tw-border-opacity));
+  }
+
+  .group\/feature:hover .xl\:group-hover\/feature\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .group\/feature:hover .xl\:group-hover\/feature\:opacity-100 {
     opacity: 1;
   }
 
-  .group\/series:hover .xl\:group-hover\/series\:opacity-100 {
+  .group:hover .xl\:group-hover\:opacity-100 {
     opacity: 1;
   }
 
