@@ -9,7 +9,6 @@ const initLoyaltySlider = () => {
   if (loyaltyContainer && loyaltySliderContainer) {
     const loyaltySwiper = new Swiper(loyaltySliderContainer, {
       modules: [Navigation],
-      rewind: true,
       slidesPerView: 1,
       allowTouchMove: false,
       navigation: {

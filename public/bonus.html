@@ -8,7 +8,7 @@
   </head>
   <body class="bg-[#f2f2f2]">
     <header
-      class="sticky top-0 z-[1000] bg-primary-500 py-2.5 font-secondary text-sm/[normal] text-white lg:text-base/[normal] xl:text-xl/none 2xl:text-[1.875rem]"
+      class="sticky top-0 z-[1000] bg-primary-500 py-2.5 font-secondary text-sm/[normal] text-white lg:text-base/[normal] xl:static xl:text-xl/none 2xl:text-[1.875rem]"
     >
       <div
         class="container max-w-screen-3xl lg:[--tw-container-padding-x:2.5rem]"
@@ -362,10 +362,11 @@
 
                 <div class="mt-2.5 space-y-2.5 md:mt-3.5 xl:mt-6 xl:space-y-5">
                   <p class="2xl:text-[2rem]">
+                    Ты участвуешь в акции
                     <a href="" class="link link--dark">
-                      Ты участвуешь в акции <b>МОБИС ВОЛГОГРАД= ДЕКАБРЬ</b> 2023
-                      до 31.12.2023
+                      <b>МОБИС ВОЛГОГРАД= ДЕКАБРЬ 2023</b>
                     </a>
+                    до 31.12.2023
                   </p>
 
                   <p>
@@ -385,7 +386,7 @@
 
                     <span class="flex flex-col">
                       <span
-                        class="text-[2rem] font-bold leading-none 2xl:text-[9.625rem]"
+                        class="text-nowrap text-[2rem] font-bold leading-none 2xl:text-[9.625rem]"
                       >
                         5 600
                       </span>
@@ -424,15 +425,15 @@
                 <form action="" class="relative mt-5">
                   <input
                     type="text"
-                    class="h-12 w-full rounded-xl border-4 border-primary-500 bg-white pl-3.5 pr-14 font-secondary xl:border-8 2xl:h-44 2xl:rounded-[2.5rem] 2xl:border-[10px] 2xl:pl-12 2xl:pr-56 2xl:text-[2.75rem]"
+                    class="h-12 w-full rounded-xl border-4 border-primary-500 bg-white pl-3.5 pr-14 font-secondary lg:h-14 lg:rounded-2xl xl:h-20 xl:border-[6px] xl:pr-24 2xl:h-44 2xl:rounded-[2.5rem] 2xl:border-[10px] 2xl:pl-12 2xl:pr-56 2xl:text-[2.75rem]"
                     placeholder="Укажите IMEI 1 или серийный номер товара"
                   />
                   <button
                     type="submit"
-                    class="absolute bottom-2 right-2 top-2 flex w-10 items-center justify-center rounded-lg bg-primary-500 text-white hover:bg-primary-900 focus:bg-primary-900 2xl:bottom-6 2xl:right-6 2xl:top-6 2xl:w-48 2xl:rounded-3xl"
+                    class="absolute bottom-2 right-2 top-2 flex w-10 items-center justify-center rounded-lg bg-primary-500 text-white hover:bg-primary-900 focus:bg-primary-900 xl:bottom-3 xl:right-3 xl:top-3 xl:w-20 2xl:bottom-6 2xl:right-6 2xl:top-6 2xl:w-48 2xl:rounded-3xl"
                     aria-label="Отправить IMEI"
                   >
-                    <svg class="block size-4 2xl:size-16">
+                    <svg class="block size-4 lg:size-6 xl:size-8 2xl:size-16">
                       <use
                         xlink:href="./images/icons/sprite.svg#icon-chevron-right"
                       ></use>
@@ -1046,7 +1047,7 @@
             <div class="inline-grid grid-cols-[repeat(3,auto)]">
               <button
                 type="button"
-                class="swiper-loyalty-button-prev flex w-10 items-center justify-center rounded-l-lg bg-[#d0d0d0] text-white lg:w-12"
+                class="swiper-loyalty-button-prev flex w-10 items-center justify-center rounded-l-lg bg-[#d0d0d0] text-white xl:w-8 2xl:w-12"
                 aria-label="Предыдущий слайд"
               >
                 <svg class="block size-4 lg:size-6 2xl:size-8">
@@ -1059,7 +1060,7 @@
               <select
                 id="loyalty-date-select"
                 name="loyalty-date"
-                class="min-w-14 appearance-none bg-[#aeaeae] px-1 py-3.5 text-center font-bold text-white lg:px-2.5 2xl:min-w-44 2xl:text-[2.875rem]"
+                class="min-w-14 appearance-none rounded-none bg-[#aeaeae] px-1 py-3.5 text-center font-bold text-white lg:px-2.5 2xl:min-w-44 2xl:text-[2.875rem]"
               >
                 <option value="0" selected>2023</option>
                 <option value="1">2022</option>
@@ -1067,7 +1068,7 @@
 
               <button
                 type="button"
-                class="swiper-loyalty-button-next flex w-10 items-center justify-center rounded-r-lg bg-[#d0d0d0] text-white lg:w-12"
+                class="swiper-loyalty-button-next flex w-10 items-center justify-center rounded-r-lg bg-[#d0d0d0] text-white xl:w-8 2xl:w-12"
                 aria-label="Следующий слайд"
               >
                 <svg class="block size-4 lg:size-6 2xl:size-8">

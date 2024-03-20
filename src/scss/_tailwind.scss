@@ -6,9 +6,9 @@
     @apply z-10 m-0 flex size-7 items-center justify-center text-primary-500 transition-colors after:hidden hover:text-primary-700 lg:size-14;
 }
 
-/* .swiper-button svg {
-    @apply block size-10;
-  } */
+.swiper-button-disabled {
+    @apply opacity-50;
+}
 
 .swiper-button--lg {
     @apply size-20;

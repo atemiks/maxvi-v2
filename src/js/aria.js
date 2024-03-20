@@ -1,38 +1,46 @@
 const initAria = () => {
   const expanders = document.querySelectorAll("[aria-expanded]");
 
-  const expandItem = (item) => {
-    const target = item.getAttribute("aria-controls");
+  const toggleExpander = (toggle) => {
+    const target = toggle.getAttribute("aria-controls");
     const targetContainer = document.getElementById(target);
-    const isFocusabled =
-      item.getAttribute("data-controls-focusabled") === "true";
+    const toggleExpandedText = toggle.getAttribute("data-expanded-text");
+    const toggleCollapsedText = toggle.getAttribute("data-collapsed-text");
+    const toggleTargetInject =
+      toggle.querySelector("[data-target-inject]") || toggle;
+    const isExpanded = toggle.getAttribute("aria-expanded") === "true";
 
-    item.setAttribute("aria-expanded", true);
+    const expand = () => {
+      toggle.setAttribute("aria-expanded", true);
 
-    if (targetContainer) {
-      targetContainer.setAttribute("aria-hidden", false);
+      if (toggleCollapsedText) {
+        toggleTargetInject.textContent = toggleCollapsedText;
+      }
 
-      if (isFocusabled) {
+      if (targetContainer) {
+        targetContainer.setAttribute("aria-hidden", false);
         targetContainer.focus();
       }
-    }
+    };
+
+    const collapse = () => {
+      toggle.setAttribute("aria-expanded", false);
+
+      if (toggleExpandedText) {
+        toggleTargetInject.textContent = toggleExpandedText;
+      }
+
+      if (targetContainer) {
+        targetContainer.setAttribute("aria-hidden", true);
+      }
+    };
+
+    isExpanded ? collapse() : expand();
   };
 
-  const collapseItem = (item) => {
-    const target = item.getAttribute("aria-controls");
-    const targetContainer = document.getElementById(target);
-
-    item.setAttribute("aria-expanded", false);
-
-    if (targetContainer) {
-      targetContainer.setAttribute("aria-hidden", true);
-    }
-  };
-
-  expanders.forEach((item) => {
-    item.addEventListener("click", () => {
-      const isExpanded = item.getAttribute("aria-expanded") === "true";
-      isExpanded ? collapseItem(item) : expandItem(item);
+  expanders.forEach((expander) => {
+    expander.addEventListener("click", () => {
+      toggleExpander(expander);
     });
   });
 };

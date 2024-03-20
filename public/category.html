@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru" class="h-full">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,6 @@
             type="button"
             aria-expanded="false"
             aria-controls="offcanvas"
-            data-controls-focusabled="true"
             class="offcanvas-toggle group/toggle flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 p-1.5 lg:hidden"
             aria-label="Меню"
           >
@@ -625,6 +624,7 @@
                 aria-hidden="true"
                 id="filter-wrapper"
                 class="fixed bottom-0 left-0 right-0 top-0 z-[1000] flex flex-col gap-3.5 overscroll-contain bg-white p-3.5 aria-hidden:hidden lg:static lg:z-0 lg:overscroll-auto lg:p-0 aria-hidden:lg:block"
+                tabindex="0"
               >
                 <div class="grid grid-cols-[1fr_auto] gap-3.5 lg:hidden">
                   <h2 class="title-h2">Фильтр</h2>
@@ -785,58 +785,67 @@
                       </div>
                     </fieldset>
 
-                    <fieldset
-                      aria-expanded="false"
+                    <div
+                      id="filter-secondary-params"
                       aria-hidden="true"
                       class="aria-hidden:hidden"
+                      tabindex="0"
                     >
-                      <legend class="font-bold xl:text-lg">Кнопка «SOS»</legend>
+                      <fieldset>
+                        <legend class="font-bold xl:text-lg">
+                          Кнопка «SOS»
+                        </legend>
 
-                      <div class="mt-1.5 flex flex-col gap-3">
-                        <label
-                          class="peer grid grid-cols-[auto_1fr] items-center gap-1"
-                        >
-                          <input
-                            name="emergency"
-                            type="radio"
-                            class="peer size-5 appearance-none rounded-full border border-[gray-300] checked:border-[6px] checked:border-primary-500"
-                          />
-                          Есть
-                        </label>
+                        <div class="mt-1.5 flex flex-col gap-3">
+                          <label
+                            class="peer grid grid-cols-[auto_1fr] items-center gap-1"
+                          >
+                            <input
+                              name="emergency"
+                              type="radio"
+                              class="peer size-5 appearance-none rounded-full border border-[gray-300] checked:border-[6px] checked:border-primary-500"
+                            />
+                            Есть
+                          </label>
 
-                        <label
-                          class="peer grid grid-cols-[auto_1fr] items-center gap-1"
-                        >
-                          <input
-                            name="emergency"
-                            type="radio"
-                            class="peer size-5 appearance-none rounded-full border border-gray-300 checked:border-[6px] checked:border-primary-500"
-                          />
-                          Нет
-                        </label>
+                          <label
+                            class="peer grid grid-cols-[auto_1fr] items-center gap-1"
+                          >
+                            <input
+                              name="emergency"
+                              type="radio"
+                              class="peer size-5 appearance-none rounded-full border border-gray-300 checked:border-[6px] checked:border-primary-500"
+                            />
+                            Нет
+                          </label>
 
-                        <label
-                          class="peer grid grid-cols-[auto_1fr] items-center gap-1"
-                        >
-                          <input
-                            name="emergency"
-                            type="radio"
-                            class="peer size-5 appearance-none rounded-full border border-gray-300 checked:border-[6px] checked:border-primary-500"
-                          />
-                          Не важно
-                        </label>
-                      </div>
-                    </fieldset>
+                          <label
+                            class="peer grid grid-cols-[auto_1fr] items-center gap-1"
+                          >
+                            <input
+                              name="emergency"
+                              type="radio"
+                              class="peer size-5 appearance-none rounded-full border border-gray-300 checked:border-[6px] checked:border-primary-500"
+                            />
+                            Не важно
+                          </label>
+                        </div>
+                      </fieldset>
+                    </div>
 
                     <button
                       type="button"
-                      class="filter-collapse-toggle group relative flex w-full items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓']"
+                      aria-expanded="false"
+                      aria-controls="filter-secondary-params"
+                      data-expanded-text="Еще фильтры"
+                      data-collapsed-text="Свернуть"
+                      class="relative flex w-full items-center justify-center gap-1 p-2 before:content-['↓'] after:content-['↓'] before:aria-expanded:rotate-180 after:aria-expanded:rotate-180"
                     >
                       <span
-                        class="underline underline-offset-2 group-hover/series:no-underline"
+                        data-target-inject
+                        class="underline underline-offset-2 group-hover:no-underline"
+                        >Еще фильтры</span
                       >
-                        Еще фильтры
-                      </span>
                     </button>
                   </div>
 
@@ -1196,7 +1205,7 @@
     >
       <div class="container-lg mx-auto px-4">
         <div
-          class="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3 lg:justify-items-start lg:gap-7"
+          class="grid grid-cols-1 justify-items-center gap-5 lg:grid-cols-3 lg:gap-7"
         >
           <div class="hidden flex-col gap-2 lg:flex xl:gap-3">
             <h3 class="title-h2 font-display uppercase">Продукция</h3>

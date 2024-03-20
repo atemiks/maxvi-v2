@@ -3064,30 +3064,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var initAria = function initAria() {
   var expanders = document.querySelectorAll("[aria-expanded]");
-  var expandItem = function expandItem(item) {
-    var target = item.getAttribute("aria-controls");
+  var toggleExpander = function toggleExpander(toggle) {
+    var target = toggle.getAttribute("aria-controls");
     var targetContainer = document.getElementById(target);
-    var isFocusabled = item.getAttribute("data-controls-focusabled") === "true";
-    item.setAttribute("aria-expanded", true);
-    if (targetContainer) {
-      targetContainer.setAttribute("aria-hidden", false);
-      if (isFocusabled) {
+    var toggleExpandedText = toggle.getAttribute("data-expanded-text");
+    var toggleCollapsedText = toggle.getAttribute("data-collapsed-text");
+    var toggleTargetInject = toggle.querySelector("[data-target-inject]") || toggle;
+    var isExpanded = toggle.getAttribute("aria-expanded") === "true";
+    var expand = function expand() {
+      toggle.setAttribute("aria-expanded", true);
+      if (toggleCollapsedText) {
+        toggleTargetInject.textContent = toggleCollapsedText;
+      }
+      if (targetContainer) {
+        targetContainer.setAttribute("aria-hidden", false);
         targetContainer.focus();
       }
-    }
+    };
+    var collapse = function collapse() {
+      toggle.setAttribute("aria-expanded", false);
+      if (toggleExpandedText) {
+        toggleTargetInject.textContent = toggleExpandedText;
+      }
+      if (targetContainer) {
+        targetContainer.setAttribute("aria-hidden", true);
+      }
+    };
+    isExpanded ? collapse() : expand();
   };
-  var collapseItem = function collapseItem(item) {
-    var target = item.getAttribute("aria-controls");
-    var targetContainer = document.getElementById(target);
-    item.setAttribute("aria-expanded", false);
-    if (targetContainer) {
-      targetContainer.setAttribute("aria-hidden", true);
-    }
-  };
-  expanders.forEach(function (item) {
-    item.addEventListener("click", function () {
-      var isExpanded = item.getAttribute("aria-expanded") === "true";
-      isExpanded ? collapseItem(item) : expandItem(item);
+  expanders.forEach(function (expander) {
+    expander.addEventListener("click", function () {
+      toggleExpander(expander);
     });
   });
 };
@@ -3347,7 +3354,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var initModals = function initModals() {
-  console.log("init modals");
   var initVideoModal = function initVideoModal() {
     var modalNode = document.querySelector("#modal-video");
     if (modalNode) {
@@ -3993,7 +3999,6 @@ var initLoyaltySlider = function initLoyaltySlider() {
   if (loyaltyContainer && loyaltySliderContainer) {
     var loyaltySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](loyaltySliderContainer, {
       modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
-      rewind: true,
       slidesPerView: 1,
       allowTouchMove: false,
       navigation: {

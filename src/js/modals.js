@@ -2,8 +2,6 @@ import { Modal } from "bootstrap";
 import Player from "/src/js/player";
 
 const initModals = () => {
-  console.log("init modals");
-
   const initVideoModal = () => {
     const modalNode = document.querySelector("#modal-video");
 
