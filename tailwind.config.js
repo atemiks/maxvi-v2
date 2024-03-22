@@ -85,7 +85,6 @@ module.exports = {
         lg: "992px",
         "3xl": "1920px",
       },
-      // 40 32 30 28 22 20 18 16
       fontSize: {
         "title-1": [
           "2.5rem", // 40px

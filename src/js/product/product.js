@@ -47,24 +47,21 @@ const initProduct = () => {
     }
   };
 
+  // TODO: change product color
   const initProductColors = () => {
-    const productColors = document.querySelectorAll(".group\\/color");
-    console.log("productColros", productColors);
-
-    const fetchProductGallery = async (color) => {
-      const response = await fetch(`${endpoint}/product`);
-      console.log("response", response);
-    };
-
-    productColors.forEach((productControl) => {
-      productControl.addEventListener("click", () => {
-        const color = productControl.getAttribute("data-color");
-
-        if (color) {
-          fetchProductGallery();
-        }
-      });
-    });
+    // const productColors = document.querySelectorAll(".group\\/color");
+    // const fetchProductGallery = async (color) => {
+    //   const response = await fetch(`${endpoint}/product`);
+    //   console.log("response", response);
+    // };
+    // productColors.forEach((productControl) => {
+    //   productControl.addEventListener("click", () => {
+    //     const color = productControl.getAttribute("data-color");
+    //     if (color) {
+    //       fetchProductGallery();
+    //     }
+    //   });
+    // });
   };
 
   const initProductBuyPopup = () => {

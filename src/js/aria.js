@@ -1,5 +1,7 @@
 const initAria = () => {
-  const expanders = document.querySelectorAll("[aria-expanded]");
+  const expanders = document.querySelectorAll(
+    "[aria-expanded]:not([data-bs-toggle])",
+  );
 
   const toggleExpander = (toggle) => {
     const target = toggle.getAttribute("aria-controls");
@@ -9,35 +11,27 @@ const initAria = () => {
     const toggleTargetInject =
       toggle.querySelector("[data-target-inject]") || toggle;
     const isExpanded = toggle.getAttribute("aria-expanded") === "true";
-
     const expand = () => {
       toggle.setAttribute("aria-expanded", true);
-
       if (toggleCollapsedText) {
         toggleTargetInject.textContent = toggleCollapsedText;
       }
-
       if (targetContainer) {
         targetContainer.setAttribute("aria-hidden", false);
         targetContainer.focus();
       }
     };
-
     const collapse = () => {
       toggle.setAttribute("aria-expanded", false);
-
       if (toggleExpandedText) {
         toggleTargetInject.textContent = toggleExpandedText;
       }
-
       if (targetContainer) {
         targetContainer.setAttribute("aria-hidden", true);
       }
     };
-
     isExpanded ? collapse() : expand();
   };
-
   expanders.forEach((expander) => {
     expander.addEventListener("click", () => {
       toggleExpander(expander);
