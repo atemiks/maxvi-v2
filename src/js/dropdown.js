@@ -1,7 +1,6 @@
 import { Dropdown } from "bootstrap";
 
 const initDropdown = () => {
-  console.log("dropdown init");
   const toggles = document.querySelectorAll(".dropdown-toggle");
   const dropdownList = [...toggles].map(
     (dropdownToggleEl) => new Dropdown(dropdownToggleEl),

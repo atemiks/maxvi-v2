@@ -1,20 +1,20 @@
 const initFilter = () => {
-  const fitlerContainer = document.querySelector("#filter-wrapper");
-  const filterToggle = document.querySelector("#filter-toggle");
-  const filterClose = document.querySelector("#filter-close");
+  const filterContainer = document.querySelector("#filter-wrapper");
   const filterCollapseToggle = document.querySelector(
     ".filter-collapse-toggle",
   );
-  const filterSecondaryParams = fitlerContainer?.querySelectorAll(
+  const filterSecondaryParams = filterContainer?.querySelectorAll(
     '[aria-expanded="false"]',
   );
 
-  const handleFilterOpen = () => {
-    fitlerContainer.setAttribute("aria-hidden", false);
-  };
-
   const handleFilterClose = () => {
-    fitlerContainer.setAttribute("aria-hidden", true);
+    const filterToggles = document.querySelectorAll(".filter-toggle");
+
+    filterToggles.forEach((toggle) => {
+      toggle.setAttribute("aria-expanded", false);
+    });
+
+    filterContainer.setAttribute("aria-hidden", true);
   };
 
   const handleFilterToggleParams = () => {
@@ -39,17 +39,17 @@ const initFilter = () => {
     }
   };
 
-  if (filterToggle) {
-    filterToggle.addEventListener("click", handleFilterOpen);
-  }
-
-  if (filterClose) {
-    filterClose.addEventListener("click", handleFilterClose);
-  }
-
   if (filterCollapseToggle) {
     filterCollapseToggle.addEventListener("click", handleFilterToggleParams);
   }
+
+  document.addEventListener("click", (event) => {
+    const { target } = event;
+
+    if (target.closest("#filter-close")) {
+      handleFilterClose();
+    }
+  });
 };
 
 export default initFilter;

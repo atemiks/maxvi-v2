@@ -11,24 +11,26 @@
       class="header-box sticky top-0 z-[1000] w-full bg-black/80 py-2 text-white backdrop-blur lg:py-0"
     >
       <div class="container-lg">
-        <div class="flex items-center justify-between gap-7">
-          <button
-            type="button"
-            aria-expanded="false"
-            aria-controls="offcanvas"
-            class="offcanvas-toggle group/toggle flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 p-1.5 lg:hidden"
-            aria-label="Меню"
-          >
-            <span
-              class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(0.5rem)_rotate(45deg)]"
-            ></span>
-            <span
-              class="block h-0.5 w-full bg-current group-aria-expanded/toggle:invisible"
-            ></span>
-            <span
-              class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(-0.5rem)_rotate(-45deg)]"
-            ></span>
-          </button>
+        <div class="flex items-center justify-between gap-3.5 lg:gap-7">
+          <div class="grow basis-0">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="offcanvas"
+              class="offcanvas-toggle group/toggle flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 p-1.5 lg:hidden"
+              aria-label="Меню"
+            >
+              <span
+                class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(0.5rem)_rotate(45deg)]"
+              ></span>
+              <span
+                class="block h-0.5 w-full bg-current group-aria-expanded/toggle:invisible"
+              ></span>
+              <span
+                class="block h-0.5 w-full bg-current transition-all group-aria-expanded/toggle:[transform:translateY(-0.5rem)_rotate(-45deg)]"
+              ></span>
+            </button>
+          </div>
 
           <a class="inline-block shrink-0" href="./index.html">
             <img
@@ -434,18 +436,19 @@
             </ul>
           </nav>
 
-          <button
-            role="tab"
-            type="button"
-            aria-selected="false"
-            aria-controls="pop-search"
-            class="search-toggle flex size-11 items-center justify-center hover:opacity-75 lg:mr-auto"
-          >
-            <svg class="block size-4">
-              <use xlink:href="./images/icons/sprite.svg#icon-search"></use>
-            </svg>
-            <span class="sr-only">Поиск</span>
-          </button>
+          <div class="flex grow basis-0 items-center justify-end lg:mr-auto">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="pop-search"
+              class="search-toggle flex size-11 items-center justify-center hover:opacity-75"
+            >
+              <svg class="block size-4">
+                <use xlink:href="./images/icons/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="sr-only">Поиск</span>
+            </button>
+          </div>
 
           <div class="hidden gap-x-2 lg:flex">
             <a

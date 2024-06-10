@@ -10,13 +10,12 @@ const initSearch = () => {
   );
 
   const openSearch = () => {
-    searchToggle.setAttribute("aria-selected", true);
     popSearchContainer.setAttribute("aria-hidden", false);
     popSearchInput.focus();
   };
 
   const closeSearch = () => {
-    searchToggle.setAttribute("aria-selected", false);
+    searchToggle.setAttribute("aria-expanded", false);
     popSearchContainer.setAttribute("aria-hidden", true);
   };
 
